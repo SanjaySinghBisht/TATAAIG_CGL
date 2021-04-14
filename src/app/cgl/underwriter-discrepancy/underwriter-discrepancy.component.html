@@ -1,0 +1,149 @@
+<div class="theme-container" #target>
+    <div class="page-title">
+        <div class="nav-btn">
+            <svg>
+                <use xlink:href="#ICON_Arrow" />
+            </svg>
+        </div>
+        <div class="head-lg heading">UNDERWRITER DISCREPANCY</div>
+        <div class="pull-right breadcrum">
+            <span class="head-sm">Application / </span> <span class="head-sm">Underwriter Discrepancy</span>
+        </div>
+    </div>
+    <form class="theme-form p-0 theme-card">
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <div class="card-content theme-form-card">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-lg-12 head-sm">UNDERWRITER <span class="head-sm opacity-sm ml-3">12 / 02 /
+                                    2020</span></div>
+                            <div class="col-lg-12">
+                                <span class="theme-value">Please Upload Your Income Documents</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngFor="let document of documentArray.value; index as i" class="row">
+            <div class="col-md-12 mt-4">
+                <div class="card-content theme-form-card">
+                    <div class="fw-100 p-l-20">
+                        <div class="head-sm">{{document.docHead}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="form-field col-md-6 col-lg-4">
+                            <div class="head-sm">{{document.docLabel}}</div>
+                            <div class="custom-file">
+                                <input type="file" (change)="onFileChange($event,i)" accept="image/jpeg,image/png,application/pdf" class="custom-file-input" id="{{'customFile'+i}}">
+                                <label *ngIf="!document.documentName" class="custom-file-label form-control" for="{{'customFile'+i}}"><svg class="icon-uploadFile m-r-sm">
+                                    <use xlink:href="#ICON_FileUpload" /></svg> Upload file</label>
+                                <label *ngIf="document.documentName"
+                                    class="custom-file-label form-control fileName-label"
+                                    for="{{'customFile'+i}}"><span
+                                        class="text-truncate">{{document.documentName}}</span>
+                                    <span><button (click)="removeDocFileArr(i)"
+                                            class="btn font-sm link-btn">REMOVE</button></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-field col-md-6 col-lg-8">
+                            <div class="head-sm">REMARKS</div>
+                    <input type="text" class="form-control"
+                        placeholder="Lorem-Ipsum-Dolor-Sit-Amet,Et-Mea-Quem-Unum-ludico">
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                <div class="form-field col-md-6 col-lg-4 col-xl-3">
+                    <div class="theme-label p-b-sm">UPLOAD DOCUMENT</div>
+                    <div class="custom-file">
+                        <input type="file" (change)="onFileChange($event,'file1')" class="custom-file-input" id="customFile">
+                        <label *ngIf="!fileForm.value.file1Name" class="custom-file-label form-control" for="customFile"><svg class="svg-xs m-r-sm"><use xlink:href="#ICON_Download" /></svg>Upload file</label>
+                        <label *ngIf="fileForm.value.file1Name" class="custom-file-label form-control text-truncate" for="customFile">{{fileForm.value.file1Name}}</label>
+                    </div>
+                </div>
+                <div class="form-field  col-md-6 col-xl-8">
+                    <div class="head-sm color-asqi">REMARKS</div>
+                    <input type="text" class="form-control date" mask="00/00/00"
+                        placeholder="Lorem-Ipsum-Dolor-Sit-Amet,Et-Mea-Quem-Unum-ludico">
+                </div>
+            </div>
+            <div *ngIf="displaySecondUpload" class="row">
+                <div class="form-field col-md-6 col-lg-4 col-xl-3">
+                    <div class="theme-label p-b-sm">UPLOAD DOCUMENT</div>
+                    <div class="custom-file">
+                        <input type="file" (change)="onFileChange($event,'file2')" class="custom-file-input" id="customFile2">
+                        <label *ngIf="!fileForm.value.file2Name" class="custom-file-label form-control" for="customFile2"><svg class="svg-xs m-r-sm"><use xlink:href="#ICON_Download" /></svg>Upload file</label>
+                        <label *ngIf="fileForm.value.file2Name" class="custom-file-label form-control text-truncate" for="customFile2">{{fileForm.value.file2Name}}</label>
+                    </div>
+                </div>
+                <div class="form-field  col-md-6 col-xl-8">
+                    <div class="head-sm color-asqi">REMARKS</div>
+                    <input type="text" class="form-control date" mask="00/00/00"
+                        placeholder="Lorem-Ipsum-Dolor-Sit-Amet,Et-Mea-Quem-Unum-ludico">
+                </div>
+
+            </div> 
+            <div *ngIf="!displaySecondUpload" class="w-100 m-t-sm">
+                <button type="button" (click)="addDocument()" class="link-btn font-md p-0">+ ADD ANOTHER FILE</button>
+            </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="m-t-lg">
+            <div class="btn-block">
+                <button type="button"  (click)="shareQuote(success_template)" class="btn primary-btn theme-lg-btn">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<ng-template #success_template>
+    <div class="detail-container-modal modal-md success-info pb-modal">
+       <div class="modal-header">
+          <div class="close-icon" (click)="successModalRef.hide()">
+             <svg>
+                <use xlink:href="#ICON_Cross" />
+             </svg>
+          </div>
+       </div>
+       <div class="modal-body succes-container">
+          <div class="row">
+             <div class="text-center col-md-12">
+                <div>
+                   <svg class="icon-blue">
+                      <use xlink:href="#ICON_Sent_successfully" />
+                   </svg>
+                </div>
+                <div class="head-md">Saved Successfully</div>
+             </div>
+             <div class="col-md-12 d-flex justify-content-center">
+                <table>
+                   <tr>
+                      <td class="theme-label">Full Name</td>
+                      <td class="pl-5 theme-value">Rajesh Arora</td>
+                   </tr>
+                   <tr>
+                      <td class="theme-label">Quote Number</td>
+                      <td class="pl-5 theme-value">12356776</td>
+                   </tr>
+                   <tr>
+                      <td class="theme-label">Mobile Number</td>
+                      <td class="pl-5 theme-value">+91 98290 98280</td>
+                   </tr>
+                </table>
+             </div>
+             <div class="col-md-12 text-center m-30-0">
+                <div class="row justify-content-center">
+                   <div class="col-6">
+                      <button type="button" class="btn primary-btn btn-successModal">Dashboard</button>
+                   </div>
+                   <div class="col-6 ">
+                      <button  type="button" class="btn primary-btn btn-successModal">View Quotes</button>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </ng-template>

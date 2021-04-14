@@ -1,0 +1,31 @@
+@import "../../../sass/variable"
+@import "../../../sass/mixins"
+.form-field.radio-field
+ width: 50%
+.customer-detail .form-control
+ height: 50px
+.brdr-bottom
+ border-bottom: 1px dotted #337ab7 
+.fw-50
+ +mQ($mobile)
+  width: 100% !important
+.theme-form .field-two .form-field
+ +mQ($mobile)
+  width: 100% !important
+  min-height: auto
+  margin-bottom: 10px
+
+.customer-detail .theme-radio
+  margin-right: 10px
+
+.sub-lbl
+  color: #324572
+  opacity: 1
+@media (max-width: 624px)
+  .theme-form .field-two .form-field
+    width: 100%
+  .fw-50
+    width: 100%
+@media (max-width: 480px)
+  .page-title .pull-right
+    width: 100%

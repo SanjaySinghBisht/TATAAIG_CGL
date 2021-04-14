@@ -1,0 +1,123 @@
+=font_style($size, $color, $family: $pop-lite, $opac)
+  font-size:$size
+  color:$color
+  font-family:$family
+  opacity:$opac
+  
+=btn_style($clr, $opac, $bg)
+ color:$clr !important
+ opacity:$opac
+ background:$bg
+ box-shadow:$outset
+ border-radius: 33px
+ border: none
+ font-size: 18px
+ padding: 20px
+ min-width:200px
+ height: 70px
+ font-family: $pop-med
+
+=btn($type)
+ @if $type == 'primary' 
+  &.active, &:active, &:hover, &:focus
+   +btn_style($default, 1, $btn-pri-active) 
+  &[disabled] 
+   +btn_style($clr-primary, 0.8, $btn-bg)
+   box-shadow:$outset
+  +btn_style($clr-primary, 1, $btn-bg)
+  box-shadow:$outset
+ @else if $type == 'secondary'
+  +btn_style($btn-sec-clr, 1, $btn-bg)
+  &.active, &:active
+   box-shadow: $outset
+  &:focus, &:hover
+   +btn_style($default, 1, $btn-pri-active)
+ @else if $type == 'tertiary'
+   background: none
+   border: none
+   text-decoration: underline
+   +font_style(18px, $clr-primary, $pop-med, 1)   
+ @else if $type == 'normal' 
+   +btn_style($clr-primary, 1, $btn-bg)
+   font-family: $pop-med
+   &.active, &:active
+    +btn_style($clr-primary, 1, $btn-bg)
+   &:focus, &:hover
+    +btn_style($default, 1, $btn-pri-active)
+
+=justify-center 
+ position: absolute
+ top: 50%
+ left: 50%
+ transform: translate(-50%, -50%)  
+ 
+=float($float, $width) 
+ float: $float 
+ width: $width
+ 
+=box-size($height, $width)
+ height:$height 
+ width:$width 
+
+=square($square) 
+ height: $square
+ width: $square
+
+//positions
+=position($position, $top: 0px, $right: 0px, $bottom :0px, $left: 0px)
+ position:$position
+ top: $top
+ right: $right
+ bottom: $bottom
+ left: $left 
+ 
+// media query
+$mobile: 768px
+$tab: 768px
+$lapSm: 1024px
+$lapMd: 1200px
+$lapLg: 1366px
+$desktop: 1920px
+
+ 	
+=mQ($resize) 	
+ @if $resize == $mobile 	
+  @media only screen and (max-width:$mobile)  
+   @content 
+ @if $resize == $tab 	
+  @media only screen and (max-width:$tab)  
+   @content 
+ @if $resize == $lapSm 	
+  @media only screen and (max-width: $lapSm)  
+   @content 
+ @if $resize == $lapMd	
+  @media only screen and (max-width: $lapMd) 
+   @content
+ @if $resize == $lapLg	
+  @media only screen and (max-width: $lapLg) 
+   @content
+ @if $resize == $desktop	
+  @media only screen and (max-width: $desktop) 
+   @content  
+ @if $resize == $resize	
+  @media only screen and (max-width: $resize) 
+   @content
+=mQmin($resize)  
+ @media only screen and (min-width: $resize) 
+  @content    
+//vendor prefixs  
+=box-shadow($props)
+ box-shadow:$props
+ -webkit-box-shadow:$props
+ -moz-box-shadow:$props
+
+=border-radius($props)
+ border-radius:$props
+ -webkit-border-radius:$props
+ -moz-border-radius:$props
+
+@function SplitCol($col)
+ @return 100% / $col
+
+
+

@@ -1,0 +1,866 @@
+@import "sass/variable"
+@import "sass/mixins"
+@import "sass/fonts"
+@import "sass/placeholder"
+@import "@ng-select/ng-select/themes/default.theme.css"
+
+.text
+ padding:0px !important
+.customer-ws
+    line-height:40px
+    white-space: pre
+    padding-left: 0px !important
+.has-form .field-four 
+    .form-field:nth-child(even),.form-field:nth-child(odd) 
+        padding-left: 0 !important
+        padding-right: 15px !important
+.theme-radio.radio-btn, .theme-check.check-btn
+    //min-width: 246px !important
+.modal-dialog
+    &.theme-modal
+       // min-width: 480px
+.nav-btn
+    +border-radius(50px)
+    +square(60px)
+    svg
+        +square(30px)
+.bg-icon  
+    svg
+        height: 16px
+.form-head
+    font-size: 18px
+.theme-label
+    +font_style(18px, #071E54, $pop-med, 0.5) 
+.theme-label-small
+    +font_style(15px, #337ab7, $pop-reg, 1) 
+.theme-value
+    +font_style(18px, $clr-primary, $pop-semi, 1) 
+.theme-value-small
+    +font_style(12px, $clr-primary, $pop-reg, 1) 
+.theme-value-bold
+    +font_style(18px, $clr-primary, $pop-semi, 1) 
+.page-title .heading
+    margin-top: 5px !important
+.error-msg,.label-indent
+    //padding-left: 30px !important
+.detail-container-modal.premium-breakup-details
+    max-width: 700px !important
+    .modal-header
+        padding-bottom: 13px
+    .modal-body
+        padding-top: 13px
+    table
+        tr
+            td:first-child
+                +font_style(18px,$clr-secondary, $pop-med, 0.5) 
+            td:last-child
+                +font_style(18px,$clr-primary, $pop-semi, 1) 
+.head-md
+  +font_style(18px, $clr-primary, $pop-med ,1)
+
+.uw-error-msg 
+    color: $err !important
+    font-size: 18px !important
+    float: left
+    width: 100%
+    margin-top: 5px
+    word-break: break-word
+
+.review-proposal label
+    margin-bottom: 0.2em
+.review-proposal span.theme-value
+    display: block
+
+.link-btn 
+    font-size: 13px
+
+@media screen and ( max-width:1600px)
+    .theme-form .field-four .form-field
+        width: 25% !important
+    .review-details .theme-label, .review-details .theme-value
+        //padding-left: 30px !important
+    .page-title .heading
+        margin-top: 3px	!important
+        line-height: 28px
+    .page-title .nav-btn svg  
+        height: 15px !important
+        width: 15px !important
+    .page-title .nav-btn 
+        height: 30px !important
+        width: 30px !important
+    .head-sm, .modal-body .head-sm
+        +font_style(14px, $clr-secondary, $pop-med, 1)
+@media (max-width: 1600px)
+    .btn.primary-btn, .normal-btn, .proceed-width, .theme-modal .double-btn .secondary-btn, .theme-modal .modal-content .contact-details .secondary-btn, .theme-modal .secondary-btn
+        min-width: 200px
+        padding: 15px
+        height: 50px
+@media screen and ( min-width:1600px  )
+    .btn.primary-btn,.primary-btn.active, .primary-btn:active, .primary-btn:hover, .primary-btn:focus, .primary-btn[disabled]
+       //min-width: 417px !important
+        //height: 70px
+    .btn.theme-label-small,.theme-value-small
+        font-size: 16px !important
+    .head-sm, .modal-body .head-sm
+        +font_style(18px, $clr-secondary, $pop-med, 1)
+
+
+@media screen and ( max-width:1400px)
+    .theme-label,.theme-value
+        font-size: 14px
+    .form-head
+        font-size: 14px
+    .head-sm
+        font-size: 14px
+    .detail-container-modal.premium-breakup-details
+        max-width: 500px !important
+        .modal-header
+            padding-left: 30px 
+            padding-right: 30px 
+        table
+            tr
+                td:first-child
+                    +font_style(14px,$clr-secondary, $pop-med, 0.5) 
+                td:last-child
+                    +font_style(14px,$clr-primary, $pop-semi, 1) 
+
+.opt-cov .has-form .form-field:nth-child(even)
+    padding-left: 0 !important
+.optional-covers.theme-modal .modal-content .theme-form .field-two .form-field
+    padding-left: 0 !important
+    padding-right: 25px
+.risk-details-pop.theme-modal .modal-content .theme-form .form-field:nth-child(even)
+    padding-left: 47px !important
+.error-msg
+    //position: relative
+@media (max-width: 768px)
+    .review-proposal .md-2
+        margin: 0
+    .review-proposal .row div[class*="col"] label,
+    .review-proposal .row div[class*="col"] span
+        width: 50%
+        display: inline-flex
+        word-break: break-all
+        align-items: baseline
+    .error-msg
+        //bottom:0
+    .add_risk .has-form .form-field
+        width:50% !important
+    .theme-addoncover .error-msg
+        padding-right: 0 !important
+        margin-left: -100px !important
+        position: absolute
+        //margin-left: 0 !important
+    .theme-addoncover .table-margin .error-msg
+        margin-left: -80px !important
+.label-indent
+    padding-left: calc(var(--fldgap)/2 + 30px) !important
+
+@media screen and ( max-width:1600px)
+    .label-indent
+        padding-left: calc(var(--fldgapL)/2 + 30px) !important
+
+@media screen and (max-width: 1024px) and (min-width: 768px)
+    .label-indent
+        padding-left: calc(var(--fldgapT)/2 + 30px) !important
+    .theme-addoncover .error-msg
+        margin-left: -13px !important 
+@media screen and (max-width: 768px) and (min-width: 320px)
+    .label-indent
+        padding-left: calc(var(--fldgapM)/2 + 15px) !important
+:root
+ --fldgap: 29px
+ --fldgapL: 16px
+ --fldgapT: 35px
+ --fldgapM: 20px
+
+ @media (max-width: 1600px)
+    .check-default label:before
+        //height: 30px
+        //width: 30px
+    .check-default label:after
+        //height: 22px
+        //width: 22px
+    .check-default
+        //font-size: 13px
+        //padding: 0 0 5px 45px
+    .add_risk .has-form .form-field:nth-child(even) 
+        padding-left: 45px !important
+    .premium-card-container .custom-radio-top label.premium-lbl:before
+        height: 30px
+        width: 30px
+    .premium-card-container .custom-radio-top label.premium-lbl:after
+        height: 22px
+        width: 22px
+ @media (min-width: 1600px)
+    .check-default label:before
+        //height: 36px
+        //width: 36px
+    .check-default label:after
+        //height: 23px
+        //width: 23px
+    .premium-card-container .custom-radio-top label.premium-lbl:before
+        height: 36px
+        width: 36px
+        top: -22px !important
+    .premium-card-container .custom-radio-top label.premium-lbl:after
+        height: 29px
+        width: 29px
+        top: -18px !important
+    .check-default
+        //font-size: 16px
+        //padding: 0 0 5px 45px
+    .add_risk .has-form .form-field:nth-child(even) 
+         padding-left: 73px !important
+    .premium-card-container.opt-cov .head-sm
+        font-size: 15px !important
+
+.add_risk .has-form .form-field:nth-child(odd) 
+    padding-right: 0 !important
+.add_risk .has-form .form-field
+    min-height: 50px
+.sub-head-sm
+  opacity: 1
+  padding-left: 30px
+  margin-bottom: 15px
+
+.error-msg
+    padding-left: 20px!important
+@media (max-width: 400px)
+    .add_risk .has-form .form-field
+        width:100% !important
+    .theme-addoncover .error-msg
+        margin-left: -120px !important
+
+.premium-card-container
+  width: 100%
+  float: left
+  
+  label.premium-lbl
+   +square(100%)
+   +border-radius(20px)
+   //box-shadow: $outset
+   background: $dr-color
+	  
+.quotelist-btn 
+    color: $clr-primary
+    opacity: 1
+    background: $btn-pri-bg
+    box-shadow: $outset
+    border-radius: 50%
+    border: none
+    font-size: 12px
+    margin-right: 10px
+    margin-bottom: 10px
+    min-width: 40px
+    padding:10px
+
+.icon-filter
+    height: 45px                                                                                                                                                                                                                        
+    width: 45px
+    position: relative                                                                                                                                                                                                                                                                                                          
+
+.search-icon
+    height: 25px
+    width: 25px
+    position: absolute
+    right: 30px
+    bottom: 34px
+
+.search-btn
+    color: $clr-asqi
+    opacity: 1
+    background: $btn-pri-bg
+    box-shadow: $outset
+    border-radius: 33px
+    border: none
+    font-size: 12px
+    margin-right: 10px
+    margin-bottom: 10px
+    min-width: 40px
+    padding:10px
+
+.search-btn:active, .search-btn:focus, .search-btn:hover, .quotelist-btn:active, .quotelist-btn:focus, .share-btn:active, .share-btn:focus
+    color: $clr-primary
+    box-shadow:$outset
+
+.label-checked 	
+    pointer-events: auto !important
+
+.sort-filter-label
+    height: 100px!important
+    width: 100px!important
+    margin-right: 5px
+    margin-left: 0!important
+
+.brdr-right
+    border-right: 1px dotted rgba(81,96,129,.5)
+
+.premium-card-container label.premium-lbl 
+    height: 100%
+    width: 100%
+    border-radius: 20px
+    -webkit-border-radius: 20px
+    -moz-border-radius: 20px
+    background: $dr-color
+
+.premium-info-icon
+    top: auto
+.premium-rate
+    font-size:20px
+    font-weight:600
+.font-12
+    font-size:12px !important
+ 
+@media (min-width: 1600px)
+  .theme-addoncover .check-default label:before
+    height: 36px
+    width: 36px
+    top: 2px!important
+  .theme-addoncover .check-default label:after
+    height: 29px
+    width: 29px
+    top: 5px!important
+    left: 4px
+  .theme-addoncover .error-msg
+    margin-left: -76px
+  .theme-addoncover .table-margin .error-msg
+    margin-left: -75px
+
+@media (max-width: 1600px)
+  .theme-addoncover .check-default label:before
+    height: 30px
+    width: 30px
+    top: 2px!important
+  .theme-addoncover .check-default label:after
+    height: 22px
+    width: 22px
+    top: 5px!important
+    left: 4px
+  .theme-addoncover .error-msg
+    margin-left: -78px
+  .theme-addoncover .table-margin .error-msg
+    margin-left: -8px
+    width: 250px
+
+@media screen and (max-width: 1400px)
+   .sub-head-sm
+      font-size: 14px
+@media screen and (max-width: 850px)
+  .theme-addoncover .error-msg
+        margin-left: -106px !important
+@media screen and (max-width: 580px)
+  .theme-addoncover .error-msg
+        margin-left: -80px !important
+  .theme-addoncover .table-margin .error-msg
+    margin-left: -70px
+   
+/*************** QUOTE LISTING ********************/ 
+.member-icon
+ width: 25px !important
+ height: 25px !important
+.premium-type div.pull-left
+ margin-top: 0px
+ margin-left: 5px
+.premium-card
+ margin-bottom: 30px
+/*************** QUOTE LISTING ********************/ 
+.inline-message
+ height:110px
+ font-size:$ft-12
+ font-weight:$ft-w-400
+ color:$primary-dark
+ opacity:50%
+
+.opacity-sm
+    opacity:.3
+.border-as-bottom
+    border-bottom: 1px dotted rgba(81, 96, 129, 0.5)
+.custom-file-label::after
+    content: none !important
+//.row
+//    width: -webkit-fill-available
+
+.upArrow
+ font-size: 27px
+ position: absolute
+ top: 11%
+ left: 70%
+ color: $clr-asqi !important
+
+.calender
+ top: 24%
+ width: 30px
+ left: 45%
+
+.modal-card
+ padding-top: 50px
+
+
+.document-uw-name
+    text-decoration: underline
+.mini-search-icon
+ left: 57px
+ height: 18px
+ width: 25px
+ position: absolute
+  
+.topnav-master
+    overflow: hidden
+
+.topnav-master a
+    float: left
+    display: block
+    color: $clr-asqi
+    text-align: center
+    padding: 10px 10px
+    text-decoration: none
+    font-size: 15px
+    border-bottom: 5px solid $clr-asqi
+    font-weight: 600
+    cursor: pointer
+
+.topnav-master a:hover
+    border-bottom: 5px solid $primary-dark
+    color: $primary-dark
+
+.topnav-master a.active
+    border-bottom: 5px solid $primary-dark
+    color: $primary-dark
+
+.master-radio-margin-right
+    margin-right:5px !important
+
+.search-si-icon
+    height: 25px
+    width: 25px
+    position: absolute
+
+.table-row-card
+    display: revert
+    background: $card-bg
+    box-shadow: $outset
+    background-clip: padding-box
+    border-radius: 10px 10px 0 0
+    padding: 10px
+    border: none
+
+.as-master-table
+    border-collapse: separate
+    border-spacing: 0 2em
+
+.dsp-contents
+    display: contents
+
+.table-span-gq
+    overflow: hidden 
+    text-overflow: ellipsis
+    white-space: nowrap
+
+.table-data-gq
+    padding: 0 !important
+    font-family: $pop-semi
+    font-size: 13px !important
+    color: $primary-dark
+
+.uw-alert-msg
+    font-weight: 500 !important
+
+.message-button
+    background: $default
+    border-radius: 33px
+    font-size: 10px
+    text-decoration: underline
+    color: $primary-dark
+
+.border-as-bottom-top
+    border-bottom: 1px dotted rgba(81, 96, 129, 0.5)
+    border-top: 1px dotted rgba(81, 96, 129, 0.5)
+
+.border-as-top
+    border-top: 1px dotted rgba(81, 96, 129, 0.5)
+
+.border-as-bottom
+    border-bottom: 1px dotted rgba(81, 96, 129, 0.5)
+
+@media(min-width:1440)
+.lh-12
+  line-height:10px !important
+.rq-span
+    color: $primary-dark
+    font-family: Poppins-semiBold
+    font-size: 13px
+
+.rq-list
+    padding-left: 0px
+    counter-reset: list
+
+.rq-list li
+    list-style: none !important
+    position: relative
+    color: $primary-dark
+    font-size: 13px
+
+.rq-list li:before
+    counter-increment: list
+    content: counter(list,decimal) ".\a0"
+    
+.rq-nestList
+    padding: 0px
+    counter-reset: list
+
+.rq-nestList li
+    list-style: none !important
+    position: relative
+
+.rq-nestList li:before
+    counter-increment: list
+    content: "(" counter(list,lower-roman) ")\a0"
+
+.rq-retroList
+    padding-left: 0px
+    counter-reset: list
+
+.rq-retroList li
+    list-style: none !important
+    position: relative
+    color: $primary-dark
+    font-size: 13px
+
+.rq-retroList li:before
+    counter-increment: list
+    content: counter(list,lower-roman) ")\a0"
+
+.rq-ps
+    color: $primary-dark
+    font-family: Poppins-semiBold
+    font-size: 14px
+    text-align: center
+
+.rq-alphaList
+    padding-left: 0px
+    counter-reset: list
+
+.rq-alphaList li
+    list-style: none !important
+    position: relative
+    color: $primary-dark
+    font-size: 13px
+
+.rq-alphaList li:before
+    counter-increment: list
+    content: counter(list,upper-alpha) ".\a0"
+
+.icon-uploadFile
+    width:30px
+    height:25px !important
+    fill:$primary-dark
+.m-h-30 .head-sm
+    min-height: 30px
+.section-headings
+    margin: 20px 15px
+.order-list li
+    list-style: upper-alpha
+.order-list
+    padding-left: 15px
+    line-height: 20px
+.dashed-border
+    border-bottom: 1px dashed $clr-asqi
+.form-field .head-lg
+    padding-left: 20px 
+.l-h-55
+    line-height: 55px
+.small-device-labels
+    display: none
+.country-section .form-field
+    min-height: 60px !important
+@media (min-width: 320px) and (max-width: 576px)
+    .country-section label, .total-section label
+        padding-left: 20px
+    .small-device-labels
+        display: block
+    .l-h-55
+        line-height: normal
+    .m-h-30 .head-sm
+        min-height: 15px
+    .m-h-30 .head-sm.long-label-text
+        min-height: 30px
+    .section-headings
+        padding: 0 20px
+    .mt-mobile
+        margin-top: 2rem
+    .word-break-all
+        word-break: break-all !important
+    .btn-successModal
+        min-width : auto !important
+        white-space : nowrap
+@media (min-width: 768px) and (max-width: 1023px)
+    .mb-h-30 .head-sm
+        min-height: 38px !important
+
+@media (min-width: 1024px) and (max-width: 1024px)
+    .m-h-30 .head-sm 
+        min-height: 15px
+    .m-h-30 .head-sm.long-label-text
+        min-height: 15px
+@media (max-width: 576px)
+    .mt-mobile
+        margin-top: 2rem
+    .rq-edit
+        margin: 0px !important
+        min-width: 35px !important
+        padding: 8px !important
+    .rq-edSvg
+        height: 15px
+        width: 15px
+    .ws-nowrap
+        white-space: nowrap
+    .rq-head-md
+        font-size: 14px !important
+    .rq-list li, .rq-retroList li, .rq-alphaList li
+        font-size: 12px !important
+    .cp-disc
+        font-size: 12px !important
+    .referal-input
+        border-radius: 33px !important
+    .is-refer-btn
+        border-radius: 33px !important
+    .w-sm-100
+        width: 100% !important
+    .refer-mob-card
+        float: left
+        width: 100%
+        padding: 15px
+        border: none
+        background: #EFF0F3
+        border-radius: 20px !important
+        -webkit-border-radius: 20px !important
+        -moz-border-radius: 20px !important
+        box-shadow: -3px -3px 6px #ffffff, 3px 3px 6px #bfc3cf
+        -webkit-box-shadow: -3px -3px 6px #ffffff, 3px 3px 6px #bfc3cf
+        -moz-box-shadow: -3px -3px 6px #FFFFFF, 3px 3px 6px #BFC3CF
+        background-clip: padding-box
+        -webkit-appearance: none
+        position: relative
+        margin: 1.5rem 0rem
+    .txtsm-center
+        text-align: center 
+    .netPremium-linkbtn
+        float: left !important
+    .is-netPremium
+        padding: 0px 15px !important
+
+@media (max-width: 1600px)
+.form-field 
+    margin-bottom: 20px !important
+    word-break: break-all !important
+@media(max-width:345px)
+.word-break-all
+  word-break: break-all !important
+
+.rq-alphaBrackList
+    padding-left: 0px
+    counter-reset: list
+
+.rq-alphaBrackList li
+    list-style: none !important
+    position: relative
+    color: $primary-dark
+    font-size: 13px
+
+.rq-alphaBrackList li:before
+    counter-increment: list
+    content: counter(list,upper-alpha) ")\a0"
+
+@media(max-width:345px)
+.word-break-all
+  word-break: break-all !important
+@media screen and (max-width: 768px) and (min-width: 320px)
+.btn.sm.box-none:hover
+    box-shadow: none !important
+
+.uwTickCross-svg
+    background: #fff
+    border-radius: 50px
+    margin-right: 10px
+    height: 25px
+    width: 25px
+
+.uwYest-svg
+    background: #fff
+    border-radius: 50px
+    margin-right: 10px
+    height: 35px
+    width: 35px
+
+.uw-btn
+    border-radius: 8px !important
+    cursor: alias !important
+    display: flex
+    align-items: center
+
+.rq-quoteDate
+    color: $clr-asqi
+    font-family: Poppins-Medium
+    font-size: 13px
+    padding-right: 1rem
+
+@media screen and (min-width: 320px) and (max-width: 768px)
+    .convertClone-btn-block
+        display: none !important
+
+    .cloneConvert-btn-block
+        display: block !important 
+
+@media screen and (min-width: 769px)
+    .cloneConvert-btn-block
+        display: none !important
+    .pb-modal
+        margin-top: 3rem
+
+
+.rqList-label
+    color: $clr-secondary
+    font-family: Poppins-Medium
+    opacity: 0.5
+    font-size: 14px
+
+@media screen and (max-width: 768px)
+    .mob-btn-cgl
+        background: linear-gradient(to right, #EFF0F3, #E5E6EB) !important
+        color: $clr-asqi !important
+    .mob-btn-cgl.active
+        background: none !important
+        color: #fff !important
+    .cgl-btnBlock
+        background: linear-gradient(to right, #EFF0F3, #E5E6EB) !important
+    .block-active
+        background: linear-gradient(270deg, #18478B, #283A61) !important
+    .isCalc-btn
+        color: $clr-asqi !important
+    .isCalc-btn.active
+        color: #fff !important
+
+.cp-disc
+    color: $primary-dark
+    font-size: 13px
+ 
+@media (min-width: 320px) and (max-width: 768px) 
+    .btn.sm.box-none:hover
+        box-shadow: none !important
+    .pb-modal
+        margin-top: 0px !important   
+
+.primary-dark-text
+    color: $primary-dark
+
+@media (min-width: 1920px)
+    .posrel-LG
+        position: relative !important
+    .btm-lg
+        bottom: 1.5rem !important
+
+
+@media (min-width: 768px)
+    .posrel-md
+        position: relative !important
+        bottom: 1.4rem
+    .referal-input
+        border-top-right-radius: 0px !important
+        border-bottom-right-radius: 0px !important
+    .ref-btnBlock
+        padding-left: 0px !important
+    .ref-inpBlock
+        padding-right: 0px !important
+    .errMsg-btm-res
+        bottom: 1.9rem !important
+
+@media (min-width: 1600px)
+    .posrel-md
+        bottom: 0.5rem !important
+
+.is-text
+    font-size: 12px
+    color: #071E54
+    opacity: 0.4
+
+
+
+.is-refer-btn
+    background: linear-gradient(to right, #EFF0F3, #E5E6EB)
+    color: #264A9F
+    opacity: 1
+    border-top-left-radius: 0px
+    border-bottom-left-radius: 0px
+    border-top-right-radius: 33px
+    border-bottom-right-radius: 33px
+    box-shadow: -3px -3px 6px #ffffff, 3px 3px 6px #bfc3cf
+    -webkit-box-shadow: -3px -3px 6px #ffffff, 3px 3px 6px #bfc3cf
+    -moz-box-shadow: -3px -3px 6px #FFFFFF, 3px 3px 6px #BFC3CF
+    background-clip: padding-box
+    -webkit-appearance: none
+    border: none
+    font-size: 14px
+    font-family: Poppins-Medium
+    box-shadow: -3px -3px 6px #ffffff, 3px 3px 6px #bfc3cf
+    -webkit-box-shadow: -3px -3px 6px #ffffff, 3px 3px 6px #bfc3cf
+    -moz-box-shadow: -3px -3px 6px #FFFFFF, 3px 3px 6px #BFC3CF
+    background-clip: padding-box
+    -webkit-appearance: none
+    height:50px
+
+.is-refer-btn:focus , .is-refer-btn:hover , .is-refer-btn:active
+    color: $primary-dark
+    box-shadow: none
+
+.is-netPremium
+    color: $primary-dark
+    font-size: 20px
+    font-family: Poppins-Medium
+    font-weight: 600
+    padding: 0px 25px 0px 0px
+
+.premBreak-span
+    color: $clr-secondary 
+    opacity: 0.8
+    font-family: Poppins-Medium
+    font-size: 14px
+    float: right
+
+.cvp-btn
+    display: flex
+    align-items: center
+
+.doc-format-msg
+    font-size : 13px
+    color: $clr-asqi
+    display : inline-block
+    padding-left : 1rem
+
+@media (min-width: 1920px)
+    .btm-errMsg-xl
+        bottom: -10px !important
+    .is-refer-btn
+        height: 70px !important
+    .primary-btn
+        height: 65px !important
+    .margin-xl
+        margin-right : 1.5rem
+    .rq-list li, .rq-retroList li, .rq-alphaList li, .rqList-label, .rq-quoteDate, .rq-span, .uw-msg, .rq-ps, .cp-disc, .uw-alert-msg, .inline-message
+        font-size: 18px !important
+    .cvp-btn
+        width : 100% !important
+    .custom-file-label
+        height: 70px
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size : 18px
+    .doc-format-msg
+        margin-top : 1.8rem
+        font-size : 16px
+    .link-btn-fr-pr
+        font-size : 16px !important
+    
+    
+    

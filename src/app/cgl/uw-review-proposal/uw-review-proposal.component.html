@@ -1,0 +1,497 @@
+<!-- <p>uw-review-proposal works!</p> -->
+<div class="theme-container preview-quote">
+    <div class="page-title">
+       <div (click)="routeToProposalListing()" class="nav-btn">
+          <svg>
+             <use xlink:href="#ICON_Arrow" />
+          </svg>
+       </div>
+       <div class="head-lg heading">REVIEW PROPOSAL</div>
+       <div class="pull-right breadcrum">
+          <span class="head-sm">Application / </span> <span class="head-sm">Review Proposal</span>
+       </div>
+    </div>
+    <form [formGroup]="underwriterForm" class="theme-form p-0">
+    <!-- <div class="row">
+       <div class="col-md-12 mt-4">
+          <div class="card-content theme-form-card">
+             <div class="row">
+                <div class="col-md-12">
+                   <div class="head-sm m-0">REASON FOR REFERRAL</div>
+                   <span class="head-sm opacity-sm">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, </span>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div> -->
+    <div class="theme-card w-100 has-form full mb-4">
+        <div class="card-content theme-form-card">
+           <span class="alert-heading text-red alert-message uw-alert-msg"><i class="fa fa-warning"></i> Alert your quote has
+              triggered Underwriter</span><br>
+           <span class="inline-message">You can either change the values or send it for consideration</span>
+        </div>
+     </div>
+     <div class="preview-details m-t-lg">
+      <div class="theme-card p-0">
+         <div class="card-content">
+            <div class="head-md">Accident Shield</div>
+            <div class="theme-label">(Quote ID)</div>
+            <div class="disp-flex preview-structure">
+               <div class="flex-box-100">
+                  <div class="fw-100">
+                     <div class="head-sm pull-left">CUSTOMER DETAILS</div>
+                  </div>
+                  <table aria-hidden="true" class="w-100">
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Full Name</span></td>
+                        <td><span class="theme-value">Rajesh</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Email</span></td>
+                        <td><span class="theme-value">Rajesh@gmail.com</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Phone Number</span></td>
+                        <td><span class="theme-value">+91 9889767545</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Occupation</span></td>
+                        <td><span class="theme-value">Service</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Pin Code</span></td>
+                        <td><span class="theme-value">201001</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">GSTIN No.</span></td>
+                        <td><span class="theme-value">XXXXXXXXXXXX</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Annual Income</span></td>
+                        <td><span class="theme-value">XXXXXXXXXXXX</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Account Number</span></td>
+                        <td><span class="theme-value">XXXXXXXXXXXX</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label ">Communication Address</span></td>
+                        <td><span class="theme-value">78 CP, Ghaziabad 201001</span></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="flex-box-100">
+                  <div class="fw-100">
+                     <div class="head-sm">PLAN DETAILS</div>
+                     <table aria-hidden="true" class="w-100">
+                        <tr>
+                           <td class="fixed-width"><span class="theme-label">Plan Type</span></td>
+                           <td><span class="theme-value">Family</span></td>
+                        </tr>
+                        <tr>
+                           <td class="fixed-width"><span class="theme-label">Risk Type</span></td>
+                           <td><span class="theme-value">Self + Spouse + 2 Children</span></td>
+                        </tr>
+                     </table>
+                  </div>
+               </div>
+               <div class="flex-box-100">
+                  <div class="fw-100">
+                     <div class="head-sm">INSURANCE DETAILS</div>
+                     <table aria-hidden="true" class="w-100">
+                        <!-- <tr>
+                           <td class="fixed-width"><span class="theme-label">Policy Inward Type</span></td>
+                           <td><span class="theme-value">Online</span></td>
+                        </tr> -->
+                        <tr>
+                           <td class="fixed-width"><span class="theme-label">Policy Tenure</span></td>
+                           <td><span class="theme-value">1 Year</span></td>
+                        </tr>
+                        <tr>
+                           <td class="fixed-width"><span class="theme-label">Policy Start Date</span></td>
+                           <td><span class="theme-value">22/12/2020</span></td>
+                        </tr>
+                        <tr>
+                           <td class="fixed-width"><span class="theme-label">Policy End Date</span></td>
+                           <td><span class="theme-value">22/12/2021</span></td>
+                        </tr>
+                        <tr>
+                           <td class="fixed-width"><span class="theme-label">Total Sum Insured</span></td>
+                           <td><span class="theme-value">₹2,00,000</span></td>
+                        </tr>
+                        <tr>
+                           <td class="fixed-width"><span class="theme-label">Premium Amount</span></td>
+                           <td><span class="theme-value">₹2,00,000</span></td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div class="fw-100 m-t-sm">
+                     <button type="button" (click)="openPremiumBreakupModal(premium_breakup_modal_template)" class="link-btn font-sm1 p-0">View Premium Breakup</button>
+                  </div>
+               </div>
+               
+               <div class="flex-box-100 pt-0 mt-4">
+                  <div class="head-sm pull-left">MEMBER DETAILS</div>
+                  <div *ngFor="let proposal of proposalDetails">
+                  <div class="fw-100 mt-3">
+                     <div class="head-sm pull-left">{{proposal.member.type}}</div>
+                  </div>
+                  <table aria-hidden="true" class="w-100">
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Name</span></td>
+                        <td><span class="theme-value">{{proposal.member.name}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Gender</span></td>
+                        <td><span class="theme-value">{{proposal.member.gender}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Date of Birth</span></td>
+                        <td><span class="theme-value">{{proposal.member.dob}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Age</span></td>
+                        <td><span class="theme-value">{{proposal.member.age}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Insured Relationship</span></td>
+                        <td><span class="theme-value">{{proposal.member.insuredRelationShip}}</span></td>
+                     </tr>
+                     <div class="head-sm pull-left mt-3">NOMINEE DETAILS</div>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Name</span></td>
+                        <td><span class="theme-value">{{proposal.nominees[0].name}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Gender</span></td>
+                        <td><span class="theme-value">{{proposal.nominees[0].gender}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Date of Birth</span></td>
+                        <td><span class="theme-value">{{proposal.nominees[0].dob}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Relationship with Insured</span></td>
+                        <td><span class="theme-value">{{proposal.nominees[0].relationship}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Shared Contribution</span></td>
+                        <td><span class="theme-value">{{proposal.nominees[0].sharedContribution}}</span></td>
+                     </tr>
+                     <div class="head-sm pull-left mt-3">SECOND NOMINEE DETAILS</div>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Name</span></td>
+                        <td><span class="theme-value">{{proposal.nominees[1].name}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Gender</span></td>
+                        <td><span class="theme-value">{{proposal.nominees[1].gender}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Date of Birth</span></td>
+                        <td><span class="theme-value">{{proposal.nominees[1].dob}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Relationship with Insured</span></td>
+                        <td><span class="theme-value">{{proposal.nominees[1].relationship}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Shared Contribution</span></td>
+                        <td><span class="theme-value">{{proposal.nominees[1].sharedContribution}}</span></td>
+                     </tr>
+                     <div class="head-sm pull-left mt-3">APPOINTEE DETAILS</div>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Name</span></td>
+                        <td><span class="theme-value">{{proposal.appointee.name}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Relationship with Insured</span></td>
+                        <td><span class="theme-value">{{proposal.appointee.relationship}}</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Address</span></td>
+                        <td><span class="theme-value">{{proposal.appointee.address}}</span></td>
+                     </tr>
+                  </table>
+                     <div class="head-sm pull-left mt-3">GENERAL QUERIES</div>
+                     <div class="row col-12 col-lg-12">
+                        <span class="theme-label ">Have you been suffering/met with any illness or disability in last 5 years?</span>
+                     </div>
+                     <!-- <tr>
+                        <td><span class="theme-label ">Have you been suffering/met with any illness or disability in last 5 years?</span></td>
+                     </tr> -->
+                     <table aria-hidden="true" class="w-100">
+                     <tr>
+                        <td><span class="table-data-gq">{{proposal.generalQueries[0].gq1Response}}</span></td>
+                     </tr>
+                     <tr *ngIf="proposal.generalQueries[0].gq1Details">
+                        <td class="fixed-width"><span class="theme-label">Details</span></td>
+                     </tr>
+                  </table>
+                  <div *ngIf="proposal.generalQueries[0].gq1Details" class="row col-lg-12 col-12 mx-0 px-0 mb-1">
+                     <span class="table-data-gq">{{proposal.generalQueries[0].gq1Details}}</span>
+                  </div>
+                  <div class="row col-12 col-lg-12">
+                     <span class="theme-label ">You have any Personal Accident Policy?</span>
+                  </div>
+                     <table aria-hidden="true" class="w-100">
+                     <!-- <tr *ngIf="proposal.generalQueries[0].gq1Details">
+                        <td><span class="table-data-gq">{{proposal.generalQueries[0].gq1Details}}</span></td>
+                     </tr> -->
+                     <!-- <tr>
+                        <td><span class="theme-label ">You have any Personal Accident Policy?</span></td>
+                     </tr> -->
+                     <tr>
+                        <td><span class="table-data-gq">{{proposal.generalQueries[1].gq2Response}}</span></td>
+                     </tr>
+                     <tr *ngIf="proposal.generalQueries[1].insuranceDetailsSection">
+                        <td class="fixed-width"><span class="theme-label">Insurance Details Section</span></td>
+                        <td><span class="theme-value">{{proposal.generalQueries[1].insuranceDetailsSection}}</span></td>
+                     </tr>
+                     <tr *ngIf="proposal.generalQueries[1].policyNumber">
+                        <td class="fixed-width"><span class="theme-label">Policy Number</span></td>
+                        <td><span class="theme-value">{{proposal.generalQueries[1].policyNumber}}</span></td>
+                     </tr>
+                  </table>
+                  </div>
+                  <div class="fw-100 m-t-sm">
+                     <button type="button" (click)="openSumInsuredModal(sum_insured_breakup_template)" class="link-btn font-sm1 p-0">Sum Insured Breakup</button>
+                  </div> 
+               </div>
+               <div class="flex-box-100">
+                  <div class="head-sm">COVERAGE SECTION</div>
+                  <table aria-hidden="true" class="w-100">
+                     <tr >
+                        <td  class="fixed-width"><span class="theme-label">Accidental Death Cover</span></td>
+                        <td><span class="theme-value">Lorm Ipsum</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Permanent Total Disability Cover</span></td>
+                        <td><span class="theme-value">Lorm Ipsum</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Permanent Partial Disability Cover</span></td>
+                        <td><span class="theme-value">Lorm Ipsum</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Education Benefit</span></td>
+                        <td><span class="theme-value">Lorm Ipsum</span></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="flex-box-100">
+                  <div class="head-sm pull-left">PROPOSAL DETAILS</div>
+                  <table aria-hidden="true" class="w-100">
+                     <tr >
+                        <td  class="fixed-width"><span class="theme-label">Occupation</span></td>
+                        <td><span class="theme-value">Lorm Ipsum</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Marital Status</span></td>
+                        <td><span class="theme-value">Lorm Ipsum</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">GSTIN</span></td>
+                        <td><span class="theme-value">Lorm Ipsum</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Partner Application Number</span></td>
+                        <td><span class="theme-value">Lorm Ipsum</span></td>
+                     </tr>
+                     <tr>
+                        <td class="fixed-width"><span class="theme-label">Insured PAN Number</span></td>
+                        <td><span class="theme-value">Lorm Ipsum</span></td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+       <div class="theme-card p-0 w-100 mt-4">
+          <!-- <div class="col-md-12 mt-4"> -->
+             <div class="card-content disp-flex theme-form-card">
+                <div class="flex-box-100">
+                    <div class="row">
+                      <div class="col-lg-12 theme-value">UNDERWRITER HISTORY</div>
+                    </div>
+                   <div class="row m-t-lg">
+                      <div class="col-lg-12 head-sm text-red">The case is taken to the underwriter</div>
+                   </div>
+                   <div class="row m-t-lg border-as-bottom">
+                      <div class="col-lg-12 head-sm">AGENT <span class="head-sm opacity-sm ml-3">12 / 02 / 2020</span></div>
+                      <div class="col-lg-12">
+                          <p class="theme-value">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
+                      </div>
+                  </div>
+                  <div class="row m-t-lg border-as-bottom">
+                      <div class="col-lg-12 head-sm">UNDERWRITER <span class="head-sm opacity-sm ml-3">12 / 02 / 2020</span></div>
+                      <div class="col-lg-12">
+                          <p class="theme-value">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, </p>
+                      </div>
+                  </div>
+                  <div class="row m-t-lg border-as-bottom">
+                      <div class="col-lg-12 head-sm">CS REPRESENTATIVES<span class="head-sm opacity-sm ml-3">12 / 02 / 2020</span></div>
+                      <div class="col-lg-12">
+                          <p class="theme-value">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
+                      </div>
+                  </div>
+                  <div class="row m-t-lg border-as-bottom">
+                      <div class="col-lg-12 head-sm">UNDERWRITER <span class="head-sm opacity-sm ml-3">12 / 02 / 2020</span></div>
+                      <div class="col-lg-12">
+                          <p class="theme-value">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, </p>
+                      </div>
+                  </div>
+                  <div class="row m-t-lg">
+                   <div class="col-lg-12 head-sm">CS REPRESENTATIVES<span class="head-sm opacity-sm ml-3">12 / 02 / 2020</span></div>
+                   <div class="col-lg-12">
+                      <table aria-hidden="true" class="w-100">
+                         <tr>
+                            <td class="fixed-width"><span class="theme-label">Document Name</span></td>
+                            <td><span class="theme-value document-uw-name">Sample.pdf</span></td>
+                         </tr>
+                         <tr>
+                            <td class="fixed-width"><span class="theme-label">Remark</span></td>
+                            <td><span class="theme-value">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, </span></td>
+                         </tr>
+                      </table>
+                   </div>
+               </div>
+                </div>
+             </div>
+          <!-- </div> -->
+       </div>
+       <div *ngIf="displayQuoteForm" class="theme-card w-100 p-0 mt-4">
+          <div class="card-content">
+            <div class="flex-box-100">
+               <div class="row">
+                  <div class="col-md-6 col-lg-4">
+                     <ng-select [items]="reasonArray" [searchable]="false" formControlName="action" placeholder="Select" class="ngSelectOption 1">
+                 </ng-select>
+                  </div>
+                  <div class="form-field col-md-12 col-lg-12">
+                     <label for="uwRemark" class="head-sm pull-left">UW Remark</label>
+                     <div class="pull-right"><button (click)="removeRemarks()" class="btn link-btn font-sm1">Remove Remarks</button></div>
+                     <textarea class="form-control" formControlName="remark" name="uwRemark" id="uwRemark" cols="30" rows="4" placeholder="Remark"></textarea>
+                  </div>
+                  <div *ngIf="underwriterForm.value.action == 'Query'" class="col-md-12">
+                     <div class="check-default">
+                        <input type="checkbox" formControlName="addFile" class="checkbox" id="customer">
+                        <label for="customer">Allow User to Add File</label>
+                     </div>
+                  </div> 
+               </div>
+            </div>
+          </div>
+       </div>
+       <div *ngIf="underwriterForm.value.addFile" class="theme-card w-100 p-0 mt-4">
+          <div class="card-content">
+           <div *ngFor="let policyDoc of documentArray.controls; index as i" class="row mb-3" [ngClass]="{'border-as-top': i >0}">
+               <div *ngIf="i>0" class="fw-100 pt-2">
+                   <button (click)="removeFileFromArr(i)" class="btn link-btn pull-right">Delete</button>
+               </div>
+               <div class="form-field col-md-6 col-lg-4">
+                  <label for="" class="head-sm">DOCUMENT NAME</label>
+                  <input type="text" class="form-control" name="documentName" id="documentName" autocomplete="off">
+                     <span class="error-msg">
+                        Required *
+                     </span>
+               </div>
+               <div class="form-field  col-md-6 col-lg-8">
+                   <div class="head-sm">REMARKS</div>
+                   <input type="text" id="remark" class="form-control"
+                       placeholder="Lorem-Ipsum-Dolor-Sit-Amet,Et-Mea-Quem-Unum-ludico">
+               </div>
+           </div>
+           <div class="px-3 w-100 mt-2">
+               <button type="button" (click)="addDocumentFileBtn()"
+                   class="link-btn font-sm1 p-0 link-btn-fr-pr">+ ADD ANOTHER FILE</button>
+           </div>
+          </div>
+       </div>
+       <div *ngIf="underwriterForm.value.action && !displayQuoteForm" class="row">
+          <div class="col-md-12 mt-4">
+            <button *ngIf="queryRaised" class="btn primary-btn uw-btn theme-lg-btn active"><svg class="uwTickCross-svg pull-left"><use xlink:href="#ICON_Tick_mark"/></svg>Query Has Been Raised</button>
+            <button *ngIf="quoteApproved" class="btn primary-btn uw-btn theme-lg-btn active"><svg class="uwTickCross-svg pull-left"><use xlink:href="#ICON_Tick_mark"/></svg>Quote Has Been Approved</button>
+            <button *ngIf="quoteRejected" class="btn primary-btn uw-btn theme-lg-btn active"><svg class="uwTickCross-svg pull-left"><use xlink:href="#ICON_Cross"/></svg>Quote Has Been Rejected</button>
+            <button *ngIf="referToUW" class="btn primary-btn uw-btn theme-lg-btn active"><svg class="uwYest-svg pull-left"><use xlink:href="#ICON_Yesterday_UW"/></svg>Referred To Underwriter {{uwNum}}</button>
+          </div>
+      </div>
+       <div class="btn-block primary bg-blue m-t-lg">
+         <button type="button" class="btn primary-btn mob-text-btn sm m-t-xs">Refer To Cop</button>
+         <button type="button" (click)="uwSubmitQuote()" class="btn primary-btn mob-btn sm m-t-xs">Submit</button>
+     </div>
+ </form>
+ </div>
+ <ng-template #sum_insured_breakup_template>
+   <div class="detail-container-modal modal-md success-info mt-3">
+      <div class="modal-header">
+         <h4 class="modal-title pull-left">SUM INSURED BREAKUP</h4>
+        <div class="close-icon" (click)="sumInsuredModalRef.hide()">
+           <svg>
+              <use xlink:href="#ICON_Cross" />
+           </svg>
+        </div>
+     </div>
+      <div class="modal-body succes-container">
+         <div class="row">
+            <div class="col-md-6"><span class="theme-label">Self</span></div>
+            <div class="col-md-6 pl-5"><span class="theme-label">
+               <i class="fa fa-inr"></i>50,000</span></div>
+            <div class="col-md-6"><span class="theme-label">Spouse</span></div>
+            <div class="col-md-6 pl-5"><span class="theme-label">
+               <i class="fa fa-inr"></i>25,000</span></div>
+            <div class="col-md-6"><span class="theme-label">Child 1</span></div>
+            <div class="col-md-6 pl-5"><span class="theme-label">
+               <i class="fa fa-inr"></i>25,000</span></div>
+            <div class="col-md-6"><span class="theme-label">Child 2</span></div>
+            <div class="col-md-6 pl-5"><span class="theme-label">
+               <i class="fa fa-inr"></i>25,000</span></div>
+         </div>
+         <div class="row mt-4 border-as-bottom-top">
+            <div class="col-md-6 my-4"><span class="theme-label">Total Sum Insured Balance</span></div>
+            <div class="col-md-6 my-4 pl-5"><span class="theme-value">
+               <i class="fa fa-inr"></i>1,00,000</span></div>
+         </div>
+         <div class="col-md-12 text-center m-30-0">
+            <button type="button" (click)="sumInsuredModalRef.hide()" class="btn btn-mob primary-btn m-t">Done</button>
+         </div>
+      </div>
+   </div>
+ </ng-template>
+ <ng-template #premium_breakup_modal_template>
+   <div class="detail-container-modal modal-md success-info">
+      <div class="modal-header">
+         <h4 class="modal-title pull-left">PREMIUM BREAKUP</h4>
+        <div class="close-icon" (click)="premiumBreakupModalRef.hide()">
+           <svg>
+              <use xlink:href="#ICON_Cross" />
+           </svg>
+        </div>
+     </div>
+      <div class="modal-body succes-container">
+         <div class="row">
+            <div class="col-md-6"><span class="theme-label">Sum of Premium</span></div>
+            <div class="col-md-6 pl-5"><span class="theme-label">
+               <i class="fa fa-inr"></i>4785</span></div>
+            <div class="col-md-6"><span class="theme-label">Discount Premium</span></div>
+            <div class="col-md-6 pl-5"><span class="theme-label">
+               <i class="fa fa-inr"></i>0.0</span></div>
+            <div class="col-md-6"><span class="theme-label">Net Premium</span></div>
+            <div class="col-md-6 pl-5"><span class="theme-label">
+               <i class="fa fa-inr"></i>4785</span></div>
+            <div class="col-md-6"><span class="theme-label">GST (18%)</span></div>
+            <div class="col-md-6 pl-5"><span class="theme-label">
+               <i class="fa fa-inr"></i>862</span></div>
+         </div>
+         <div class="row mt-4 border-as-bottom-top">
+            <div class="col-md-6 my-4"><span class="theme-label">Total Premium</span></div>
+            <div class="col-md-6 my-4 pl-5"><span class="theme-value">
+               <i class="fa fa-inr"></i>5646</span></div>
+         </div>
+         <div class="col-md-12 text-center m-30-0">
+            <button type="button" (click)="premiumBreakupModalRef.hide()" class="btn btn-mob primary-btn m-t">Done</button>
+         </div>
+      </div>
+   </div>
+ </ng-template>

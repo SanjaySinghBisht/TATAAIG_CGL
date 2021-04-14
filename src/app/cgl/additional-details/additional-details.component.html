@@ -1,0 +1,60 @@
+<div class="theme-container" #target>
+    <div class="page-title">
+        <div (click)="routeBack()" class="nav-btn">
+            <svg>
+                <use xlink:href="#ICON_Arrow" />
+            </svg>
+        </div>
+        <div class="head-lg heading ws-nowrap">ADDITIONAL DETAILS<span class="p-l-md head-date">01/02</span></div>
+        <div class="pull-right breadcrum">
+            <span class="head-sm">Application / </span> <span class="head-sm">Additional Details</span>
+        </div>
+        <div class="pull-right">
+            <button type="button" class="link-btn font-sm1">Go Back To Proposal</button>
+        </div>
+    </div>
+    <form [formGroup]="additionalDetailsForm" class="theme-form mt-mobile">
+        <div class="customer-detail theme-card w-100 p-0">
+            <div class="card-content">
+                <div class="row">
+                    <div [ngClass]="{'complete': additionalDetailsForm.value.accountNumber}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                        <label for="accountNumber" class="head-sm">ACCOUNT NUMBER</label>
+                        <input type="text" formControlName="accountNumber" class="form-control" name="accountNumber" id="accountNumber" autocomplete="off">
+                        <span class="error-msg">
+                            Required *
+                        </span>
+                    </div>
+                    <div [ngClass]="{'complete': additionalDetailsForm.value.landlineNumber}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                        <label for="landlineNumber" class="head-sm">LANDLINE NUMBER</label>
+                        <input type="text" formControlName="landlineNumber" (keypress)="isNumberKey($event)" class="form-control" name="landlineNumber" id="landlineNumber" autocomplete="off">
+                        <span class="error-msg">
+                            Required *
+                        </span>
+                    </div>
+                    <div [ngClass]="{'complete': additionalDetailsForm.value.panNumber}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                        <label for="panNumber" class="head-sm">PAN NUMBER</label>
+                        <input type="text" formControlName="panNumber" class="form-control" name="panNumber" id="panNumber" autocomplete="off">
+                        <span class="error-msg">
+                            Required *
+                        </span>
+                    </div>
+                    <div [ngClass]="{'complete': additionalDetailsForm.value.annualIncome}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                        <label for="annualIncome" class="head-sm">ANNUAL INCOME</label>
+                        <input type="text" formControlName="annualIncome" (keypress)="isNumberKey($event)" class="form-control" name="annualIncome" id="annualIncome" autocomplete="off">
+                        <span class="error-msg">
+                            Required *
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-block primary bg-blue m-t-lg">
+            <button type="button" class="btn primary-btn mob-text-btn sm m-t-xs margin-xl">Save</button>
+            <button type="button" (click)="route()" class="btn primary-btn mob-btn sm m-t-xs">Next</button>
+        </div>
+        <!-- <div class="btn-block m-t-lg">
+            <button type="button" class="btn primary-btn theme-lg-btn">Save</button>
+            <button type="button" (click)="route()" class="btn primary-btn theme-lg-btn">Next</button>
+        </div> -->
+    </form>
+</div>

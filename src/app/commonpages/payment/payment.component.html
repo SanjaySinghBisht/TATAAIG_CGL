@@ -1,0 +1,324 @@
+<div class="theme-container">
+		
+		<div class="page-title"><div class="head-lg"><div class="nav-btn"><svg><use xlink:href="#ICON_Arrow" /></svg></div>PAYMENT</div></div>
+		<div class="block m-b-none">
+		<div class="payment premium-detail-card theme-card">
+		   <div class="card-content">
+			<div class="head-sm">Sapphire+</div>
+			<div class="fw-100 m-b-sm">
+				<div class="fw-50 payment-list">
+					<div class="theme-label">Payable Amount</div>
+					<div class="theme-value-bold">2,300/-</div>
+				</div>
+				<div class="fw-50 payment-list">
+					<div class="theme-label">Proposal Number</div>
+					<div class="theme-value-bold">1234567</div>
+				</div>
+		 </div>
+		</div>
+		<div class="fw-100 m-t-md"><label class="theme-value">You have initiated payment for</label><span class="m-l-sm theme-value">2300/-</span></div>	
+	</div>
+	<div class="block">	
+		<div class="payment-selection">
+			<form class="theme-form">
+			<div class="form-field m-r-md">
+				<div class="head-sm p-0">MODE OF PAYMENT</div>
+				<div class="theme-radio outset">
+					<input type="radio"  id="demand_draft" name="select_plan">
+					<label for="demand_draft" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+					<div class="lbl">Demand Draft</div>
+				</div>
+				<div class="theme-radio outset" >
+					<input type="radio"  id="cheque" name="select_plan" >
+					<label for="cheque" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+					<div class="lbl">Cheque</div>
+				</div>
+				<div class="theme-radio outset">
+					<input type="radio"  id="bank_guarantee" name="select_plan">
+					<label for="bank_guarantee" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+					<div class="lbl">Bank Guarantee</div>
+				</div>
+			</div>
+			<div class="form-field">
+				<div class="head-sm p-0">ONLINE PAYMENT</div>
+				<div class="theme-radio outset">
+					<input type="radio"  id="debit_card" name="select_plan">
+					<label for="debit_card" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+					<div class="lbl">Debit card</div>
+				</div>
+				<div class="theme-radio outset" >
+					<input type="radio"  id="credit_card" name="select_plan" (click)="paymentsuccess(payment_success1)">
+					<label for="credit_card" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+					<div class="lbl">Credit Card</div>
+				</div>
+				<div class="theme-radio outset">
+					<input type="radio"  id="upi_payment" name="select_plan">
+					<label for="upi_payment" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+					<div class="lbl">UPI Payment</div>
+				</div>
+				<div class="theme-radio outset">
+					<input type="radio"  id="net_banking" name="select_plan">
+					<label for="net_banking" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+					<div class="lbl">Net Banking</div>
+				</div>
+				<div class="theme-radio outset">
+					<input type="radio"  id="neft_rtgs" name="select_plan">
+					<label for="neft_rtgs" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+					<div class="lbl">NEFT/RTGS</div>
+				</div>
+			</div>
+			</form>
+		</div>
+		</div>
+	</div>
+	<form class="theme-form ">
+		<div class="theme-card w-100 has-form">
+		  <div class="card-content">
+		  <div class="head-sm p-l">DEMAND DRAFT</div>
+			<div class="field-three">
+				<div class="form-field col-md-6">
+					<div for="dddate" class="head-sm">DD DATE</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="ddnumber" class="head-sm">DD NUMBER</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="ifsccode" class="head-sm">IFSC CODE</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="accnumber" class="head-sm">ACCOUNT NUMBER</div>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+		  </div>
+		</div>
+		<div class="btn-block primary bg-blue">
+			<button type="button" class="btn primary-btn m-r-sm" disabled>Make Payment</button>
+		</div>
+	</form>
+	<form class="theme-form ">
+		<div class="theme-card w-100 has-form">
+		  <div class="card-content">
+		  <div class="head-sm p-l">CHEQUE PAYMENT</div>
+			<div class="field-three">
+				<div class="form-field">
+					<div for="payableamount" class="head-sm">PAYABLE AMOUNT</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="chequedate" class="head-sm">CHEQUE DATE</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="chequenumber" class="head-sm">CHEQUE NUMBER</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="ifsccode" class="head-sm">IFSC CODE</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="accnumber" class="head-sm">ACCOUNT NUMBER</div>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+		  </div>
+		</div>
+		<div class="btn-block primary bg-blue">
+			<button type="button" class="btn primary-btn m-r-sm" disabled>Add Payment</button>
+		</div>
+	</form>
+	<form class="theme-form ">
+		<div class="theme-card w-100 has-form">
+		  <div class="card-content">
+		  <div class="head-sm p-l">BANK GUARANTEE</div>
+			<div class="field-two">
+				<div class="form-field col-md-6">
+					<div for="date" class="head-sm">DATE</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="bankguaranteenum" class="head-sm">BANK GUARANTEE NUMBER</div>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+		  </div>
+		</div>
+		<div class="btn-block primary bg-blue">
+			<button type="button" class="btn primary-btn m-r-sm" disabled>Make Payment</button>
+		</div>
+	</form>
+	<form class="theme-form ">
+		<div class="theme-card w-100 has-form">
+		  <div class="card-content">
+		  <div class="head-sm p-l">DEBIT CARD</div>
+			<div class="field-three">
+				<div class="form-field v">
+					<div for="nameonboard" class="head-sm">NAME ON THE BOARD</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="cardnumber" class="head-sm">CARD NUMBER</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="expirydate" class="head-sm">EXPIRY DATE</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="cvv" class="head-sm">CVV</div>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+		  </div>
+		  <div class="fw-100  p-l-md m-t-sm">
+			<div class="head-sm">*Transactional charges are applicable</div>
+		  </div>
+		</div>
+		<div class="btn-block primary bg-blue">
+			<button type="button" class="btn primary-btn m-r-sm" disabled>Make Payment</button>
+		</div>
+	</form>
+	<form class="theme-form">
+		<div class="theme-card w-100 has-form">
+		  <div class="card-content">
+		  <div class="head-sm p-l">CREDIT CARD</div>
+			<div class="field-three">
+				<div class="form-field col-md-6">
+					<div for="nameonboard" class="head-sm">NAME ON THE BOARD</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="cardnumber" class="head-sm">CARD NUMBER</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="expirydate" class="head-sm">EXPIRY DATE</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="cvv" class="head-sm">CVV</div>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+		  </div>
+		  <div class="fw-100  p-l-md m-t-sm">
+			<div class="head-sm">*Transactional charges are applicable</div>
+		  </div>
+		</div>
+		<div class="btn-block primary bg-blue">
+			<button type="button" class="btn primary-btn m-r-sm" disabled>Make Payment</button>
+		</div>
+	</form>
+	<form class="theme-form">
+		<div class="theme-card w-100 has-form">
+		  <div class="card-content">
+		  <div class="head-sm p-l">UPI PAYMENT</div>
+			<div class="field-two">
+				<div class="form-field col-md-6">
+					<div for="upiid" class="head-sm">UPI ID</div>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div class="bar-code m-l-lg">
+				<svg class="barcode-icon"><use xlink:href="#ICON_Report" /></svg>
+			</div>
+		  </div>
+		</div>
+		<div class="btn-block primary bg-blue">
+			<button type="button" class="btn primary-btn m-r-sm" disabled>Make Payment</button>
+		</div>
+	</form>
+	<form class="theme-form">
+		<div class="theme-card w-100 has-form">
+		  <div class="card-content">
+		  <div class="fw-100 head-sm p-l">SELECT BANK</div>
+			<div class="form-field m-r-md">
+				<div class="theme-radio round">
+					<input type="radio"  id="axisbank" name="select_plan">
+					<label for="axisbank" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+				</div>
+				<div class="theme-radio round" >
+					<input type="radio"  id="hdfc" name="select_plan">
+					<label for="hdfc" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+				</div>
+				<div class="theme-radio round">
+					<input type="radio"  id="citibank" name="select_plan">
+					<label for="citibank" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+				</div>
+				<div class="theme-radio round">
+					<input type="radio"  id="icicibank" name="select_plan">
+					<label for="icicibank" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+				</div>
+				<div class="theme-radio round">
+					<input type="radio"  id="kotakbank" name="select_plan">
+					<label for="kotakbank" class="man"><svg class="icon-center"><use xlink:href="#ICON_Car" /></svg><span class="lbl" for="radio"></span></label>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<div class="btn-block primary bg-blue">
+			<button type="button" class="btn primary-btn m-r-sm" disabled>Make Payment</button>
+		</div>
+	</form>
+	<form class="theme-form ">
+		<div class="theme-card w-100 has-form">
+		  <div class="card-content">
+		  <div class="head-sm p-l">NEFT / RTGS</div>
+			<div class="field-three">
+				<div class="form-field col-md-6">
+					<div for="transactiondate" class="head-sm">TRANSACTION DATE</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="transactionnumber" class="head-sm">TRANSACTION NUMBER</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="accountnumber" class="head-sm">ACCOUNT NUMBER</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="bankname" class="head-sm">BANK NAME</div>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-field col-md-6">
+					<div for="branchname" class="head-sm">BRANCH NAME</div>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+		  </div>
+		</div>
+		<div class="btn-block primary bg-blue">
+			<button type="button" class="btn primary-btn m-r-sm" disabled>Make Payment</button>
+		</div>
+	</form>
+</div>	
+<ng-template #payment_success1>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-header">
+      <div class="close-icon" (click)="modalRef.hide()">
+         <svg>
+            <use xlink:href="#ICON_Cross" />
+         </svg>
+      </div>
+   </div>
+   <div class="modal-body p-0 payment-popup">
+      <div class="text-center m-b-md">
+		<div><svg class="icon-blue"><use xlink:href="#ICON_Payment_successful" /></svg></div>
+         <div class="head-md text-center f-bold">Payment Successful</div>
+         <span class="p-r-10 theme-label p-r-md">Policy Number</span>
+         <span class="theme-value">123465</span>
+      </div>
+      <div class="text-center p-sm double-btn">
+         <button type="button" class="btn secondary-btn m-r-sm">Dashboard</button>
+         <button type="button" class="btn secondary-btn m-l-sm">View Policy</button>
+      </div>
+   </div>
+   </div>
+   </div>
+</ng-template>

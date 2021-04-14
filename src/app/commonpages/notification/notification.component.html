@@ -1,0 +1,33 @@
+<div class="theme-container" #target>
+<div class="page-title">
+    <div class="nav-btn">
+        <svg>
+            <use xlink:href="#ICON_Arrow" />
+        </svg>
+    </div>
+    <div class="head-lg heading">NOTIFICATION</div>
+    <div class="pull-right breadcrum">
+        <span class="head-sm">Plan Details / </span> <span class="head-sm">Notification</span>
+    </div>
+</div>
+<form class="theme-form">
+      <div class="theme-card w-100  p-t-md p-r-0">
+                <div class="card-content">
+                    <div class="row mb-4 mt-4"  *ngFor="let notif of notificationStatus ;let i = index">
+                        <div class="col">
+                            <span class="theme-value">{{notif.name}}</span>
+                            <span>
+                                <svg class="icon-blue svg-xs ml-2">
+                                    <use xlink:href="#ICON_Sent_successfully" />
+                                 </svg>
+                            </span>
+                            <span class="theme-label pl-1">{{notif.time}}</span>
+                                <button *ngIf="notif.flag" type="button" class="btn-square btn quotelist-btn ml-4">View Proposal</button>
+                        <div class="dotted-border mt-4" *ngIf="i != 5"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+</form>
+</div>

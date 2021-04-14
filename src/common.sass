@@ -1,0 +1,4427 @@
+@import "sass/variable"
+@import "sass/mixins"
+@import "sass/fonts"
+@import "sass/placeholder"
+@import "@ng-select/ng-select/themes/default.theme.css"
+@import "sass/variable"
+@import "sass/mediaquery"
+@import "sass/tatagrid.sass"
+
+/*LEFT MENU STYLES*/
+/*PRODUCT SECTION*/
+/*BROWSER SUPPORT CSS*/
+/*MAIN BODY CSS*/
+/*BREADCRUMB STYLE*/
+/*TABLE STYLE*/
+/*LOADER STYLE*/
+/*THEME CARD STYLE*/
+/*BUTTON STYLE*/
+/*RADIO & CHECKBOX STYLE*/
+/*DISCLAIMER*/
+/*PREMIUM CARD STYLE*/
+/*PAGINATION*/
+/*LABEL STYLE*/
+/*MODAL STYLE*/
+/*DROPDOWN STYLE*/
+/*PREVIEW PAGE*/
+/*FORM STYLE*/
+/*TITLE STYLE*/
+/*HEADER STYLE*/
+/*TAB & ACCORDIAN STYLE*/
+/*CHECKBOX STYLE*/
+/*FONT SIZES*/
+/*MARGINS & PADDINGS*/
+/*ICON BUTTON STYLE*/
+/*SVG ICONS STYLES*/
+/*TOGGLE BUTTON STYLE*/
+/*DISPLAY FLEX STYLE*/
+/*DATE FIELD STYLE*/
+/*CIRCLE BUTTON STYLES*/
+/*MENBER COUNT BAGES STYLE*/
+/*PANEL STYLE*/
+/*FIXED MENU THEME CARD STYLE*/
+/*ERROR MESSAGE STYLE*/
+/*CLAUSES*/
+/*CUSTOM CLASS*/
+/*PENDING DETAILS*/
+/*FILTER STYLE*/
+/*CLIENT CONTAINER STYLES*/
+/*MULTISELECT DROPDOWN STYLE*/
+/*FONT-SIZE & WEIGHT*/
+/*MEDIA QUERIES*/
+
+
+@keyframes show-navbar-collapse 
+    0% 
+        opacity: 0
+        transform: scale(0.95)
+        transform-origin: 100% 0
+    
+
+    100% 
+        opacity: 1
+        transform: scale(1)
+    
+
+
+@keyframes hide-navbar-collapse 
+    from 
+        opacity: 1
+        transform: scale(1)
+        transform-origin: 100% 0
+    
+
+    to 
+        opacity: 0
+        transform: scale(0.95)
+
+/***************** LEFT MENU STYLE ********************/
+.left-container
+  box-shadow: $outset
+  left: 0
+  height:100%
+  position: fixed
+  width: 85px
+  padding: 15px 0px
+  background: $bg-color-8
+ 
+  .theme-menu
+   max-height: calc(100vh - 162px)
+   overflow-y: auto
+   padding-inline-start: 0px !important
+   li
+    color:$clr-primary
+    width:100%
+	
+.center-container
+  min-height: 100vh
+
+.right-container
+  right: 0
+  top: 0
+  display: none
+  position: fixed
+  height:100%
+  width: 395px
+  //background: $bg-color-8 // removed as per client request
+  
+.navbar-collapse-header
+  display: none
+.left-container .nav-toggle
+  display: none
+.left-container .theme-menu li:last-child
+  position: absolute
+  bottom: 0
+  left: 0
+  border-top: dotted 1px $clr-primary
+.left-container .logo
+  text-align: center
+  width: 100%
+/* Using SCSS variables to store breakpoints */
+@media screen and (max-width: 1000px)
+  .left-container .theme-menu
+    overflow-y: auto
+    max-height: calc(100vh - 161px)
+  .left-container .theme-menu li:last-child
+    border-top: none
+    position: static
+  .left-container
+    box-shadow: none
+    background: transparent
+    padding: 5px 10px
+  .left-container .logo
+    width: auto
+    text-align: left
+  .left-container .theme-menu li
+    float: left
+    text-align: left
+  .left-container .theme-menu li img
+    height:25px
+    width: 25px
+    float: left
+  .left-container .theme-menu li div
+    float: left
+    margin-top: 2px
+    margin-left:7px
+    font-size: 15px
+  .left-container,.right-container
+    position: static
+    display: inline-block
+    width: 100%
+  .left-container .logo img
+    width:60px
+  .center-container
+    overflow-y: auto
+    overflow-x: hidden
+    margin: 0px
+  .right-container
+    display: none
+	
+  .left-container .nav-toggle 
+    display: block
+
+  .navbar-collapse-header
+    display: block
+  .menu
+    max-width: 70%
+    margin: 0px auto
+    display: none
+    width: 100%
+    position: absolute
+    top: 20px
+    left: 0
+    right: 0
+    z-index: 0
+    overflow-y: auto
+    height: calc(100vh - 40px) !important
+    opacity: 0
+  .left-container.in .menu
+    z-index: 1
+    padding: 20px
+    color: $menu-color
+    border-radius: 0.55rem
+    background: $bg-color-7
+    animation: show-navbar-collapse .2s ease forwards
+    box-shadow: 6px 6px 12px $bg-color-5, -6px -6px 12px $default
+  .left-container.in
+    position: fixed
+    height: 100%
+    z-index: 1
+  .left-container.in .nav-toggle,.left-container.in .logo
+    display: none
+  .left-container.out .menu
+    animation: hide-navbar-collapse .2s ease forwards
+/***************** LEFT MENU STYLE*********************/ 
+
+/***************** PRODUCT SECTION ********************/
+.product-inner-page.full-width
+ width: 100%
+.right-container.full-width
+  display: none
+.product-inner-page
+ padding-top: 150px
+ padding-left: 265px
+ padding-bottom: 50px
+ float: left
+ //padding-right: 65px
+.right-container-closed
+  .right-container
+   display: none
+  .center-container
+   padding-right: 30px
+   width: 100%
+@media (max-width: 1600px)
+ .product-inner-page
+   padding-top: 120px
+   padding-left: 170px
+   //padding-right: 50px
+@media (max-width: 1400px) 
+ .right-container
+   width: 200px
+   
+@media (max-width: 1024px) 
+ .pt-0
+  padding-top: 0px !important
+   
+ .right-container
+   width: 100px 
+ .ws-text
+   white-space: nowrap !important
+ 
+@media (max-width: 1000px) 
+ .product-inner-page
+   padding: 105px 20px 20px 20px
+   float: left
+   width: 100%
+/**************** PRODUCT SECTION *********************/
+
+/**************** BROWSER SUPPORT CSS *****************/
+.form-control::-webkit-input-placeholder
+ color: $clr-primary !important
+ opacity: 0.5
+
+.form-control::placeholder
+ color: $clr-primary !important
+ opacity: 0.5
+
+.form-control::-moz-placeholder
+ color: $clr-primary !important
+ opacity: 0.5
+
+.form-control:-ms-input-placeholder
+ color: $clr-primary !important 
+ opacity: 0.5
+*
+ -webkit-overflow-scrolling: touch
+ -webkit-appearance: none
+/***************Chrome,safari,edge,opera*************/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+ -webkit-appearance: none
+ margin: 0
+/***************Firefox**************************/
+input[type=number]
+ -moz-appearance: textfield
+input[type="radio"], input[type="checkbox"]
+ visibility: hidden
+/*************CSS specific to iOS devices*******/
+@supports (-webkit-touch-callout: none) 
+ .multiselect-dropdown span.dropdown-btn,.ng-select.ng-select-single .ng-select-container,.form-control,input[type="text"],input[type=email],input[type=number],input[type=password],textarea
+  font-size: 16px
+/********************* BROWSER SUPPORT CSS **************/
+
+/********************* MAIN BODY CSS ********************/
+.main-body
+ float: left
+ width: 100%
+ position: relative
+body 
+ height: 100vh
+body,html
+ overflow-x: hidden
+ position: relative
+ font-size: 14px
+*,.btn
+ outline: none
+ &:focus,&:active 
+  outline: none !important 
+body,html
+ background:$bg-color
+ font-family: $pop-reg 
+.fw-50
+  +float(left, 50%)
+.fw-100
+  +float(left, 100%)
+.fw-70
+  +float(left, 70%)	
+.fw-80
+  +float(left, 80%)	
+.fw-30
+  +float(left, 30%)	
+.fw-25
+ +float(left, 25%)
+.fw-20
+ +float(left, 20%)
+.fw-15
+ +float(left, 15%)  
+.fw-33
+ +float(left, 33%)
+.fw-60
+ +float(left, 60%)
+.note-field
+ font-size: 11px
+ color: $clr-primary 
+::-webkit-scrollbar-track
+ background-color: rgba(6, 6, 6, 0.15)
+
+::-webkit-scrollbar
+ width: 8px
+ background-color: $primary-lite
+ height: 8px
+
+::-webkit-scrollbar-thumb
+ background-color: rgba(4, 4, 4, 0.2784313725490196)
+ +border-radius(50px) 
+
+.rupee
+ font-family: sans-serif
+ 
+.icon-blue
+ fill: #B9C9EF
+ height: 107px
+ width: 103px
+
+.t-t-none
+ text-transform: none
+
+.img-container
+  width: 300px
+  float: left
+
+.brdr-bottom
+ border-bottom: 1px dotted $pagination-colors
+
+input[type=radio], input[type=checkbox], input[type=button]  
+    &:focus + label
+      +box-shadow($outset)
+
+.toggle-btn input[type=checkbox]
+   &:focus + span:before
+      +box-shadow($outset)
+
+.link-btn:focus
+     +box-shadow($outset)
+
+.dotted-divider
+ margin: $m-20-0
+
+.alert-bg-color
+ background-color:$red-color
+ color: $default
+
+.alert-message
+ color: $default
+ font-size:$ft-18
+ opacity:100%
+ height:100px
+ font-weight:$ft-w-600
+.text-red
+ color:$red-color 
+.error-required
+ color:$err
+.mini-svg
+ height: 15px
+ width: 15px
+ margin-right: 5px
+
+.reload-icon
+ right: 10px
+ width: 22px
+ display: inline-block
+ position: relative
+ cursor: pointer
+
+.upload-error-img
+  height: 80px
+  width: 80px
+  right:0px
+
+.text-color
+ color:$clr-primary
+
+.inline-label
+ margin-right: 15px !important
+ line-height: 28px
+
+.heading2
+ font-size: 1em
+
+label
+  text-transform: uppercase
+/*************** MAIN BODY CSS *************/
+
+/*************** COMMON STYLE ****************/
+.dotted-border
+  border-bottom: 1px dotted rgb(81 96 129 / .5)
+
+
+
+.color-primary
+  color:$clr-primary
+
+.color-asqi
+  color: $clr-asqi !important
+
+.c-pointer
+  cursor: pointer
+
+textarea
+  resize: none 
+
+.clr-left
+  clear: left 
+   
+li
+  list-style: none
+  transition: all 0.2s ease-in-out
+ 
+.fa.fa-inr
+ margin-right: 5px
+
+.has-icon
+ position: relative 
+/*************** COMMON STYLE ****************/ 
+
+/************** BREADCRUMB STYLE ***********/
+.breadcrum 
+ span.head-sm
+  cursor: pointer
+  font-size: 1.286rem
+ span.head-sm
+  &:last-child
+   opacity: 0.4
+   margin-right: 5px
+
+.breadcrum 
+    position: absolute
+    top: 5px
+    right: 0
+/************** BREADCRUMB STYLE ************/
+
+/************** TABLE STYLE *****************/
+.disp-table
+  display: table 
+  +box-size(100vh, 100%)
+
+  .tbl-row
+    display: table-row
+    +mQ($mobile)
+     display: block
+
+  .tbl-cell
+    display: table-cell
+    vertical-align: top
+    +mQ($mobile)
+     display: block
+
+.table.no-borders 
+  tbody tr td 
+    border:0px
+
+.brdr-none
+  border: none !important
+
+.tbl-layout-fix 
+ table-layout: fixed
+ width:100%
+
+td.fixed-width
+ width:35%
+
+.table-small
+  max-width: 545px 
+
+.theme-table-container	
+    float: left
+    width: 100%
+    
+table.theme-table
+    border: none
+    background: $card-bg
+    +border-radius(20px !important)
+    font-size: 15px
+    +box-shadow($outset)
+    th
+        padding: 30px 22px
+        border-bottom: dotted 1px #ccc
+        +font_style(14px, $clr-secondary, $pop-med, 0.8)
+        font-weight: unset
+    //th:first-child
+       // padding-left: 60px
+    td
+        padding: 20px 22px
+        border-bottom: dotted 1px #ccc
+        +font_style(14px, $clr-primary, $pop-med, 1)
+    tr:last-child td
+        border-bottom: none
+    tr 
+     //td:first-child
+      //padding-left: 60px	
+
+.theme-smart-table
+ +box-shadow($outset)
+ +border-radius(10px)
+ background: $bg-color-4 
+ .form-control
+  height: 16px
+  width: 16px
+  position: relative
+  top: -3px
+  margin-right: 10px
+table.theme-smart-table tr td, table.theme-smart-table tr th
+   font-size: 11px !important
+   padding: 12px 10px !important
+   color: $table-color
+   border-top: none
+   font-weight: 500
+table.theme-smart-table tr td
+ font-weight: 600 
+table.theme-smart-table tr th a
+ color: $table-smart-color
+table.theme-smart-table tr th:first-child input
+ display: none
+table.theme-smart-table.table > thead > tr > th
+ border-bottom: none 
+table.theme-smart-table input[type='checkbox']:after
+ line-height: 1.5em
+ content: ''
+ display: inline-block
+ width: 22px
+ height: 22px
+ margin-top: -2px
+ margin-left: -2px
+ border: 2px solid $default-color
+ border-radius: 8px
+ background:$bg-color-11
+ +box-shadow($inset)
+
+table.theme-smart-table input[type='checkbox']:checked:after 
+ width: 22px
+ height: 22px
+ background:$bg-color-16
+ border: 2px solid $default-color
+ +box-shadow(none)
+
+table.theme-smart-table .ng2-smart-filters th
+  padding: 8px 10px !important
+  background-image: linear-gradient($bg-color-18, $bg-color-17)
+  border-bottom: none
+
+table input[type=checkbox]:checked:before 
+  top: -1px
+  left: 0px
+  width: 7px
+  height: 12px 
+  //border-top: 4px solid $bg-color-16 // pandiyarajan
+  //border-left: 4px solid $bg-color-16 // pandiyarajan
+  //border-right: 2px solid $default-color // pandiyarajan
+  border-bottom: 2px solid $default-color
+  -webkit-transform: rotate(50deg)
+  -moz-transform: rotate(50deg)
+  -ms-transform: rotate(50deg)
+  -o-transform: rotate(50deg)
+  transform: rotate(50deg)
+  -webkit-backface-visibility: hidden
+  -webkit-transform-origin: 100% 100%
+  -moz-transform-origin: 100% 100%
+  -ms-transform-origin: 100% 100%
+  -o-transform-origin: 100% 100%
+  transform-origin: 100% 100%
+
+table input[type=checkbox]:before 
+  content: ''
+  position: absolute
+  margin-top: 2px
+/************** TABLE STYLE *****************/
+
+/************** LOADER STYLE ****************/ 
+.spinner-txt
+ font-size: 25px 
+ color: rgb(29,31,136)
+ padding-top: 50px
+ 
+.menu-list
+  padding: 10px
+  +square(50px)
+  margin: 10px
+  +box-shadow($inset)
+  transition: all 2s ease-in-out
+  +border-radius(4px)
+
+  &:hover, &.active
+    +box-shadow($outset)
+/************** LOADER STYLE *****************/ 
+
+/************** THEME CARD STYLE *************/ 
+.theme-card.optional-card 
+ padding: 0px
+.block
+  @extend .fw-100
+  margin-bottom: 20px
+      
+.spouse-member .theme-card
+ width: 100%
+
+.theme-card
+ float: left
+ padding:0px 20px 20px 0px
+ +mQ($mobile)
+   padding-right: 0px
+ &.full
+  padding: 0px
+  width: 100%
+ .card-content
+  +float(left, 100%)
+  padding: 25px
+  border: none
+  background: $card-bg
+  +border-radius(20px !important)
+  //+box-shadow($outset)
+  +box-shadow($outset)
+  // margin: 0px 20px 20px 0px
+  position: relative
+  .card-head
+    +font_style(13px, $clr-secondary, $pop-semi, 1)
+    margin-bottom: 10px
+  +mQ($mobile)
+    width: 100% !important
+
+.theme-card.image-card
+  width: 300px
+  height: 215px
+  padding: 0px
+  border-radius: 10px 10px 0px 0px
+  background: $bg-color-14
+  position: relative
+  .image-container
+    box-shadow: $outset
+    width: 100%
+    height: 185px
+    border-radius: 10px 10px 0px 0px
+  .image-footer
+    +float(left, 100%)
+    padding: 10px
+    font-size: 11px
+    position: absolute
+    left: 0px
+    background: $gradient-dark-left  !important
+    color: $default-color
+    bottom: 0px
+    border-bottom-left-radius: 8px
+    border-bottom-right-radius: 8px
+
+.theme-card.optional-card
+  .info-icon
+    margin: 0px 10px	
+  .title
+    padding: 10px 
+    border-bottom: 1px dashed $clr-primary
+  .optional-card-body	
+    display: table
+    width: 100%
+    float: left
+  .optional-card-left
+    display: table-cell
+    vertical-align: middle	
+    max-width: 175px
+  .optional-card-right
+    display: table-cell 
+    vertical-align: middle	
+    width: 100px
+    text-align: center
+    .secondary-btn
+      min-width: 75px
+  .add-options	
+    display: flex
+    align-items: center
+
+.multicard-selection 
+  .theme-radio > label
+    height: 70px
+    width: 70px
+    margin: 0px
+    .icon-center
+        width: 50px
+        height: 50px
+  .theme-radio .lbl
+    width: 70px
+
+.theme-card.image-card
+  width: 300px
+  height: 215px
+  padding: 0px
+  border-radius: 10px 10px 0px 0px
+  background: $bg-color-14
+  position: relative
+  .image-container
+    +box-shadow($outset)
+    width: 100%
+    height: 185px
+    border-radius: 10px 10px 0px 0px
+  .image-footer
+    +float(left, 100%)
+    padding: 10px
+    font-size: 11px
+    position: absolute
+    left: 0px
+    background: $gradient-dark-left  !important
+    color: $default-color
+    bottom: 0px
+    border-bottom-left-radius: 8px
+    border-bottom-right-radius: 8px
+/************** THEME CARD STYLE ****************/ 
+ 
+/***************** BUTTON STYLE *****************/ 
+.btn-block
+  @extend .fw-100
+  margin-top: 10px
+  & > div
+   margin-top: 0px
+
+.double-btn .secondary-btn
+  min-width: 120px
+
+.additional-btn
+  max-width: 320px
+  width: 100%
+.primary-btn
+ +btn(primary)
+
+.secondary-btn 
+ +btn(secondary) 
+
+.link-btn
+ +btn(tertiary)
+ +font_style(18px, $clr-secondary, $pop-med, 0.5) 
+ cursor: pointer
+
+.normal-btn 
+ +btn(normal)
+
+.btn
+ &.sm
+  min-width: 150px !important
+
+.btn-block button
+ margin-bottom: 10px
+
+.theme-modal .double-btn .secondary-btn
+  width:200px  
+  margin-top: 30px
+  margin-bottom: 40px
+.btn.btn-square
+  border-radius:10%
+.btn.btn-round 
+  +border-radius(20px)
+
+.btn.btn-xs
+  padding: 1px 12px
+  font-size: 12px
+  line-height: 16px 
+
+.theme-lg-btn
+ height: 70px
+
+.theme-lg-btn, .theme-lg-btn.active, .theme-lg-btn:active, .theme-lg-btn:hover, .theme-lg-btn:focus
+ min-width: 400px
+
+.theme-sm-btn
+ height: 60px
+
+.theme-sm-btn, .theme-sm-btn.active, .theme-sm-btn:active, .theme-sm-btn:hover, .theme-sm-btn:focus
+ min-width: 200px
+/***************** BUTTON STYLE *****************/ 
+
+/***************** RADIO & CHECKBOX STYLE *******/  
+.theme-radio, .theme-check
+  float: left
+  position: relative
+  margin-right: 30px 
+  &.square
+   label
+    span
+     +justify-center
+     +font_style(12px, $clr-primary, $pop-reg, 1)
+  &.outset
+   label
+    +box-shadow($outset)
+    background:$shadow-bg
+  & > label
+   +square($rcSize)
+   +border-radius(10px)
+   +box-shadow($inset)
+   position: relative
+   cursor: pointer
+   //opacity: 0.8
+   //margin-left:15px
+   //margin-right:15px
+  .lbl
+   +font_style(12px, $clr-primary, $pop-reg, 0.8)
+   display: block
+   width: 100%
+   text-align : center
+   +box-size(transparent,auto)
+   &::after
+    +justify-center
+    content:""
+    //content: url(#$iconPath/man.png)
+	
+  input[type=radio], input[type=checkbox], input[type=button]
+   //display: none !important
+   width: 0px //changed by pandiyarajan  
+   position: absolute //changed by pandiyarajan  
+   &:checked + label
+     //+box-shadow($outset)
+     //background: $checked
+     //@extend %after-check
+     ~.lbl
+      @extend %after-check
+     &::after
+      content:" "
+      //content: url(#$iconPath/woman.png)
+
+.theme-radio.premium-card > label
+  +box-shadow($outset) 
+  font-weight: 100
+
+.theme-radio.round label, .theme-check.round label
+  +border-radius(50%)
+  margin-right: 8px
+  margin-left: 8px
+
+.theme-radio.square > label
+ margin-right: 0px
+
+.theme-radio.radio-btn, .theme-check.check-btn
+  height: 90px 
+  margin-bottom: 0px
+  opacity: 1
+
+.theme-radio.radio-btn
+ display: table
+
+.theme-radio.radio-btn input[type="radio"]:checked + label, .theme-check.check-btn input[type="checkbox"]:checked + label
+  +box-shadow($outset)
+  +font_style(20px, $clr-primary, $pop-semi, 1)
+  background: transparent linear-gradient(286deg, $bg-color-3 0%, $bg-color-4 100%) 0% 0% no-repeat padding-box
+
+.theme-radio.radio-btn input[type="radio"]:checked + label .lbl, .theme-check.check-btn input[type="checkbox"]:checked + label .lbl
+  opacity: 1
+
+.theme-radio.square input[type="radio"]:checked + label, .theme-check.square input[type="checkbox"]:checked + label
+  +box-shadow($outset)
+
+.theme-radio.round input[type="radio"]:checked + label, .theme-check.round input[type="checkbox"]:checked + label
+  +box-shadow($outset)
+
+.theme-radio.big-square input[type="radio"]:checked + label, .theme-check.big-square input[type="checkbox"]:checked + label
+  +box-shadow($outset) 
+
+.theme-radio.inset-radio
+  +mQ($mobile)
+   margin-right: 10px
+
+.theme-radio.round, .theme-check.round
+    margin-right: 20px
+    margin-bottom: 10px  
+
+.theme-radio.inset-radio label
+  padding:6px 20px
+  font-weight: 500
+  margin-bottom: 0px
+  +square(auto)
+  +mQ($mobile)
+   padding: 10px
+
+.theme-radio.radio-btn label
+  line-height: 1.5
+  display: table-cell
+  vertical-align: middle  
+
+.theme-radio.radio-btn label, .theme-check.check-btn label
+    text-align : center
+    padding: 15px 20px
+    +square(100%)
+    +font_style(20px, $clr-primary, $pop-reg, 0.5)
+    font-weight: unset
+    .lbl-txt
+     +justify-center
+
+.theme-check.type-2 input[type=checkbox]:checked + div .count
+  display: block !important
+  position: absolute
+  top: 0px
+  right: 1px
+  color: $default-color
+  font-size: 12px
+.payment-selection .theme-radio
+  min-height: 105px  
+
+.multicard-selection .theme-radio
+  min-height: 105px 
+
+
+.custom-radio-top.theme-radio input[type=radio]:checked + label::after, .custom-radio-top.theme-radio input[type=checkbox]:checked + label::after, .custom-radio-top.theme-check input[type=radio]:checked + label::after, .custom-radio-top.theme-check input[type=checkbox]:checked + label::after
+    content: url("assets/icon/ICON_Tick_white.svg")
+    background: $clr-primary	
+/***************** RADIO & CHECKBOX STYLE *****/  
+
+/***************** DISCLAIMER *****************/ 
+.disclaimer.check-default 
+  padding: 0px 0px 5px 70px
+  label
+    +font_style(18px, $clr-primary, $pop-med, 0.8)
+  .error-msg
+    padding-left: 0 !important
+    float: left
+    position: relative
+    bottom: 0
+    width: 100% 
+/***************** DISCLAIMER *****************/ 
+
+/***************** PREMIUM CARD STYLE *********/ 
+.premium-card-container
+  width: 100%
+  float: left
+  
+  label.premium-lbl
+   +square(100%)
+   +border-radius(20px)
+   //box-shadow: $outset
+   background: $bg-color-12 
+
+.premium-card-container .custom-radio-top label.premium-lbl
+   font-weight: 400
+   font-family: $pop-reg
+   position: relative
+   &:before
+    content: ""
+    position: absolute
+    right: -5px !important
+    top: -11px !important
+    +square(27px)
+    background: $default
+    +position(absolute, $left: auto, $right: 0px)
+    +border-radius(5px)
+    box-shadow: -3px -3px 6px $bg-color-4, 3px 3px 6px #BFC3CF
+   &:after
+     content: "" 
+     +square(20px)
+     background: $bg-color-11
+     position: absolute
+     left: auto
+     right: -2px
+     +border-radius(5px)
+     top: -7px
+
+.premium-card-container.with-tick
+ .premium-card
+  label:after
+    content: ""
+    //content: url("assets/icon/ICON_Tick_white.svg")
+    position: absolute
+    +square(40px)
+    border-radius: 50px
+    top: -18px
+    right: -10px
+    padding: 8px
+.premium-card
+  input[type=radio]:checked + label
+   font-family: $pop-reg !important
+   background: $bg-color-12
+   &:after
+    content: url("assets/icon/ICON_Tick_white.svg")
+    position: absolute
+    +square(40px)
+    border-radius: 50px
+    top: -18px
+    right: -10px
+    padding: 8px	
+    background: $bg-color-19
+    box-shadow: -3px -3px 6px $default 
+    border: 1px solid $default-color
+  .premium-container
+    float: left
+    padding: 20px
+    cursor: pointer
+    +box-size(100%, 100%)
+    color: $clr-primary
+  .premium-header
+    +float(left, 100%)
+    padding-bottom: 10px
+    min-height: 45px
+  .premium-body
+     +float(left, 100%)
+     .premium-text
+       text-align: center
+       padding: 10px
+
+  .premium-footer
+    +float(left, 100%)
+    padding: 10px
+    position: absolute
+    left: 0px
+    background: $bg-color-1
+    color: $default-color
+    bottom: 0px
+    border-bottom-left-radius: 15px
+    border-bottom-right-radius: 15px
+    .addons
+     font-size: 18px
+  .premium-type .head
+    font-size: 24px
+  .premium-type
+    float: left
+    text-align: left
+    font-size: 15px
+    .info-icon
+      margin-left: 5px
+      
+
+  .premium-header .premium-members
+    float: right
+    text-align: right
+    text-decoration: none
+    font-size: 15px
+  .premium-summary
+    float: left
+    width: 100%
+
+  .premium-amt, .date-head
+     +font_style(15px, $clr-secondary, $pop-med, 0.5)
+  .prem-card-detail
+     +font_style(15px, $clr-secondary, $pop-med, 0.3)
+  .member-count
+     +font_style(15px, $clr-primary, $pop-med, 0.3)
+
+  .premium-per-month
+    +font_style(28px, $clr-primary, $pop-med, 1)
+    padding-bottom: 5px
+  .premium-list
+    justify-content: space-between
+    border-top: 1px dotted rgb(81 96 129 / .5)
+    +float(left, 100%)
+    padding: 10px 0px
+    display: flex
+    align-items: baseline
+  .theme-lbl
+      text-align: left
+      text-align: left
+      +font_style(15px, $clr-secondary, $pop-med, 0.5) 
+      flex: 1
+
+  .premium-value
+      text-align: right
+      +font_style(15px, $clr-primary, $pop-semi, 1)
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option
+    padding: 10px 30px
+    font-size: 12px 
+/**************** PREMIUM CARD STYLE *************/ 
+	 
+/**************** PAGINATION *********************/
+.pagination-entries
+ margin: 35px 0px	
+ color: $clr-primary
+ opacity: 1
+ font-size: 18px 
+
+.pagination 
+ display: flex
+
+.pagination a 
+ color: $clr-primary
+ opacity: 1
+ background: $btn-pri-bg
+ +box-shadow($outset)
+ float: left
+ padding: 8px 16px
+ border: none
+ margin-right: 10px 
+ margin-bottom: 10px 
+ font-size: 18px
+ border-radius: 5px
+
+.pagination a.search-completed
+ background: $gradient-dark-left !important
+ +box-shadow(noen !important)
+ color: $default !important	
+
+.pagination a:hover:not(.active) 
+ background-color: $pg-bg-color
+
+.ngx-pagination 
+ .disabled
+    color: $pagining-inactive-link 
+    padding:8px !important
+
+.ngx-pagination 
+  .current 
+    background: $pagining-link  !important
+    color: $pagining-inactive-link !important
+    text-align: center !important
+    padding:8px !important
+    
+
+.ngx-pagination
+ li 
+   margin-right:10px !important
+   box-shadow: $outset
+   border-radius: 10px !important
+   background-color: $pagining-link !important
+   text-align: center !important
+   width: 28px
+
+.ngx-pagination
+ li.pagination-next
+  width: fit-content
+
+.ngx-pagination
+ li.pagination-previous
+  width: fit-content
+
+.ngx-pagination
+  a 
+   padding: 8px !important
+   border-radius: 10px !important
+
+.pagination-bg-color
+ background-color:$clr-primary !important
+/**************** PAGINATION *********************/
+ 
+/***************** LABEL STYLE *****************/    
+.label-left
+ padding-left: 0px !important
+
+.label-indent
+ padding-left: 15px !important
+
+.theme-label
+ +font_style(15px, $clr-secondary, $pop-med, 0.5)
+
+.theme-label-small
+ +font_style(10px,$pagination-colors, $pop-reg, 1)
+
+.theme-light-label
+  +font_style(18px, $clr-secondary, $pop-med, 0.3)
+
+.theme-light-label-small
+  +font_style(10px, #ABB3C4, $pop-reg, 1)
+
+.theme-value
+ +font_style(15px, $clr-primary, $pop-semi, 1)
+
+.theme-value-small
+ +font_style(11px, $clr-primary, $pop-reg, 1)
+
+.theme-light-value-small
+ +font_style(11px, #93A4CC, $pop-reg, 1)
+
+.theme-value-bold
+ +font_style(15px, $clr-primary, $pop-semi, 1)
+
+.theme-value-bold-small
+ +font_style(11px, $clr-primary, $pop-semi, 1)
+/***************** LABEL STYLE *****************/    
+
+/***************** MODAL STYLE *****************/
+.theme-modal
+  .modal-header
+    .close-icon svg
+       width: 13px 
+
+.theme-modal .modal-content .head-sm.m-b-0,.head-sm.m-b-0,.theme-card .card-content .form-field.m-b-0,.block.m-b-0,m-b-0
+  margin-bottom: 0px !important
+
+.modal-dialog
+  margin: auto
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  +float(left,100%)
+
+.modal.in .modal-dialog
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.modal.fade .modal-dialog 
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.modal.fade .modal-dialog 
+  transition: unset
+
+.modal-dialog
+ &.theme-modal
+  width: 100%
+  max-width: 480px
+ &.modal-sm  
+  width: 350px
+ &.modal-lg  
+  width: 1100px
+
+.modal-dialog.theme-modal .nav-btn
+  display: none
+
+.modal-dialog.modal-md.theme-modal
+  width: 100%
+  max-width: 1200px
+
+.modal-dialog.modal-xs.theme-modal
+  width: 100%
+  max-width: 750px
+
+.modal-dialog.declare-modal.theme-modal
+  width: 100%
+  max-width: 680px
+  +mQ(768px)
+    padding: 0px
+
+.modal-dialog.declare-modal.theme-modal .detail-container-modal
+  max-width: 680px
+
+.modal-dialog.filter-modal.theme-modal
+  width: 100%
+  max-width: 780px
+  +mQ(768px)
+    padding: 0px  
+
+.modal-dialog.filter-modal.theme-modal .detail-container-modal
+  max-width: 780px  
+
+.modal-dialog.right.theme-modal
+  position: fixed
+  max-width :100%
+  right: 0px
+  top: 0px
+  height: 100%
+  margin: 0px
+  .modal-content
+    height: 100%
+    overflow: auto
+
+.theme-modal
+  .modal-form
+   .modal-header
+    padding: 40px 40px 40px 70px
+  .modal-header
+    padding: 40px
+    position: relative
+    border: none
+    .close-icon
+     right: 44px
+     top: 32px
+     +square(45px)
+    .modal-title
+     +font_style(22px, $clr-primary, $pop-med, 1)
+     border: none	
+    .close
+      +box-shadow($outset)  
+      +border-radius(50%)
+      background: $bg-color-8
+      padding: 1px 6px
+      +position(absolute, 50%, 35px, auto, auto)
+	  
+      span
+        position: relative
+        top: -4px
+        font-size: 20px
+  .modal-content
+    +float(left,100%)
+    background:$modal-bg
+    border: none
+    float: left
+    +box-shadow($outset)
+    +border-radius(10px) 
+    padding: 10px
+    .theme-form 
+      float: none
+      .form-field
+        width:100%
+        //margin-bottom: 25px
+    .head-sm
+      margin-bottom: 10px !important 
+    .secondary-btn
+      margin-top: 10px 
+
+.theme-modal.popup-small .btn.sm
+  min-width: 135px  !important
+
+.popup-large.theme-modal .modal-content .detail-container-modal
+  width: 100%
+  max-width: 1000px
+
+.popup-table.theme-modal .modal-content .detail-container-modal
+  width: 100%
+  max-width: 900px
+  .modal-body
+    padding: 0px
+    .table
+        margin-bottom:0px
+
+.medicare.theme-modal .modal-content .detail-container-modal
+  width: 100%
+  max-width: 380px
+
+.medicare.theme-modal .modal-header
+  .modal-title
+    font-size: 15px
+  .nav-btn
+    display: none
+
+.add-discount.theme-modal .modal-content
+  min-width: 420px  
+
+.theme-modal .modal-content 
+  display: table-row
+  width: 100%
+  height: 100%
+  float: none
+  +box-shadow(none)
+  background: none
+  
+.modal.fade .modal-dialog 
+  top: 0
+  left: 0
+  transform: inherit
+  display: table
+  width: 100%
+  height: 100vh
+  max-width: 100%
+  
+.modal-container
+  display: table-cell
+  width: 100%
+  height: 100vh
+  vertical-align: middle
+  padding: 20px 10px
+
+.modal-body  
+  padding: 0px 40px 40px 40px 
+  float: left
+  width: 100%
+
+.no-header .modal-body 
+  padding: 40px
+
+.modal-body.has-form .theme-radio > label,.modal-body.has-form .theme-check > label
+  margin-left: 0px !important
+  
+.modal-body.succes-container .theme-value,.modal-body.members-modal .theme-value
+  font-family: $pop-semi
+
+.success-tbl td
+  padding: 4px 
+
+.modal-body.succes-container .head-md 
+  margin-bottom: 10px
+
+.modal-body .double-btn
+  float: left
+  width: 100%
+
+.detail-container-modal
+  display: table
+  width: 100%
+  margin: 0 auto
+  background: $bg-color-4
+  border-radius: 10px
+  +box-shadow($outset)
+
+.detail-container-modal.premium-breakup-details
+   max-width: 280px
+
+.detail-container-modal.modal-xl
+  max-width: 900px
+
+.detail-container-modal.modal-lg
+  max-width: 750px
+
+.detail-container-modal.modal-md
+  max-width: 650px
+
+.detail-container-modal.modal-sm
+  max-width: 550px
+
+.modal-backdrop
+  background-color:$primary-lite
+  opacity:0.8 
+  &.in
+    opacity:0.8 
+  
+.theme-modal .modal-content .theme-form .field-two .form-field
+ width: 50%
+
+.optional-covers .detail-container-modal
+ max-width:1100px
+
+.optional-covers.theme-modal .modal-content .theme-form .field-two .form-field
+ width: 50%
+
+.popup-large .theme-form .field-three .form-field  
+  width: 33.33%  !important
+  
+.popup-large .theme-form .check-default
+  padding-left: 25px
+
+.modal-body.full
+  padding:15px 30px 
+
+.modal-body .theme-form .img-container.drag-box
+  width: 100% !important
+
+.modal-body .theme-form .img-container .theme-card .drag-dropdown
+  height: 225px !important 
+
+.modal-body .theme-form .img-container .theme-card.image-card
+  width: 100% !important
+  height: 260px !important
+
+.theme-modal .secondary-btn, .theme-modal .double-btn .secondary-btn, .theme-modal .modal-content .contact-details .secondary-btn, .group-btn2 .primary-btn
+  height: 60px
+/***************** MODAL STYLE *****************/
+
+/***************** DROPDOWN STYLE **************/ 
+.open > .dropdown-menu
+ margin-top: 10px
+
+.ng-select-container
+ margin-bottom: 20px 
+
+.ng-select.ng-select-single.ng-select-filtered .ng-select-container .ng-value-container .ng-value
+ visibility: visible !important
+
+.ng-select.ng-select-single.ng-select-filtered.ng-select-opened .ng-select-container .ng-value-container .ng-value
+ visibility: hidden !important
+
+.ng-select.ng-select-opened .ng-select-container,.ng-dropdown-panel
+ z-index: 1 !important
+
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input
+ color: $clr-primary !important
+
+.ng-dropdown-panel .scroll-host
+ border-radius: 20px
+ background: transparent linear-gradient(312deg, $bg-color-3 0%, $bg-color-4 100%) 0% 0% no-repeat padding-box
+ box-shadow: $outset
+
+.ng-select.ng-select-single .ng-dropdown-panel
+ border-radius: 20px
+ margin-top: 10px
+
+.ng-dropdown-panel.ng-select-bottom .ng-dropdown-panel-items .ng-option:last-child
+ border-bottom-right-radius: 20px
+ border-bottom-left-radius: 20px
+ border-bottom: none
+
+.multiselect-dropdown span.dropdown-btn .ng-star-inserted
+ opacity: 0.5 !important
+
+.ng-select .ng-select-container .ng-value-container .ng-placeholder
+ color: $clr-primary
+
+.complete .multiselect-dropdown span.dropdown-btn .ng-star-inserted,.complete .ng-select.ng-select-single .ng-select-container .ng-value-container, .complete .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value
+ opacity: 1 !important
+
+.ng-select.ng-select-single.ng-invalid .ng-select-container .ng-value-container, .complete .ng-select.ng-select-single.ng-invalid .ng-select-container .ng-value-container
+ opacity: 0.5 !important
+
+.ng-select.ng-select-single.ng-invalid.ng-select-filtered .ng-select-container .ng-value-container
+ opacity: 1 !important
+
+.complete .ng-select.ng-select-disabled .ng-select-container .ng-value-container .ng-value, .ng-select.ng-select-disabled .ng-select-container .ng-value-container .ng-value
+ opacity: 0.8 !important
+
+.ng-select.ng-select-single .ng-select-container .ng-value-container, .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value
+ padding-left: 7px
+
+.ng-select .ng-select-container .ng-value-container .ng-input>input
+ padding-left: 15px
+
+.ng-select .ng-select-container .ng-value-container .ng-input > input
+  height: 55px
+
+.ng-select.ng-select-single .ng-select-container,.multiselect-dropdown span.dropdown-btn
+    height: 70px
+    min-height: 70px
+    background: $bg-color-6 !important
+    opacity: 1 
+    border: none !important
+    +box-shadow($outset !important) 
+    +border-radius(33px !important)
+    +font_style(20px, $clr-primary, $pop-semi, 1)
+
+.ng-select.ng-select-single .ng-select-container.ng-has-value,.ng-select.ng-select-single .ng-select-container.ng-select-focused,.ng-select.ng-select-single .ng-select-container.ng-select-opened,.ng-select.ng-select-single .ng-select-container.ng-select-searchable
+       +box-shadow($outset !important)   
+
+.ng-select.ng-select-opened>.ng-select-container:hover
+    +box-shadow($inset !important) 
+
+.ng-select.ng-select-focused:not(.ng-select-opened)>.ng-select-container
+    +box-shadow($outset)
+
+.multiselect-dropdown span.dropdown-btn
+    height: 70px
+    min-height: 70px
+    background: $bg-color-6 
+    opacity: 1 
+    border: none !important
+    +box-shadow($outset)
+    +border-radius(33px !important)
+    +font_style(20px, $clr-secondary, $pop-semi, 1)	
+
+ng-multiselect-dropdown.ng-valid .multiselect-dropdown .dropdown-btn
+  padding: 14px 30px !important
+
+ng-multiselect-dropdown.ng-invalid .multiselect-dropdown .dropdown-btn
+  padding: 14px 30px !important
+
+.ng-dropdown-panel.ng-select-bottom
+    border: none
+    background: $card-bg
+    +border-radius(10px)
+    +box-shadow($outset)
+    font-size: 20px
+    font-family:$pop-med
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option
+    background: $card-bg
+    color:$clr-secondary
+    border-bottom: solid 1px #e8e9ea
+    padding: 20px 30px
+    opacity: 0.5
+	
+.ng-dropdown-panel .ng-dropdown-panel-items
+    .ng-option.ng-option-marked
+     background: $bg-color-4
+     color: $clr-secondary
+    .ng-option.ng-option-selected
+     color: $clr-primary !important
+     opacity: 1
+     background: $bg-color-4 !important
+	
+.ng-select .ng-select-container .ng-value-container .ng-placeholder
+  padding-left: 9px
+
+ngx-dropzone.custom-dropzone
+  display: block
+  width: 100%
+  height: 100%
+  border: none
+  background: $bg-color-14
+  text-align: center
+
+ngx-dropzone.custom-dropzone ngx-dropzone-image-preview.img-preview
+  max-width: 100% !important
+  margin: 0px !important
+  height: 100% !important
+  img
+    height: 220px !important
+    width: 100% !important	
+
+ngx-dropzone.custom-dropzone
+  display: block
+  width: 100%
+  height: 100%
+  border: none
+  background: $bg-color-14
+  text-align: center
+
+ngx-dropzone.custom-dropzone ngx-dropzone-image-preview.img-preview
+  max-width: 100% !important
+  margin: 0px !important
+  height: 100% !important
+  img
+    height: 220px !important
+    width: 100% !important
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
+ +box-shadow($outset)
+ background: none
+ border: none 
+ color: $pagination-colors
+ border-radius: 4px
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus
+ text-decoration: none
+
+.ng2-smart-pagination .ng2-smart-page-item:first-child, .ng2-smart-pagination .ng2-smart-page-item:last-child
+ display: none  !important 
+ 
+.ng2-smart-pagination .ng2-smart-page-item a.page-link-next, .ng2-smart-pagination .ng2-smart-page-item a.page-link-prev
+  +box-shadow($outset)
+  span
+    display: none
+
+.ng2-smart-pagination .ng2-smart-page-item a.page-link-next, .ng2-smart-pagination .ng2-smart-page-item a.page-link-prev
+  span.sr-only 
+    display: block
+    width: auto
+    height: auto
+    margin: 0px	    
+    position: relative
+
+.ng2-smart-pagination .ng2-smart-page-item.disabled a.page-link-next, .ng2-smart-pagination .ng2-smart-page-item.disabled a.page-link-prev
+  +box-shadow($inset)
+
+.ng2-smart-pagination-nav
+ float: right
+ 
+ng2-smart-table-pager
+ display: block !important
+.ng2-smart-pagination .ng2-smart-page-item
+ padding: 4px
+ a
+  +box-shadow($inset)
+  border: none
+  border-radius: 4px
+  background-color: inherit
+
+
+.ng-select .ng-arrow-wrapper
+ padding-right: 0px
+ width: auto
+
+.ng-select .ng-arrow-wrapper .ng-arrow
+ border-width: 9px 8px 2.5px
+ position: relative
+ top: 2px
+ border-color: $clr-secondary transparent transparent
+
+ng-select .ng-select-container 
+ padding: 20px 17px
+
+.header ng-select .ng-select-container
+ padding: 0px
+
+.ng-select.ng-select-opened>.ng-select-container .ng-arrow 
+ border-width: 0px 9px 9px !important
+
+//.ng-select .ng-arrow-wrapper:hover .ng-arrow 
+ //border-top-color: transparent !important
+
+.header .ng-select.ng-select-single .ng-select-container
+  +box-shadow($outset)
+
+.ng-select .ng-clear-wrapper
+  display: none
+//ng-select span.ng-value-label.ng-star-inserted, .form-field input
+ //opacity: 0.5
+
+.ng-select.ng-select-single .ng-select-container,.ng-select.ng-select-single .ng-dropdown-panel, .multiselect-dropdown span.dropdown-btn
+    font-size: 20px	
+
+.dropdown button .user-name
+ padding-right: 20px !important
+ color: $clr-secondary 
+/***************** DROPDOWN STYLE *****************/ 
+	
+/***************** PREVIEW PAGE **********************/
+.preview-details
+  .info-icon
+   width: 40px
+   height: 40px
+  .info-icon svg
+   width: 25px
+   height: 25px
+
+.preview-structure .flex-box-100:nth-child(2n+1), .preview-structure .flex-box-100:nth-child(3n+2), .preview-structure .flex-box-100:nth-child(1n+1)
+  border-bottom: 1px dotted rgb(81 96 129 / .5)
+  padding: 20px 0px
+
+.preview-structure .flex-box-100:last-child
+  border-bottom: 0px
+  padding-bottom: 0px
+
+.flex-box-100 
+   flex: 0 1 100%
+
+.preview-details .theme-value
+ font-size: 18px	
+
+.preview-details
+ td
+   word-break: break-word
+   padding: 4px 0px
+   vertical-align: top
+   span 
+    display: inline-block
+    width: 100%
+ .theme-label
+    +font_style(18px, $clr-secondary, $pop-med, 0.5)
+ .head-sm
+    +font_style(18px, $clr-secondary, $pop-med, 0.8)
+    padding-left: 0px	
+ .head-sm.light
+    +font_style(13px, #1cb0b7, $pop-reg, 1)
+
+.premium-breakup td
+ padding: 10px 0px 
+
+.premium-breakup .total
+ padding: 30px 0px 
+
+.premium-breakup tfoot
+ border-top: 1px dotted $pagination-colors
+ border-bottom: 1px dotted $pagination-colors 
+
+.preview-details .head-md
+  +font_style(24px, $clr-primary, $pop-med, 1)
+
+.preview-details .preview-structure td .theme-value
+    padding-left: 0px !important  
+.theme-tab .nav-item a.nav-link.active:after
+  bottom: -9px
+.note
+  width: 100% 
+/***************** PREVIEW PAGE ********************/
+  
+/***************** FORM STYLE **********************/
+:root
+ --fldgap: 65px
+ --fldgapL: 45px
+ --fldgapT: 30px
+ --fldgapM: 20px
+
+.theme-form .theme-form-card
+ float: left
+ width: 100% 
+
+.card-content.theme-form-card .sub-head-sm, .card-content.theme-form-card .card-head.label-indent, .calc-left-pad
+ padding-left: calc(Calc(var(--fldgap)/2) + 30px) !important
+
+.card-content.theme-form-card
+ padding: 25px
+
+.theme-form .no-gap
+  position: relative
+
+.quote-listing-container .form-group 
+  input
+    font-size:13px
+	
+  .input-group	
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    width: 100%
+  
+  .input-group .input-group-append 
+    position: absolute
+    right: 10px
+    display: inline-block
+    width: 20px
+    z-index: 462
+    top: 8px
+  
+  .input-group .form-control
+    padding-right:40px
+  
+.form-control 
+  background: transparent
+  border: none !important
+  +box-shadow($inset)
+  +border-radius(20px !important)
+  +font_style(12px, $clr-primary, $pop-med, 1)
+  height: 70px
+  &:focus
+   +box-shadow($outset)
+   
+.detail-list-container .form-group 
+  input
+    font-size:18px
+	
+  .input-group	
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    max-width: 800px
+    float: left
+    width: 100%
+  .input-group .input-group-append 
+    position: absolute
+    right: 40px
+    display: inline-block
+    width: 29px
+    z-index: 8
+    top: 55px
+  
+  .input-group .form-control
+    padding-right:40px
+  
+	
+.form-control 
+  @extend %after-check
+  background-color: transparent !important
+  border: none !important
+  +box-shadow($inset)
+  +border-radius(33px !important)
+  +font_style(20px, $clr-primary, $pop-semi !important, 1 !important)
+  height: 70px
+  &:focus
+   +box-shadow($outset)  
+
+.form-field.lg
+  min-height: 190px
+
+.form-field
+ margin-bottom:30px
+ float: left
+ position: relative!important
+ .head-sm
+  opacity:0.8
+  padding-left: 30px
+  height: 20px
+  margin-bottom: 20px
+
+.form-field.rectangle-field
+  min-height: 160px !important 
+
+.form-control
+ padding: 20px 30px
+
+.step-completed 	
+ background: transparent linear-gradient(174deg, $bg-color-1 0%, $bg-color-2 100%) 0% 0% no-repeat padding-box
+ +box-shadow(none !important)
+ color: $default
+ pointer-events: none
+ opacity : 1!important
+ .icon-center
+  fill: $default
+ +.lbl
+  @extend %after-check
+
+.theme-form
+ +float(left, 100%)
+ .field-one
+   .form-field
+      width: SplitCol(1)
+ .field-two
+   .form-field
+     //width: 50% !important
+     width: SplitCol(2)
+ .field-three
+   .form-field
+     width: SplitCol(3)
+ .field-four
+   .form-field
+     width: SplitCol(4)
+
+.highlighted
+  background: linear-gradient(to left, $bg-color-1, $bg-color-2)
+  color:$default-color  !important
+
+textarea.form-control
+ border-radius: 20px !important
+.custom-file-input.ng-valid + input + label.custom-file-label
+ text-align: left
+ padding: 20px 30px !important
+
+.form-control[disabled],[disabled]
+  background-color: $bg-color-12
+  opacity: 0.8 !important
+
+.complete .head-sm
+ opacity: 0.3 !important
+
+.complete input, .complete ng-select span.ng-value-label.ng-star-inserted
+ opacity: 1 !important 
+
+.form-field
+ min-height: 135px 
+
+.no-minheight .form-field 
+ min-height: auto
+
+.modal .has-form .contact-details 
+ .form-field
+  margin-bottom: 15px
+  min-height: auto
+ .error-msg
+  position: relative
+/*************** FORM STYLE ******************/
+   
+/*************** TITLE STYLE *****************/
+.head-lg 
+  +font_style(35px, $clr-primary, $pop-med, 1) 
+
+.sub-head-sm
+  +font_style(18px, $clr-secondary, $pop-med, 0.3) 
+
+.head-md
+  +font_style(18px, $clr-primary, $pop-med, 0.3) 
+
+.head-sm, .modal-body .head-sm
+  +font_style(18px, $clr-secondary, $pop-med, 0.8)
+  .info-icon
+   top: 5px
+  .downld-btn
+   top: 0px
+  margin-bottom:10px
+
+.f-bold
+ font-weight: 600
+
+.form-head
+  +font_style(12px, $clr-secondary1, $pop-semi, 1)
+  text-transform: uppercase
+  padding-bottom: 10px
+
+.page-title
+ margin-bottom: 30px
+ width:100%
+ float: left
+ position: relative
+ //display: flex
+ align-items: center
+
+.page-title .nav-btn
+ float: left
+ margin-right:25px
+ padding:5px
+ +border-radius(55px)
+ position: relative
+ +box-shadow($outset) 
+ background: $shadow-bg
+ +square(55px)
+ border: none
+ cursor: pointer
+
+ svg
+  fill: #333
+  +justify-center
+  +square(25px)
+
+.page-title .head-lg .head-date
+  +font_style(20px, $clr-secondary, $pop-med, 0.3)
+
+.page-title .heading
+ margin-top: 4px
+ padding-left: 8px 
+/*************** TITLE STYLE *****************/
+
+/*************** HEADER STYLE ****************/
+.header li
+ opacity: 1 !important  
+
+.header
+ opacity :1 !important
+ .dropdown
+  opacity :1 !important
+
+.header .address-block .dropdown button, .header .user-block .dropdown button 
+ min-width: 240px
+
+.header .ng-select .ng-arrow-wrapper .ng-arrow
+ right: 10px 
+
+.header .user-block .dropdown button,.header .address-block .dropdown button
+ min-width: 175px
+
+.header .form-field .head-sm
+ padding-left: 30px !important
+ letter-spacing: -0.2px
+ color: $clr-secondary
+ opacity: 0.3
+ font-family: $pop-med
+
+.header .ng-select .ng-arrow-wrapper
+ margin-left: 15px
+
+.header .address-block .dropdown button
+ min-width: 300px !important
+.header .address-block .dropdown .dropdown-menu
+ width: 100%
+
+.img-container
+  width: 300px
+  float: left
+
+
+.brdr-bottom
+ border-bottom: 1px dotted rgb(81 96 129 / .5)
+
+.header .ng-select.ng-select-single .ng-select-container
+ box-shadow: -1px -1px 6px $default, 3px 3px 6px $bg-color-5
+ padding-right: 35px
+ .ng-select .ng-clear-wrapper
+  display: none
+
+.header .ng-select .ng-arrow-wrapper .ng-arrow
+ right: -10px
+
+.ng-select .ng-clear-wrapper
+  display: none
+  
+td .theme-value
+ font-family: $pop-semi 
+ 
+.dropdown-menu
+ +box-shadow($outset)
+ border-radius: 20px
+ background-color:$dr-color
+ border: none
+ padding: 10px 20px 5px
+.dropdown-menu > li > a
+ padding: 8px 0px
+ color: $drp-menu-color
+ font-size: 14px
+
+.dropdown-menu>li>a, .header .theme-light-label 
+  font-size: 18px
+ 
+.header .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,.header .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked
+ color: $clr-primary !important
+
+.header .ng-dropdown-panel .ng-dropdown-panel-items .ng-option 
+ padding: 20px 30px
+ font-size: 20px
+ font-family: $pop-med !important
+
+.header .ng-select.ng-select-single .ng-select-container .ng-value-container,.header .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value 
+ padding-left: 15px !important
+ 
+.check-custom-btn label.radio-height
+ width: auto
+ min-width: 60px !important
+ padding: 5px 10px
+ min-height: 30px !important
+ height: 30px !important
+ text-align: center
+ border-radius: 50px
+
+span.user-name 
+ margin-right: 60px !important
+.header .link-btn
+ color: $clr-primary !important
+ opacity: 1 !important
+.header .ng-select.ng-select-single .ng-select-container 
+ font-family: $pop-med
+.header .form-field 
+ min-height: auto
+.header .ng-select .ng-arrow-wrapper .ng-arrow
+ border-width: 10px 10px 10px !important
+
+/*************** HEADER STYLE ****************/
+
+/*************** TAB & ACCORDIAN STYLE *******************/
+.theme-tab
+  .nav-tabs
+   margin-bottom:20px
+   .tab-item  > a 
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    color: $clr-primary
+    border: none
+    background: transparent
+    opacity: 0.3
+    font-size: 18px
+    padding: 8px
+    &:active,&:hover,&:focus
+     border: none
+     background: transparent
+    &.active
+     color: $clr-secondary
+     opacity: 1
+     font-family: $pop-med
+     &:hover 
+      color: $clr-secondary
+  .nav-tabs::after 
+   content: ""
+   padding: 2px
+   background: $shadow-bg
+   width: 100%
+   +border-radius(10px)
+   +box-shadow($outset)
+  .nav-item
+   +float(left, 50%)
+   text-align : center
+   
+   a.nav-link.active:after
+    content: ""
+    padding: 2px
+    background: $bg-color-10
+    width: 100%
+    +border-radius(10px)
+    position: absolute
+    left: 0
+    bottom: -5px
+   
+.nav-tabs > li.active > a
+  color: $clr-primary
+  cursor: default
+  background-color: transparent
+  border: none
+  border-bottom-color: transparent
+
+  &:hover, &:focus
+    color: transparent
+    cursor: default
+    background-color: transparent
+    border: none
+    border-bottom-color: transparent 
+
+.theme-tab.left-tab .nav-tabs .tab-item > a
+  justify-content: left
+  padding: 8px 0px
+
+.theme-accordian .panel-group
+  -webkit-box-shadow: $outset
+  +box-shadow($outset)
+  margin-top: 10px
+  border-radius: 10px
+  .btn-link
+    font-size: 13px  
+  .panel  
+    border-radius: 10px  
+/*************** TAB & ACCORDIAN STYLE *******************/
+
+/*************** CHECKBOX STYLE **************/
+.check-default
+  position: relative
+  +float(left, auto)
+  padding: 5px 0px 5px 70px
+  +font_style(18px, $clr-primary, $pop-lite, 1)
+  .checkbox 
+    width: 0px //changed pandiyarajan
+    position: absolute //changed pandiyarajan 
+  &label
+   &::after
+    content:" "
+    +square(20px)
+    background: $bg-color-11
+
+  label
+   font-weight: 400
+   font-family: $pop-reg
+   cursor: pointer  
+   +box-shadow(none !important)
+   &:before
+    content: ""
+    +square(51px)
+    background: $default
+    +position(absolute, $left: 0px, $right: 0px)
+    +border-radius(5px)
+    box-shadow: -3px -3px 6px $bg-color-4, 3px 3px 6px #BFC3CF
+   &:after
+     content: "" 
+     +square(40px)
+     background: $bg-color-11
+     position: absolute
+     left: 6px
+     +border-radius(5px)
+     top: 6px
+  .checkbox:checked + label:after
+    content: url("assets/icon/ICON_Tick_white.svg")
+    background: transparent linear-gradient(174deg, $bg-color-1 0%, $bg-color-2 100%) 0% 0% no-repeat padding-box
+  .checkbox:checked + label:before
+    box-shadow: none
+/*************** CHECKBOX STYLE **************/ 
+
+/*************** FONT SIZES ******************/
+.font-xxl
+  font-size:25px
+
+.font-xl
+  font-size:22px
+
+.font-lg
+  font-size:18px
+
+.font-md1
+  font-size:16px
+
+.font-md
+  font-size:15px !important
+
+.font-sm1
+  font-size:13px
+
+.font-sm
+  font-size:12px
+.font-sm-13
+  font-size:13px !important
+.font-xs
+  font-size:10px !important
+
+.font-xxs
+  font-size:6px	
+/*************** FONT SIZES ******************/ 
+
+/*************** MARGINS & PADDINGS **********/
+.m-0-a
+ margin: 0 auto  
+
+.p-xxs 
+  padding: 5px
+  
+.p-l-none
+  padding-left: 0 !important  
+
+.p-xs 
+  padding: 10px
+.p-t-xs 
+  padding-top: 5px
+
+.p-sm 
+  padding: 15px
+
+.p-m 
+  padding: 20px
+
+.p-md 
+  padding: 25px
+
+.p-lg 
+  padding: 30px
+
+.p-xl 
+  padding: 40px
+
+.p-w-xs 
+  padding: 0 10px
+
+.p-w-sm 
+  padding: 0 15px
+  
+.p-l
+  padding-left: 15px
+
+.p-w-m 
+  padding: 0 20px
+
+.p-w-md 
+  padding: 0 25px
+
+.p-w-lg 
+  padding: 0 30px
+
+.p-w-xl 
+  padding: 0 40px
+  
+.p-r-md
+  padding-right:20px
+
+.p-r-lg
+  padding-right:30px  
+
+.p-l-sm
+  padding-left: 10px !important
+  
+.p-l-md
+  padding-left:20px
+  
+.p-l-lg
+  padding-left:30px    
+  
+.p-r-sm
+  padding-right:10px !important
+
+.p-r-xl  
+  padding-right: 40px
+  
+.p-h-xs 
+  padding: 10px 0
+
+.p-h-sm 
+  padding: 15px 0
+
+.p-h-m 
+  padding: 20px 0
+
+.p-l-xs 
+  padding-left: 5px
+.p-r-xs 
+  padding-right: 5px
+  
+.p-l 
+  padding-left: 15px  
+  
+.p-h-md 
+  padding: 25px 0
+
+.p-h-lg 
+  padding: 30px 0
+
+.p-t-md 
+  padding-top: 20px 
+  
+.p-t-sm 
+  padding-top: 10px  
+  
+.p-t-lg   
+  padding-top: 35px
+
+.p-w-xl 
+  padding: 40px 0
+
+.p-0
+ padding:0px !important
+
+.p-l-0
+ padding-left: 0px !important
+
+.p-r-0
+ padding-right: 0px !important
+
+.p-t-0
+ padding-top: 0px 
+
+.p-r-0
+ padding-right: 0px 
+
+.p-b-0
+ padding-bottom: 0px !important
+
+.p-b-sm 
+ padding-bottom: 10px
+
+.p-b-25
+ padding-bottom: 25px !important
+
+.p-b-md 
+ padding-bottom: 20px !important
+
+.p-t-xl 
+ padding-top: 40px
+
+.p-l-8
+ padding-left: 8px
+
+.p-l-20
+ padding-left: 20px
+ 
+.m 
+  margin: 15px
+
+.m-xxs 
+  margin: 2px 4px
+
+.m-xs 
+  margin: 5px
+
+.m-sm 
+  margin: 10px
+
+.m-md 
+  margin: 20px
+
+.m-lg 
+  margin: 30px
+
+.m-xl 
+  margin: 50px
+
+.m-n 
+  margin: 0 !important
+
+.m-l-none
+  margin-left: 0 !important
+
+.m-l-xs 
+  margin-left: 5px
+
+.m-l-sm 
+  margin-left: 10px !important
+
+.m-l 
+  margin-left: 15px
+
+.m-l-md 
+  margin-left: 20px
+
+.m-l-lg 
+  margin-left: 30px
+
+.m-l-xl 
+  margin-left: 40px
+
+.m-t-none 
+  margin-top: 0 !important
+
+.m-t-xxs 
+  margin-top: 1px
+
+.m-t-xs 
+  margin-top: 5px
+
+.m-t-sm 
+  margin-top: 10px
+
+.m-t 
+  margin-top: 15px
+
+.m-t-md 
+  margin-top: 20px
+
+.m-t-lg 
+  margin-top: 30px
+
+.m-t-xl 
+  margin-top: 40px
+
+.m-r-none 
+  margin-right: 0 !important
+
+.m-r-xxs 
+  margin-right: 1px
+
+.m-r-xs 
+  margin-right: 5px
+
+.m-r-sm 
+  margin-right: 10px
+
+.m-r 
+  margin-right: 15px
+
+.m-r-md 
+  margin-right: 20px !important
+
+.m-r-lg 
+  margin-right: 30px
+  
+.m-r-xlg 
+  margin-right: 35px
+
+.m-r-xl 
+  margin-right: 40px
+  
+.m-b-none 
+  margin-bottom: 0 !important 
+
+.m-b-xs 
+  margin-bottom: 5px
+
+.m-b-sm 
+  margin-bottom: 10px
+
+.m-b 
+  margin-bottom: 15px
+
+.m-b-md 
+  margin-bottom: 20px !important
+
+.m-b-lg 
+  margin-bottom: 30px
+
+.m-b-xl 
+  margin-bottom: 40px
+
+.m-30-0
+ margin: 30px 0
+
+.m-l-20
+  margin-left: 20px
+/*************** MARGINS & PADDINGS **********/ 
+
+/*************** ICON BUTTON STYLE ***********/
+.edit-icon
+  top : 0px
+  .info-icon
+    margin-left: 0px
+    width:34px !important
+    height:34px !important    
+    svg
+      width:13px !important
+
+.dld-icon
+  top : 0px
+  .info-icon
+    margin-left: 0px     
+    svg
+      width:19px !important
+
+.icon-center 
+ +justify-center
+ +square(30px)
+ fill: $clr-primary
+ 
+.input-icon 
+ +square(25px)
+ position: absolute
+ right: 10px
+ bottom: 12px
+
+.close-icon
+ position: absolute
+ @extend %icon-common
+ +square(40px)
+ cursor: pointer 
+ right: -12px
+ top: -12px
+ border: none
+ cursor: pointer
+ svg
+  +justify-center
+  +square(12px) 
+
+.info-icon  
+ @extend %icon-common
+ margin-left: 10px
+ margin-top: -10px
+ +square(31px)
+ display: inline-block
+ position: relative
+ cursor: pointer
+ svg
+  +justify-center
+  +square(15px) 
+  
+.bg-icon  
+ @extend %icon-common
+ width: 52px
+ height: 50px
+ display: inline-block
+ position: relative
+ +box-shadow(unset)
+ cursor: pointer
+ svg
+  +justify-center
+  width: 29px
+  
+.no-bg.info-icon 
+ +box-shadow(unset)
+ background: none
+ svg
+  width: 22px
+  height: auto  
+  .input-icon
+    height: 22px !important
+    width: 22px !important
+    bottom: 7px !important
+    right: 22px !important
+  .link-btn
+    font-size: 13px !important
+  .bg-icon
+    +square(35px)
+  .filter
+    top: 25px !important
+    .info-icon
+     width: 55px !important
+     height: 52px !important
+  .info-icon
+   width: 20px
+   height: 20px
+  .info-icon svg
+   width: 7px
+   height: auto
+  .nav-btn
+   top:0px !important
+  .close-icon
+    height: 30px
+    width: 30px
+  .edit-icon
+    top : 0px
+    .info-icon
+      margin-left: 0px
+      width:40px !important
+      height:40px !important   
+      svg
+        width:14px !important
+        height:14px !important
+  .dld-icon
+    top : 0px
+    .info-icon
+      margin-left: 0px
+      height: 30px
+      width: 30px       
+      svg
+        width:20px !important
+        height:20px !important 
+
+  .close-icon
+    height: 30px
+    width: 30px	
+  .close-icon svg
+    height: 9px
+    width: 9px	
+/*************** ICON BUTTON STYLE ***********/
+
+/*************** SVG ICONS STYLE *************/
+.svg-xl
+  +square(60px)
+
+.svg-lg
+  +square(50px)
+
+.svg-md
+  +square(40px)
+
+.svg-sm
+  +square(30px)
+
+.svg-xs
+  +square(20px)
+
+.svg-xxs
+ +square(15px)
+
+.svg-xxxs	
+  +square(10px)
+
+.font-auto
+ font-family: auto
+ font-weight: 600
+ padding-right: 5px
+
+.left-container .logo img
+ width: 80px
+ height: 80px
+
+.left-container .nav-toggle
+ position: relative
+ img
+  position: absolute
+  top: 9px
+  left: 9px
+/*************** SVG ICONS STYLE *************/
+
+/*************** TOGGLE BUTTON STYLE *********/
+.toggle-btn
+  +box-size(23px, 50px)
+  position: relative
+  top: -2px
+  .lbl-off, .lbl-on
+    cursor: pointer
+    display: block
+    +font_style(14px, $clr-secondary, $pop-reg, 0.5)
+    line-height: 1em
+    position: absolute
+    top: 9px
+    transition: opacity 0.25s ease-out 0.1s
+
+  .lbl-off
+    right: -15px
+    top: 10px
+
+  .lbl-on
+    top: 10px
+    opacity: 0
+    left: 17px
+
+  .switch
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    height: 0
+    font-size: 1em
+    left: 0
+    line-height: 0
+    outline: none
+    position: absolute
+    top: 0
+    width: 0
+    margin: 0
+
+    ~ .s-checkbox
+      &:before, &:after
+        content: ''
+        font-size: 1em
+        position: absolute
+        display: block
+
+      &:before
+        +border-radius(50px)
+        height: 38px
+        top: -0.1875em
+        transition: background-color 0.25s ease-out 0.1s
+        width: 83px
+        color:$default-color
+        display: block
+        +box-shadow($inset)
+        background: $bg-color-15
+
+      &:after
+        box-shadow: 0 0.0625em 0.375em 0 #666
+        +border-radius(50%)
+        background: $gradient-dark-right
+        top: 1px		
+        height: 30px
+        transform: translate(0, 0)
+        transition: transform 0.25s ease-out 0.1s
+        width: 30px
+        left: 4px
+        display: block
+
+    &:checked ~ .s-checkbox
+      &:after
+        transform: translate(28px, 0)
+        left: 21px
+        display: block
+
+      ~
+        .lbl-off
+          opacity: 0
+
+        .lbl-on
+          opacity: 0.5
+
+.toggle-btn.type-2
+  width:80px
+  .lbl-off
+    right: 7px
+  .switch ~ .s-checkbox:before  
+    width: 100% 
+  .switch ~ .s-checkbox:after, 
+  .switch:checked ~ .s-checkbox:after
+    transform: translate(56px, 0)
+  	
+.toggle-btn.type-3
+  width:100px
+  .lbl-off
+    right: 7px
+  .switch ~ .s-checkbox:before  
+    width: 100%
+    //left: 50%
+    //transform: translateX(-50px)
+  .switch ~ .s-checkbox:after
+    //left: 50%
+    //transform: translate(-46px, 0)
+  .switch:checked ~ .s-checkbox:after
+    transform: translate(81px, 0)
+/*************** TOGGLE BUTTON STYLE *********/  
+
+ /************** DISPLAY FLEX STYLE************/
+.disp-flex
+ display: flex
+ flex-flow: row wrap
+ width: 100% 
+
+.flex-box 
+ flex: 0 1 50%
+
+.pop-bold
+ opacity: 0.9 !important   
+
+.theme-container
+ +float(left, 100%)
+ padding-right: 65px
+ /************** DISPLAY FLEX STYLE************/
+
+ /************** DATE FIELD STYLE *************/
+.date-format
+ display: none 
+
+.date:not(:placeholder-shown)
+ +.date-format
+  display: block
+  position: absolute
+  background: linear-gradient(90deg, $bg-color-4 50%, $bg-color-3 100%)
+  padding: 4px 10px
+  +border-radius(10px)
+  top: 33px
+  right: 40px
+  color: $clr-primary
+  font-size: 10px  
+  z-index: 1
+  +box-shadow($inset)
+ &:not(:focus)
+  +.date-format
+   display: none     
+ /************** DATE FIELD STYLE *************/ 
+  
+/*************** CIRCLE BUTTON STYLES *********/
+.circle
+  border: none
+  width: 40px
+  height: 40px
+  +border-radius(50%)
+  +box-shadow($outset)
+  background: linear-gradient(90deg, $bg-color-4, $bg-color-3 100%)
+  background: linear-gradient(90deg, $bg-color-4, $bg-color-3 100%)
+/*************** CIRCLE BUTTON STYLES *********/ 
+
+/*************** MENBER COUNT BAGES STYLE ******/
+.select-mem-cnt
+ background:$default-color
+ border: 1px solid $default-color
+ +border-radius(50%)
+ height: 20px
+ width: 20px
+ position: absolute
+ right: 0px
+ top: 0px
+ text-align : center
+ font-size: 12px
+ font-weight: 100
+ color:$clr-primary
+/*************** MENBER COUNT BAGES STYLE ******/
+
+/*************** PANEL STYLE *******************/
+.panel
+    border: none
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body,.panel-default > .panel-heading
+    background: $bg-color-4
+    border-radius: 10px
+    padding: 10px 2px
+/*************** PANEL STYLE *******************/
+
+/*************** CUSTOM FILE STYLE *************/
+.custom-file
+  position: relative
+  cursor: pointer
+  height: calc(1.6em + 1.2rem + .0625rem)
+
+.custom-file-input
+  position: relative
+  width: 100%
+  opacity: 0
+  height: 100%
+  font-size: 0px
+
+.custom-file-label
+  position: absolute
+  font-weight: 500
+  top: 0px
+  text-align: center
+  width: 100%
+  right: 0px
+  left: 0px
+  border: .0625rem solid #D1D9E6
+  +box-shadow($outset)
+  -webkit-box-shadow: $outset
+  padding: 10px .75rem
+  border-radius: 20px
+  height: 38px
+  color: $clr-primary
+  border: none
+  z-index: 3
+  cursor: pointer
+  font-size: 12px
+  svg
+    height: 15px
+/*************** CUSTOM FILE STYLE *************/
+
+/***************** FIXED MENU THEME CARD STYLE**************/
+.fixed-menu.theme-card .card-content
+ height: 100vh !important
+
+.fixed-menu.theme-card .left-card .app-name-details
+ height: Calc(100% - 68px) !important
+/***************** FIXED MENU THEME CARD STYLE **************/
+
+/******************ERROR MESSAGE STYLE***********************/
+.hint
+ +font-style(14px, $clr-primary, $pop-semi, 1)
+ margin-top: 5px
+ padding-left: 30px !important
+
+.invalid-feedback 
+  font-size: 11px
+  
+.error-msg
+ color:$err !important
+ font-size: 18px !important
+ padding-left: 30px !important
+ padding-right: 30px !important
+ float: left
+ position: absolute
+ bottom: 0px
+ width: 100%
+ margin-top: 5px
+ word-break: break-word
+.radio-field
+ .error-msg
+  bottom: -17px
+/******************ERROR MESSAGE STYLE***********************/
+
+/********************TABS & ACCORDIAN***********************/
+
+/********************TABS & ACCORDIAN***********************/
+
+//IE style overwrite
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+ .premium-card-container 
+  .theme-radio.premium-card 
+    min-width: auto !important
+    flex-basis: 33.3%
+	
+ +mQ(768px)
+  .premium-card-container
+    flex-flow: row wrap  
+    .theme-radio.premium-card 
+      flex-basis: 100%
+	  
+/********************CLAUSES***********************/
+.clauses .panel-default > .panel-heading
+   background: $bg-color-4
+   border-top: none
+.clauses .panel-default > .panel-heading + .panel-collapse > .panel-body
+   background: $bg-color-4
+   border-top: none
+   padding: 10px 0px
+   float: left
+   width: 100%
+.clauses .panel
+   border-bottom: none
+   +box-shadow(none)
+.clauses .panel-heading
+   padding: 0px	    
+	
+.optional-covers .head-sm .info-icon
+ top: 0px
+ height: 10px
+ width: 10px
+/********************CLAUSES***********************/
+
+/******************CUSTOM CLASS*********************/
+.custom-class .pure-checkbox input[type=checkbox]+label 
+ font-family: $pop-med
+ position: relative
+ padding-left: 40px
+ padding-top: 4px 
+ color: $clr-primary
+ font-size: 20px
+ &:before
+  content: ""
+  position: absolute
+  left: 0px !important
+  top: 0px !important
+  margin-top: 0px
+  +square(27px)
+  background: $default
+  +position(absolute, $left: auto, $right: 0px)
+  +border-radius(5px)
+  box-shadow: -3px -3px 6px $bg-color-4, 3px 3px 6px #BFC3CF
+ &:after
+  content: "" 
+  +square(20px)
+  background: $bg-color-11
+  transform: unset
+  position: absolute
+  left: 4px
+  right: 0px
+  margin-top: 0px
+  border: none
+  +border-radius(5px)
+  top: 4px
+
+.custom-class .pure-checkbox input[type=checkbox]:checked+label:after
+  content: url("assets/icon/ICON_Tick_white.svg")
+  background: $clr-primary	
+  transform: unset
+
+.custom-class  .selected-list .c-list
+   position: relative
+   display: flex
+   overflow: hidden
+   width: calc(100% - 35px)
+   .c-token
+      margin-bottom: 5px
+      margin-right: 0px
+      margin-top: 5px
+      border-radius: 10px !important
+      white-space: nowrap
+      float: none
+      padding-right: 10px !important
+      padding-left: 0px !important
+	  
+      &::after 
+        content: ","
+        position: absolute
+        bottom: 4px
+        right: 6px
+      .c-remove
+         right: 3px
+         padding: 2px
+         top: 12px
+         width: 13px
+         height: 13px
+         border-radius: 10px
+         display: none
+         		 
+         c-icon
+            position: relative
+            top: -6px
+         svg
+            fill:$clr-primary
+            height: 6px
+            width: 9px
+
+.custom-class .selected-list:focus
+  +box-shadow($inset)
+
+.custom-class .selected-list .c-list .c-token .c-label
+    font-size: 11px
+
+.custom-class .selected-list
+    height: 70px
+    min-height: 70px
+    background: $bg-color-6
+    border: none !important
+    +box-shadow($outset)
+    +border-radius(100px)
+    font-size: 12px
+    color: $clr-primary
+    font-family: $pop-med
+
+.custom-class .selected-list 
+    .c-btn
+        top: 50%
+        transform: translateY(-50%)
+    .c-list .c-token .c-label
+        font-size: 20px
+        font-family: $pop-semi
+    .c-remove
+        display: none
+    .c-angle-down,.c-angle-up 
+        svg
+            display: none
+    .c-angle-down::after
+        content: ""
+        border-color: $c-angle-color transparent transparent
+        border-style: solid
+        border-width: 5px 5px 2.5px
+        position: absolute
+        top: 50%
+        right: 50%
+        transform: translate(-50%,-50%)
+    .c-angle-up::after
+        content: ""
+        border-color: transparent transparent #999
+        border-width: 0 5px 5px
+        border-style: solid
+        position: absolute
+        top: 50%
+        right: 50%
+        transform: translate(-50%,-50%)
+
+.custom-class .dropdown-list
+    top:40px !important	 
+
+.custom-class  .list-area
+    border: none
+    background: $card-bg
+    +border-radius(10px)
+    +box-shadow($outset)
+    font-size: 13px
+    font-family:$pop-med
+    padding: 0px 0px 10px 0px
+
+.custom-class .list-filter input
+    background: $card-bg
+
+.custom-class .arrow-down,.custom-class .arrow-up
+    border-bottom:15px solid $card-bg
+    display: none
+
+.custom-class .dropdown-list
+    padding-top: 34px
+    bottom: auto !important
+
+.custom-class .selected-list,.cuppa-dropdown
+    float: left
+    width: 100%
+
+.custom-class .dropdown-list ul li
+    border-bottom: solid 1px #e8e9ea
+    padding: 7px 10px 15px !important
+
+.custom-class .list-filter,.custom-class .select-all
+    border-bottom: solid 1px #e8e9ea	
+	
+.custom-class .cuppa-dropdown .selected-list
+    overflow: hidden !important
+
+.custom-file-large
+  position: relative
+  cursor: pointer
+  height: 120px
+
+.custom-file-label-large
+  position: absolute
+  font-weight: 500
+  top: 0px
+  text-align: center
+  width: 100%
+  right: 0px
+  left: 0px
+  border: dotted 1.5px #bbb
+  padding: 25px 20px
+  border-radius: 8px
+  height: 120px
+  color: $clr-primary
+  z-index: 3
+  cursor: pointer
+  font-size: 12px
+  svg
+    height: 75px
+    width: 75px
+    position: relative
+    top: -10px
+
+.custom-class .list-filter input
+  background: linear-gradient(90deg, $bg-color-4 50%, $bg-color-3 100%)
+  +box-shadow($inset)
+  
+.custom-class .list-filter input
+  border-radius: 30px
+  padding: 10px 
+
+.custom-class .selected-list .c-btn:focus
+  +box-shadow($outset)
+/******************CUSTOM CLASS*********************/
+
+/********************PENDING DETAILS****************/
+.pending-details 
+  .form-field
+    //max-width: 350px
+    margin-bottom: 30px
+  .detail-btn
+    margin-bottom: 20px
+    color: $clr-secondary !important
+    opacity: 1
+    background: linear-gradient(to right, $bg-color-4, $bg-color-3)
+    box-shadow: $outset
+    border-radius: 33px
+    border: none
+    font-size: 20px
+    padding: 20px
+    min-width: 200px
+    height: 70px
+    font-family: Poppins-Medium
+    width: 48%
+    .detail-label
+     float: left
+     line-height:15px
+     //padding-left: 20px	
+     //padding-top: 3px
+    .tick-img
+     background: $clr-primary
+     border-radius: 50px	 
+     margin-left: 8px	
+
+.pending-details 
+ .detail-btn
+  padding: 20px 30px !important
+ .arrow-img
+  height: 23px
+  width: 33px
+  fill: #283A61!important
+  margin-right: 8px
+  margin-top: 4px
+
+.pending-details .svg-added
+  padding: 15px 30px 15px 15px!important
+
+.pending-details .svg-added .detail-label
+  padding-top: 2px 
+  padding-left: 12px
+/********************PENDING DETAILS****************/
+
+/********************FILTER STYLE****************/
+.list-filter
+  padding-left: 10px !important
+  padding-right: 10px !important
+  height: 34px
+  margin-top: 10px
+  border-radius: 20px
+
+.list-filter  .c-search
+  display: none
+
+.list-filter
+  padding-left: 10px !important
+  padding-right: 10px !important
+  height: 34px
+  margin-top: 10px
+  border-radius: 20px
+
+.list-filter  .c-search
+  display: none
+
+.filter
+ margin-left: 10px
+ width: 50px
+ float: left
+ position: relative
+ top: 25px
+ .info-icon
+      height: 70px
+      width: 70px 
+/********************FILTER STYLE****************/  
+
+/**********CLIENT CONTAINER STYLES***************/
+.client 
+ .left-container
+  width: 135px !important
+  .logo
+    padding: 28px !important
+ .center-container
+  margin-left: 135px
+
+.client .question
+ padding: 30px 0px !important
+
+.client .primary-btn
+ padding: 20px 50px !important
+ border-radius: 33px !important
+ font-size: 18px !important
+
+.client .link-btn
+ font-size: 18px !important
+
+.client .form-field .head-sm
+ margin-bottom: 15px !important
+/**********CLIENT CONTAINER STYLES***************/
+
+/***************MULTISELECT DROPDOWN STYLE*******************/
+.ng-select.ng-select-single .ng-dropdown-panel
+ margin-top: 10px
+
+ng-multiselect-dropdown .multiselect-dropdown .dropdown-list
+ z-index: 1
+
+ng-multiselect-dropdown .multiselect-dropdown .dropdown-list .filter-textbox input::-webkit-input-placeholder
+ font-size: 18px !important	
+
+ng-multiselect-dropdown .multiselect-dropdown .dropdown-list ul li
+ border-bottom: 1px dotted rgb(81 96 129 / .5)
+ //&:hover
+  //background-color: $pg-bg-color
+
+form .multiselect-item-checkbox input[type=checkbox] + div
+ &:before
+  margin-right: 5px
+  padding:5px
+  position: relative
+  top: 5px !important
+  box-shadow: -3px -3px 6px $bg-color-4, 3px 3px 6px #BFC3CF
+  +square(15px !important)
+  border: none !important
+  cursor: pointer
+  border-radius: 5px
+  -webkit-border-radius: 5px
+  background: $default !important
+ &:after
+  width: 18px !important
+  height: 19px !important
+  top: -1px !important
+  left: 4px !important
+  background: $bg-color-11 !important
+  border-radius: 5px !important
+  transition: none !important
+  transform: none !important
+  border: none !important
+  -webkit-border-radius: 5px
+  margin-top: 0px !important
+  transform-origin: none !important
+
+form .multiselect-item-checkbox input[type=checkbox]:checked + div
+ &:after
+   content: url('assets/icon/ICON_Tick_white.svg') !important
+   background: $clr-primary !important
+ &:before
+   +box-shadow(none)
+
+.dropdown-list li
+ padding: 15px 10px !important
+//.filter-textbox
+ //display: none
+
+.multiselect-dropdown .dropdown-btn
+ overflow: hidden
+
+.multiselect-dropdown .dropdown-btn .selected-item > a
+ padding-top: 0px!important
+ padding-left: 4px!important
+ padding-right: 4px
+ color: $clr-primary !important
+
+.multiselect-dropdown .dropdown-btn .selected-item
+ margin-bottom: 5px
+ border-radius: 20px !important
+ //display: flex !important
+ min-width: 0px !important
+ box-sizing: border-box !important
+ font-size: 15px !important
+ padding: 5px !important
+ color: $clr-primary !important
+ opacity: 1 !important
+ margin-right: 10px !important
+ //margin-bottom: 0px !important
+ //margin-top: 6px !important
+ box-shadow: rgb(206, 206, 206) 3px 3px 3px, rgb(255, 255, 255) -3px -3px 3px !important
+ border: unset !important
+ background: unset !important
+ padding: 8px 6px 3px 8px !important
+
+.multiselect-dropdown .dropdown-list
+ border-radius: 8px !important
+ background: $bg-color-6 !important
+ +box-shadow($outset !important)
+ border: none !important
+
+.multiselect-item-checkbox input[type=checkbox]:checked + div
+   color: $clr-primary !important
+
+.multiselect-item-checkbox input[type=checkbox] + div 
+   padding-left: 40px !important
+
+.multiselect-item-checkbox input[type=checkbox]:checked + div:before  
+   -webkit-animation: none !important
+   animation: none !important
+
+.multiselect-dropdown div >span:last-child >span:last-child:not(.selected-item)
+   position: absolute
+   right: 20px
+
+.multiselect-dropdown span.dropdown-btn .dropdown-down
+   //border-top: 6px solid #adadad  !important
+   //border-left: 6px solid transparent  !important
+   //border-right: 6px solid transparent  !important
+
+.multiselect-dropdown .dropdown-btn .dropdown-down
+    border-width: 9px 8px 2.5px !important  
+    border-color: #33415F transparent transparent !important  
+    position: relative !important  
+    top: unset !important  
+
+.multiselect-dropdown span.dropdown-btn .dropdown-up
+    border-width: 9px 8px !important
+    //border-bottom: 6px solid #adadad  !important
+    //border-left: 6px solid transparent  !important
+    //border-right: 6px solid transparent  !important
+
+.multiselect-dropdown span.dropdown-btn:focus
+    +box-shadow($outset)
+
+.multiselectfocusinput
+    width: 0px
+    height: 0px
+    position: absolute
+    right: -46px
+    top: 18px
+    z-index: -1
+    &:focus + ng-multiselect-dropdown .multiselect-dropdown span.dropdown-btn
+      +box-shadow($outset)
+/***************MULTISELECT DROPDOWN STYLE*******************/
+
+/**************** FONT-SIZE & WEIGHT  *********************/
+.ft-12
+ font-size: $ft-12
+
+.ft-14
+ font-size: $ft-14 !important
+
+.ft-16
+ font-size: $ft-16
+
+.ft-18
+ font-size: $ft-18 !important
+
+.ft-20
+ font-size: $ft-20
+
+.ft-22
+ font-size: $ft-22
+
+.ft-24
+ font-size: $ft-24
+ 
+.ft-w-100
+ font-weight: $ft-w-100
+
+.ft-w-200
+ font-weight: $ft-w-200
+
+.ft-w-300
+ font-weight: $ft-w-300
+
+.ft-w-400
+ font-weight: $ft-w-400
+
+.ft-w-500
+ font-weight: $ft-w-500
+
+.ft-w-600
+ font-weight: $ft-w-600
+
+.ft-w-700
+ font-weight: $ft-w-700
+/**************** FONT-SIZE & WEIGHT  *********************/
+
+/***************MEDIA QUERY FOR DEVICES BELOW 1790 WIDTH*******************/
+@media (max-width: 1790px)
+  .theme-radio, .theme-check
+    margin-right: 25px
+/***************MEDIA QUERY FOR DEVICES BELOW 1790 WIDTH*******************/
+
+/***************MEDIA QUERY FOR DEVICES ABOVE 1025 WIDTH*******************/
+@media screen and (min-width:1025px)
+ .disp-flex .fixed-width
+  width: 35% !important
+  padding-right: 20px !important
+/***************MEDIA QUERY FOR DEVICES ABOVE 1025 WIDTH*******************/
+
+/***************MEDIA QUERY FOR DEVICES ABOVE 1024 WIDTH and BELOW 1600*******************/
+@media screen and (min-width:1024px) and (max-width:1600px)
+ .lb
+   line-break: anywhere !important
+ .theme-radio-btn-w
+    min-width:145px !important
+ .theme-form .no-gap
+  width: calc(100% + Calc(var(--fldgapL)*2))
+  left: Calc(var(--fldgapL) - Calc(var(--fldgapL)*2))
+  padding-bottom: 0px !important
+ .theme-form .field-indent, .calc-pad-right
+  padding-right: Calc(var(--fldgapL)/2)
+ .theme-form .field-indent .form-field, .equal-pad
+  padding: 0 Calc(var(--fldgapL)/2) !important
+ .card-content.theme-form-card .sub-head-sm, .card-content.theme-form-card .card-head.label-indent, .calc-left-pad
+  padding-left: calc(Calc(var(--fldgapL)/2) + 20px) !important
+ .theme-form
+  .field-indent.col-field-2
+   .form-field
+    width: 50%  
+  .field-indent.col-field-3, .field-indent.col-field-4 
+   .form-field
+    width: 50%  
+   .form-field.x2, .form-field.x3
+    width: 100% 
+ .right-container-closed .center-container 
+  .theme-form 
+   .field-indent.col-field-2
+    .form-field
+     width: 33.3%  
+   .field-indent.col-field-3, .field-indent.col-field-4 
+    .form-field
+     width: 33.3%  
+    .form-field.x2
+     width: 66.6% 
+    .form-field.x3
+     width: 100% 
+/***************MEDIA QUERY FOR DEVICES ABOVE 1024 WIDTH and BELOW 1600*******************/
+
+/***************MEDIA QUERY FOR DEVICES ABOVE 1025 WIDTH*******************/
+@media screen and (min-width:1601px)
+ .theme-form .no-gap
+  width: calc(100% + Calc(var(--fldgap)*2))
+  left: Calc(var(--fldgap) - Calc(var(--fldgap)*2))
+  position: relative
+ .theme-form .field-indent, .calc-pad-right
+  float: left
+  width: 100%
+  padding-right: Calc(var(--fldgap)/2)
+ .theme-form .field-indent .form-field, .equal-pad
+  padding: 0 Calc(var(--fldgap)/2) !important
+/***************MEDIA QUERY FOR DEVICES ABOVE 1025 WIDTH*******************/
+
+@media (max-width: 1600px)
+  .pagination a,.pagination-entries
+    font-size: 14px
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option
+    padding: 15px 20px !important
+  .dropdown-menu > li > a, .header .theme-light-label
+    font-size: 14px
+  .fixed-menu.theme-card .left-card .app-name-details
+    height: Calc(100% - 37px) !important
+  .custom-file-input.ng-valid + input + label.custom-file-label
+   padding: 15px 20px !important
+	
+  
+  /******************MULTI COLUMN STYLE*******************/
+  //.right-container-closed .center-container 
+   //.theme-form .field-indent.col-field-4 .form-field
+    //width: 33.3%
+  //.theme-form .field-indent.col-field-4 .form-field
+    //width: 33.3%
+	
+  /******************NG SELECT DROPDOWN STYLE**********************/
+  .ng-select .ng-select-container .ng-value-container .ng-input > input
+   padding-left: 10px
+  .ng-select .ng-select-container
+   padding: 15px 17px 15px 6px
+  .multiselect-dropdown .dropdown-btn .selected-item
+    font-size: 13px !important
+    margin-right: 10px !important
+    padding: 3px 6px 3px 8px !important
+  .ng-select .ng-arrow-wrapper .ng-arrow,.multiselect-dropdown .dropdown-btn .dropdown-down
+    border-width: 7px 6px 2.5px !important
+  .ng-select.ng-select-opened>.ng-select-container .ng-arrow 
+    border-width: 0px 7px 7px!important
+  .ng-select.ng-select-single .ng-select-container,.multiselect-dropdown span.dropdown-btn,.ng-select.ng-select-single .ng-dropdown-panel
+    font-size: 14px
+    height: 50px
+    min-height: 50px
+  .multiselect-dropdown span.dropdown-btn
+    font-size: 14px
+    height: 50px
+    min-height: 50px
+  ng-multiselect-dropdown.ng-invalid .multiselect-dropdown .dropdown-btn 
+    padding: 14px 20px !important	
+  .ng-select .ng-select-container .ng-value-container .ng-input > input
+    height: 35px
+    color: $clr-primary
+  //.multiselect-dropdown span.dropdown-btn
+    //padding: 5px 10px !important
+  .ng-dropdown-panel.ng-select-bottom
+    font-size: 14px
+
+  /********************SPINNER/ERROR STYLE*******************/	
+  .spinner-txt
+   font-size: 16px 
+   padding-top: 120px  
+  .error-msg
+   font-size: 12px !important
+   bottom: -5px
+  .radio-field
+   .error-msg
+    bottom: -7px
+  .error-msg,hint
+    padding-left: 20px !important
+	 
+  /******************BREADCRUMB STYLE*****************/
+  .breadcrum
+   span.head-sm
+    font-size: 14px
+	
+  /*********************HEADER/TITLE STYLE***************/
+  .header .theme-light-label
+    font-size: 14px
+  .header .ng-select.ng-select-single .ng-select-container .ng-value-container,.header .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value 
+    padding-left: 10px !important
+    font-size: 14px !important
+  .header .ng-select .ng-arrow-wrapper .ng-arrow
+    right: -15px
+  .header .ng-select .ng-arrow-wrapper .ng-arrow
+    border-width: 6px 6px 6px !important
+  .header .form-field 
+    min-height: auto
+    margin-bottom: 20px
+  .header .link-btn 
+    font-size: 14px !important
+  .header .ng-dropdown-panel .ng-dropdown-panel-items .ng-option 
+    padding: 15px 20px
+    font-size: 16px !important
+  .header .form-field .head-sm
+    padding-left: 20px !important
+  .header .theme-light-label 
+    font-size: 14px !important
+  .header .address-block .dropdown button
+    min-width: 200px !important
+  .header .address-block .dropdown button, .header .user-block .dropdown button 
+    min-width: 200px !important
+  .page-title .heading
+   margin-top: 6px	
+   font-size: 18px	
+  .page-title .nav-btn svg  
+   height: 18px
+   width: 18px
+  .page-title .nav-btn 
+   height: 35px
+   width: 35px
+   margin-right :20px
+  .form-field .head-sm, .modal-body .head-sm, .page-title .head-lg .head-date, .review-details .sub-head-sm
+    +font_style(13px, $clr-secondary, $pop-med, 0.8)
+	
+  /***************CHECKBOX/RADIO OPTION STYLE*****************/
+  .check-default
+    font-size: 12px
+  .theme-radio.square label span, .theme-check.square label span
+    font-size: 12px
+  .check-default label:before
+    height: 33px
+    width: 33px
+  .check-default
+    padding: 5px 0px 5px 45px
+  .check-default label:after
+    height: 25px
+    width: 25px
+    top: 4px
+    left: 4px
+  .disclaimer.check-default 
+    padding: 0px 0px 5px 45px
+    label
+     +font_style(13px, $clr-primary, $pop-med, 0.8)
+  .theme-radio.radio-btn, .theme-check.check-btn
+    height: 57px
+  .theme-radio-width
+    min-width: 90px
+  .width
+    width: auto !important
+    left:14px !important
+
+  .theme-radio.radio-btn label, .theme-check.check-btn label
+    height: 60px
+  .theme-radio.radio-btn label, .theme-check.check-btn label, .theme-radio.radio-btn input[type="radio"]:checked + label, .theme-check.check-btn input[type="checkbox"]:checked + label
+    font-size: 14px
+	
+  /****************CONTAINER STYLE*******************/
+  .theme-container
+    padding-right: 40px
+  .left-container .logo img
+    width: 60px
+    height: 60px
+  .left-container .theme-menu li
+    padding-left: 0px  !important
+	
+  /****************PREVIEW STYLE*******************/
+
+  .plan-details .enter-city .input-icon 
+    height: 19px !important
+    width: 19px !important
+    bottom: 16px !important
+    right: 16px !important
+  .preview-details td .theme-value,.preview-details .theme-label,.theme-value.benefits, .theme-light-label
+    font-size: 13px !important
+  .preview-details .preview-structure td .theme-value
+    padding-left: 50px !important
+  .preview-details
+   .info-icon
+    width: 25px
+    height: 25px
+   .info-icon svg
+    width: 15px
+    height: 15px
+
+	
+  /**************TOGGLE BUTTON STYLE**************/
+  .toggle-btn .switch:checked ~ .s-checkbox:after
+    left: 8px
+  .toggle-btn .switch:checked ~ .s-checkbox ~ .lbl-on
+    left: 11px
+  .toggle-btn .lbl-off 
+    right: 3px
+    top: 7px
+    font-size: 10px
+  .toggle-btn .lbl-on 
+    top: 7px
+    font-size: 10px
+  .toggle-btn 
+   .switch
+    ~ .s-checkbox
+      &:before
+        height: 28px
+        width: 60px
+      &:after		
+        height: 20px
+        width: 20px
+
+  .arrow-img
+    width:17px !important
+    height:24px !important
+  .pending-details 
+   .detail-btn
+    width: 100%
+    font-size: 14px !important
+    height: 50px !important
+    padding: 15px 30px !important
+   .tick-img
+    height: 27px
+    width: 27px
+   .svg-added
+    padding: 8px 30px 7px 15px !important
+    .detail-label 
+     padding-top: 5px
+   .arrow-img
+     margin-top: 0px
+     position: absolute
+     right: 15px !important
+  .premium-card .premium-footer .addons
+    font-size: 13px !important
+  .theme-value.sub-head
+    font-size: 12px !important
+	
+  /***************PREVIEW STYLES******************/
+  .preview-details .head-sm
+    font-size: 14px
+  .preview-details .head-md
+    font-size: 20px
+  .primary-btn,.primary-btn[disabled]
+   font-size: 14px !important  
+   
+  /***************PREMIUM CARD STYLE***************/
+  .premium-card-container .premium-container .premium-per-month
+    font-size: 22px !important
+  .premium-card
+    .member-count
+     margin-top: 10px
+    .premium-amt, .date-head, .member-count, .prem-card-detail
+     font-size: 13px !important
+    .premium-header
+     .premium-members
+      font-size: 13px !important
+    .sub-value
+     font-size: 13px !important
+    .premium-list
+      .premium-value
+       font-size: 13px !important
+      .theme-lbl
+       +font_style(13px !important, $clr-secondary, $pop-med, 0.5)
+    .premium-per-month, .premium-type .head
+     +font_style(20px !important, $clr-primary, $pop-med, 1)
+    label
+     &:after
+      +square(30px)
+      top: -10px
+      right: -5px
+      padding: 4px
+    input[type=radio]:checked + label
+     font-family: $pop-reg !important
+     background: $bg-color-12
+     border-radius: 15px
+     &:after
+      +square(30px)
+      top: -12px
+      right: -10px
+      padding: 4px
+  .detail-list-container .form-group 
+    input
+        font-size:14px
+    .close-icon svg
+        height: 9px
+        width: 9px	
+  .detail-list-container .form-group .input-group .input-group-append
+    top: 40px
+    right: 40px
+    width: 18px
+  
+  /*******************FORM STYLE******************/
+  .form-control
+    padding: 15px 20px
+  .form-control-line-height
+    line-height: 15px
+  .form-field .head-sm
+    padding-left: 20px
+    margin-bottom: 15px
+    min-height: 15px
+  .form-field
+    min-height: 100px
+    margin-bottom: 20px
+  .form-field.lg
+    min-height: 145px
+  .no-minheight .form-field 
+    min-height: auto
+  .form-control
+    +font_style(14px, $clr-primary, $pop-semi!important, 1)
+    height: 50px
+    margin-bottom: 20px
+  .theme-form .field-four .form-field
+    width: 33.3% !important
+  .theme-form .field-three .form-field
+    width: 50% !important
+  .theme-form .field-two .form-field
+    width: 50%	
+  .theme-form.policy-structure .field-three .form-field 
+    width: 100% !important	
+  .theme-form.policy-structure .field-three .form-field.text-field
+    max-width: 400px
+	
+  /*****************TAB STYLE************************/	
+  .right-container .nav-tabs.nav-justified > li
+    width: auto
+  .theme-tab .nav-tabs .tab-item > a
+    padding: 8px 14px
+    font-size: 15px
+    flex: unset
+   
+  /**********************TABLE STYLES********************/
+  table.theme-table
+    font-size: 13px
+    thead
+     th
+        padding: 20px 18px
+    td
+        padding: 15px 18px
+	 
+  /*******************MODAL STYLES**********************/
+  .theme-modal
+    .modal-header
+      .close-icon svg
+        width: 9px
+        height: auto
+  .theme-modal .modal-header .modal-title
+    font-size: 14px
+  .theme-modal .modal-header .close-icon
+    right: 29px
+    top: 22px
+    height: 30px
+    width: 30px	
+  .detail-container-modal.modal-xl
+    max-width: 700px
+  .detail-container-modal.modal-lg
+    max-width: 600px
+  .detail-container-modal.modal-md
+    max-width: 600px
+  .modal-body
+    padding: 0px 30px 30px 30px
+  .no-header .modal-body
+    padding: 30px 30px 15px 30px
+  .theme-modal .modal-header
+    padding: 30px
+  .theme-modal .modal-form .modal-header
+    padding: 30px 30px 30px 50px
+  .theme-modal .modal-content .contact-details .secondary-btn
+   min-width: 220px
+   margin-bottom: 15px
+  .optional-covers.theme-modal .modal-content .theme-form .field-two .form-field
+    width: 50%
+  .optional-covers .detail-container-modal
+    max-width:900px
+  .optional-covers.theme-modal .modal-content .theme-form .field-two .form-field
+    width: 100%
+  .popup-large .theme-form .field-three .form-field
+    width: 50%  !important
+	
+  /***********************BUTTON STYLE*********************/
+  .theme-lg-btn, .theme-lg-btn.active, .theme-lg-btn:active, .theme-lg-btn:hover, .theme-lg-btn:focus
+    min-width: 300px
+  .btn.primary-btn
+      margin-right: 20px
+  .theme-sm-btn
+      height: 50px
+      &:hover, &:focus, &:active 
+        min-width: 200px
+  .theme-lg-btn
+    padding: 15px
+    height: 50px
+  .btn:disabled
+   cursor: not-allowed
+  /******************ANGULAR SELECTBOX STYLE************/
+  .custom-class 
+    .selected-list
+     height:50px
+     min-height: 50px
+    .c-list .c-token .c-label
+     font-size: 14px
+    .dropdown-list
+     padding-top: 14px
+    .pure-checkbox input[type=checkbox] + label
+     font-size:14px
+    .pure-checkbox input[type=checkbox] + label:before
+     height: 22px
+     width: 22px
+    .pure-checkbox input[type=checkbox] + label:after
+     height: 16px
+     width: 16px
+     left: 3px
+     top: 3px
+	
+@media (max-width: 1000px)
+ .left-container .menu ul.theme-menu.nav
+   padding-left: 0px !important 
+ .left-container ul.theme-menu li
+   padding-left: 10px !important
+ .left-container .theme-menu li .font-xs
+   margin-top: 6px !important
+ .theme-container
+   padding-right: 0px !important
+ .left-container.in
+  z-index: 6 !important
+ .left-container ul.theme-menu li 
+  padding-left: 10px !important
+ .header
+  display: none !important
+   
+@media (max-width: 768px)
+  .responsive-tables thead
+    display: none
+
+  .responsive-tables tbody td
+    display: inline-flex
+    width: 50%
+  
+  .responsive-tables tbody td:before
+    content: attr(data-attr-headding)
+    position: absolute
+    color: #a0a6b5
+    text-transform: uppercase
+    font-size: 0.8em
+
+  .responsive-tables span.theme-value
+    margin-top: 10px
+    
+  .theme-radio-btn-w
+    min-width:120px !important
+  .row-fl-mw
+    float: left !important
+    min-width: 50% !important
+    margin-top: 0px !important
+  .row-mw
+    min-width: 50% !important
+  .row-w-fl
+    width: 50% !important
+    float: left !important
+  .card-content.theme-form-card
+    padding: 15px 
+  .link-btn-fr-pr
+    float: right !important 
+    padding-right:20px !important
+  .btn-block
+    z-index: 4
+    margin-top: 0
+    position: fixed
+    left: 0
+    bottom: 0
+    width: 100%
+    text-align: center
+    border-radius: 0
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    box-shadow: none
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    background-clip: padding-box
+    -webkit-appearance: none
+    opacity: unset
+    height: 60px
+    font-size: 14px!important
+    background: linear-gradient( 90deg,$bg-color-4,$bg-color-3)
+ 
+  /****************FORM STYLE******************/
+  .radio-field .error-msg
+    bottom: -8px  
+  .error-msg
+    font-size: 12px !important
+    bottom: 0px
+    //position: relative
+  /*****************Checkbox STYLE****************/
+  .checkbox-pl-3 
+    padding-left: 1rem !important	 
+  /****************MULTI COLUMN STYLE*********************/
+  .theme-form 
+   .field-indent.col-field-2 
+    .form-field
+     width: 100% 
+   .field-indent.col-field-3, .field-indent.col-field-4
+    .form-field, .form-field.x2, .form-field.x3
+     width: 100% 
+  .right-container-closed .center-container 
+   .theme-form 
+    .field-indent.col-field-2 
+     .form-field
+      width: 100% 
+    .field-indent.col-field-3, .field-indent.col-field-4
+     .form-field, .form-field.x2, .form-field.x3
+      width: 100% 
+	
+  /******************SPINNER/ERROR STYLE STYLE****************/
+  .spinner-txt
+    font-size: 14px 
+
+  
+  /*****************BUTTON STYLE*******************/
+  .full-button .primary-btn
+    width:100%
+  .btn-block.sm-btns 
+    background: $btn-pri-active !important
+    padding-top: 12px
+    .theme-sm-btn
+     height: 37px
+    .theme-sm-btn.highlighted
+     box-shadow: -3px -3px 6px $bg-color-13, 3px 3px 6px $bg-color-2
+     background: $bg-color-20
+    .theme-sm-btn:not(.highlighted)
+     background: none
+     +box-shadow(none)
+     color: $default-color
+  .btn-block	
+   .theme-lg-btn,.theme-lg-btn:active,.theme-lg-btn:hover,.theme-lg-btn:focus
+    border-radius: 0px
+    width: 100%
+    height: 100%
+    +box-shadow(none)
+	
+  /***************BREADCRUMB STYLE*************/
+  .breadcrum 
+    display: none
+	
+  /**************PREMIUM CARD STYLE************/
+  .premium-card .premium-container
+    padding: 18px
+	
+  /*************MODAL STYLE*******************/
+  .theme-modal .modal-header
+   // padding: 25px 30px 30px 30px 
+  .theme-modal .modal-form .modal-header 
+    padding: 30px 15px 30px 35px
+  .theme-modal .modal-header .close-icon
+    right: 20px
+	
+  /***********HEADER/TITLE STYLE***********/
+  
+  .form-field .head-sm, .modal-body .head-sm, .page-title .head-lg .head-date, .review-details .sub-head-sm
+    +font_style(13px, $clr-secondary, $pop-med, 0.8)
+	
+  /************CHECKBOX/RADIO OPTION STYLE*********/
+  .check-field-inner
+    width: 100% 
+    padding: 0px  !important
+  .theme-radio.radio-btn label, .theme-check.check-btn label
+    font-size: 14px  
+    padding: 20px 10px
+  .theme-radio.radio-btn, .theme-check.check-btn 
+    height: 50px
+    width: auto !important
+    margin-left: 0px
+    margin-right: 15px 
+    margin-bottom: 15px
+  .check-default
+    padding: 5px 0px 0px 40px
+	
+  /************FORM STYLE******************/
+  .no-minheight .form-field 
+    min-height: auto !important
+  .form-field
+   //min-height: 95px !important
+  .form-field .head-sm
+    height: auto
+    margin-bottom: 10px
+ 
+
+
+  
+	
+/****************TAB STYLE*******************/
+  .nav-tabs.nav-justified > li 
+    float: none
+    display: table-cell
+    width: 1%
+  .theme-tab .nav-item a.nav-link.active:after
+    bottom: -9px
+  .pending-details .field-two .form-field
+    width: 100% !important
+  .theme-tab .nav-item a.nav-link.active:after
+    bottom: -9px
+/****************TAB STYLE*******************/
+
+/********************TABLE STYLE******************/
+  table.theme-table 
+    width: 100%
+  table.theme-table
+    tr 
+     td:first-child
+      padding-left: 50%
+  table.theme-table,table.theme-table thead,table.theme-table tbody,table.theme-table th,table.theme-table td,table.theme-table tr  
+    display: block 
+  table.theme-table thead tr  
+    position: absolute
+    top: -9999px
+    left: -9999px
+  table.theme-table tr 
+    margin-bottom: 15px
+  table.theme-table tr.no-margin 
+    margin-bottom: 0px
+  table.theme-table td  
+    border: none
+    border-bottom: 1px solid #eee 
+    position: relative
+    padding-left: 50%  
+    text-align: left  !important
+  table.theme-table td:before
+    position: absolute
+    top: 16px
+    left: 20px
+    width: 45% 
+    padding-right: 10px 
+    white-space: nowrap
+    content: attr(data-column)
+    +font_style(14px, $clr-secondary, $pop-med, 0.8)	
+  .flex-width
+    width: auto !important
+  table.theme-table thead
+    display: none
+  table.theme-table
+    +box-shadow(none)
+  .popup-large .theme-form .field-three .form-field
+    width: 100%  !important
+/********************TABLE STYLE******************/
+
+/************CENTER CONTAINER STYLE***************/
+  .center-container
+    padding: 90px 15px 30px 15px !important 
+/************CENTER CONTAINER STYLE***************/
+
+/*****************MODAL STYLE***********************/
+  .theme-modal .modal-content ,.modal.fade .modal-dialog,.modal-container
+    display: block
+    padding: 0px
+  .add-discount.theme-modal .modal-content
+    min-width: auto
+  .detail-container-modal
+    height: 100vh
+    max-width: 100% !important
+  .form-control 
+    height: 50px
+    font-size: 14px
+
+/*********************SELECT DROPDOWN STYLE****************/
+  .ng-select .ng-arrow-wrapper .ng-arrow 
+    border-width: 6px 6px 2.5px !important
+    right: 0px !important  
+  .ng-select.ng-select-single .ng-select-container, .multiselect-dropdown span.dropdown-btn
+    height: 50px
+    min-height: 50px	
+    font-size: 14px
+  .multiselect-dropdown span.dropdown-btn	
+    height: 50px
+    min-height: 50px	
+    font-size: 14px
+/*********************SELECT DROPDOWN STYLE****************/
+
+/***************CARD STYLE*****************/
+  .theme-card .card-content
+    background: $bg-color-9  
+  .theme-card.detail-card	
+    padding: 10px 10px 10px 0px
+  .form-control:focus
+    background: $bg-color-6
+    background-color: transparent	
+  .premium-card input:checked + label:after	
+    height: 25px !important
+    width: 25px  !important
+    top: -13px  !important
+    right: -9px  !important
+    padding: 4px !important
+  .premium-card .sub-value	
+    font-size: 12px !important
+  .premium-card .premium-list .premium-value
+    font-size :13px !important
+  .premium-card .premium-list .theme-lbl
+    font-size :13px !important
+  .premium-card-container .premium-container .premium-per-month
+    font-size: 20px !important
+  .premium-card .premium-header .premium-members
+    font-size :13px !important  
+  .info-icon
+    height: 20px   
+    width: 20px    
+  .info-icon svg
+    height: 13px   
+    width: auto   	
+  .premium-card .premium-amt
+    font-size: 13px  !important
+  .premium-card .premium-type
+    font-size: 12px !important
+  .page-title .head-lg .head-date	
+    font-size: 10px
+  .form-field.rectangle-field
+    min-height: auto !important
+  .check-default label:before
+    height: 30px
+    width: 30px
+  .check-default label:after
+    height: 20px
+    width: 20px
+    left: 5px
+    top:5px	
+  .check-default
+    font-size: 12px  
+  .check-default label
+    margin-left: 0px  
+    padding-top: 0px
+  .detail-list-container .form-group .input-group .input-group-append 
+    position: absolute
+    right: 40px
+    display: inline-block
+    width: 18px
+    z-index: 8
+    top: 40px  
+  .has-form .form-field
+    padding-right: 0px !important
+  .fw-80
+    +float(left, 100%)
+    padding-right: 0px
+  .theme-container
+    margin-bottom: 50px
+	
+/***************CARD STYLE*****************/
+	
+/************BUTTON STYLE******************/
+  .btn-block
+    z-index: 4
+    margin-top: 0px
+    position: fixed
+    left: 0
+    bottom: 0
+    width: 100%
+    text-align : center
+    +border-radius(0px)
+    +box-shadow(none)
+    opacity: unset
+    height: 60px
+    font-size: 14px !important
+    background: linear-gradient(to right, $bg-color-4, $bg-color-3)
+  .secondary-btn.single
+    min-width: 100% !important
+/************BUTTON STYLE******************/
+	
+/***********PAGE TITLE/HEADING STYLE***********/
+  .page-title
+    text-align: center
+    position: relative
+    margin-top: 5px
+    float: left
+    width: 100%
+    margin-bottom: 30px
+    min-height: 35px
+  .head-lg
+    margin-top: 5px
+    float: left
+    width: 100%
+  .nav-btn
+    position: absolute
+    left: 0px
+    top: -5px
+    display: block
+  .theme-card
+    width:100% !important
+/***********PAGE TITLE/HEADING STYLE***********/
+	
+/*****************CHECKBOX/RADIO STYLE****************/
+  .theme-radio > label
+    margin-left: 0px
+  .theme-check.round.outset
+    display: none
+  .theme-radio .lbl, .theme-check .lbl
+    font-size: 12px !important
+  .btn:hover
+    color: $default-color
+  .theme-radio label,  .theme-check label
+    +square(55px)
+  .theme-radio.premium-card label
+    height: auto
+    width: 100%
+  .block
+    margin-bottom: 30px
+/*****************CHECKBOX/RADIO STYLE****************/
+	
+/*****************MODAL STYLE********************/
+  .modal-form .modal-body
+    padding: 0px 15px 15px 15px
+  .theme-modal .modal-header .modal-title
+    font-size: 14px 
+  .modal-dialog.theme-modal .nav-btn
+    display: block
+  .modal-header .close-icon
+    display: block
+  .modal-dialog.theme-modal, .modal-content
+    height: 100%
+    width: 100% !important
+    +border-radius(0px !important)
+  .theme-form .field-two .form-field
+    width: 100% !important
+  .theme-form .field-three .form-field
+    width: 100% !important	
+  .theme-form .field-four .form-field
+    width: 100% !important	
+  .form-field
+    margin-bottom:15px
+    min-height: auto
+
+/**************MEDICARE MODAL STYLE*******************/
+  .medicare.theme-modal .modal-header .nav-btn
+    display: block
+  .medicare.theme-modal .modal-content	
+    max-width: 480px
+  .theme-modal .modal-header .nav-btn
+    top: 10px
+/**************MEDICARE MODAL STYLE*******************/
+
+/**************** MEDIA QUERY FOR IPAD & TABLET LANDSCAPE MODE *****************/	
+@media screen and (min-width:769px) and (max-width:1024px) 
+ .theme-form .no-gap
+  width: calc(100% + Calc(var(--fldgapT)*2))
+  left: Calc(var(--fldgapT) - Calc(var(--fldgapT)*2))
+ .theme-form .field-indent, .calc-pad-right
+  padding-right: Calc(var(--fldgapT)/2)
+ .theme-form .field-indent .form-field, .equal-pad
+  padding: 0 Calc(var(--fldgapT)/2) !important
+ .card-content.theme-form-card .sub-head-sm, .card-content.theme-form-card .card-head.label-indent, .calc-left-pad
+  padding-left: calc(Calc(var(--fldgapT)/2) + 20px) !important 
+ .theme-form
+  .field-indent.col-field-2
+   .form-field
+    width: 50%  
+  .field-indent.col-field-3, .field-indent.col-field-4 
+   .form-field
+    width: 50%  
+   .form-field.x2, .form-field.x3
+    width: 100% 
+ .right-container-closed .center-container 
+  .theme-form 
+   .field-indent.col-field-2
+    .form-field
+     width: 50%  
+   .field-indent.col-field-3, .field-indent.col-field-4 
+    .form-field
+     width: 50%  
+    .form-field.x2, .form-field.x3
+     width: 100% 
+/**************** MEDIA QUERY FOR IPAD & TABLET LANDSCAPE MODE *****************/
+
+/**************** MEDIA QUERY FOR MOBILE AND TABLET POTRAIT MODE *****************/
+@media screen and (min-width:320px) and (max-width:768px) 
+ .theme-label, .theme-value
+   font-size: 12px !important
+ .lb
+   white-space: nowrap !important
+   overflow: hidden !important
+   text-overflow: ellipsis !important
+ .mob-text-btn
+  background: none !important
+  color: $default
+ .btn-block
+  background: linear-gradient( 270deg ,$bg-color-1,$bg-color-2)
+  opacity: 1
+  color: $default
+ .btn-block .theme-lg-btn
+  background: none
+  color: $default
+  height: 60px !important
+ .btn-block
+  button,.primary-btn[disabled]
+   box-shadow: none
+  button.mob-btn,.primary-btn[disabled].mob-btn
+   box-shadow: none
+   padding: 15px
+   height: 40px !important
+   line-height: 11px
+   margin-top: 10px
+   width: 100px
+   min-width: 100px !important
+   box-shadow: -3px -3px 6px $clr-primary, 3px 3px 6px #071e54
+   background: $bg-color-21
+   color: $default
+ .btn.sm
+  min-width: 100px !important
+ .theme-form .no-gap
+  width: calc(100% + Calc(var(--fldgapM)*2))
+  left: Calc(var(--fldgapM) - Calc(var(--fldgapM)*2))
+ .theme-form .field-indent, .calc-pad-right
+  padding-right: Calc(var(--fldgapM)/2)
+ .theme-form .field-indent .form-field, .equal-pad
+  padding: 0 Calc(var(--fldgapM)/2) !important
+ .card-content.theme-form-card .sub-head-sm, .card-content.theme-form-card .card-head.label-indent, .calc-left-pad
+  padding-left: calc(Calc(var(--fldgapM)/2) + 20px) !important 
+ .btn-sm
+  min-width: 120px !important
+ .theme-container
+   margin-bottom: 50px
+ .page-title .link-btn
+   font-size: 14px
+   position: absolute
+   top: 10px
+   right: 0
+ .hidden-sm
+   display: none !important
+ .modal-content > div
+  height: 100vh
+
+/**************** MEDIA QUERY FOR MOBILE AND TABLET POTRAIT MODE *****************/
+
+/**************** MEDIA QUERY FOR MOBILE DEVICES OF MAX WIDTH 530PX *****************/
+@media (max-width: 530px)
+  .form-field
+    margin-bottom: 5px !important
+  .accordion-section .link-btn
+    margin: 0 !important
+    position: absolute
+    top: -32px
+  .page-title .link-btn
+   font-size: 14px
+   position: absolute
+   top: 25px
+   left: 40px
+  .preview-details .preview-structure td .theme-value
+    padding-left: 0 !important
+  .pagination-entries
+    margin: 0px
+  .multi-btn .theme-sm-btn:first-child
+    margin-bottom:20px
+  .btn-block .theme-sm-btn,btn-block .theme-sm-btn:active,.btn-block .theme-sm-btn:focus,.btn-block .theme-sm-btn:hover,.btn-block .theme-sm-btn.active
+     min-width: 120px !important
+  .page-title
+   margin-bottom: 0 !important
+  
+  .theme-card .card-content
+    padding: 15px
+/**************** MEDIA QUERY FOR MOBILE DEVICES OF MAX WIDTH 530PX *****************/
+
+/**************** MEDIA QUERY FOR MOBILE DEVICES OF MAX WIDTH 480PX *****************/
+@media (max-width: 480px)
+  .link-btn-p-t-0
+    padding-top: 0px !important 
+  .pb-18
+    padding-bottom: 18px !important
+  .ws-text
+    white-space: nowrap !important
+  .btn-mob
+    width: 100%
+  .disp-flex 
+   .fixed-width
+    width: 50% !important
+  .theme-lg-btn,.theme-lg-btn.active, .theme-lg-btn:active, .theme-lg-btn:hover, .theme-lg-btn:focus
+    width: 100%
+    min-width: 100%	
+  .theme-radio.round, .theme-check.round
+    margin-right: 5px
+  .theme-radio > label, .theme-check > label
+    height: 46px
+    width: 46px
+/**************** MEDIA QUERY FOR MOBILE DEVICES OF MAX WIDTH 480px *****************/
+
+/**************** MEDIA QUERY FOR PAGINATION *****************/
+
+@media (min-width: 320px) and (max-width: 576px)
+    .ngx-pagination.responsive .small-screen 
+         display: initial !important
+         padding: 5px !important
+/**************** MEDIA QUERY FOR PAGINATION *****************/

@@ -1,0 +1,960 @@
+<div class="theme-container">
+   <div class="page-title">
+      <div class="nav-btn">
+         <svg>
+            <use xlink:href="#ICON_Arrow" />
+         </svg>
+      </div>
+      <div class="head-lg heading">INFORMATION SHEET</div>
+      <div class="pull-right breadcrum">
+         <span class="head-sm">Application / </span> <span class="head-sm">Information Sheet</span>
+      </div>
+   </div>
+   <form [formGroup]="informationSheetForm" class="theme-form mt-mobile">
+      <!-- <div class="nominee-detail block"> -->
+      <div class="theme-card full has-form">
+         <div class="card-content">
+            <!-- <div class="row"> -->
+            <!-- <div class="field-two"> -->
+            <div class="row">
+               <div [ngClass]="{'complete':informationSheetForm.value.location}"
+                  class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm">SOURCING LOCATION</label>
+                  <ng-select [items]="locationArray" placeholder="Select" formControlName="location"
+                     class="ngSelectOption 1">
+                  </ng-select>
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.channel}"
+                  class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm">CHANNEL<span class="text-red">*</span></label>
+                  <ng-select [items]="channel" placeholder="Select" formControlName="channel" class="ngSelectOption 1">
+                  </ng-select>
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.producerName}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="producerName" class="head-sm">PRODUCER NAME<span class="text-red">*</span></label>
+                  <input type="text" formControlName="producerName" class="form-control" name="producerName" id="producerName" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.producerCode}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="producerCode" class="head-sm">PRODUCER CODE</label>
+                  <input type="text" formControlName="producerCode" class="form-control" name="producerCode" id="producerCode" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <!-- <div class="col-md-12">
+                          <div class="head-sm ">ENTER APPOINTEE DETAILS</div>
+                          <div class="head-sm  m-b-md m-l">Since the nominee is a minor.please enter appointee details.</div>
+                          </div> -->
+               <div [ngClass]="{'complete':informationSheetForm.value.quoteDate}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="quoteDate" class="head-sm">QUOTE DATE</label>
+                  <input type="text" formControlName="quoteDate" class="form-control" name="quoteDate" id="quoteDate" autocomplete="off">
+                  <span class="error-msg posrel-LG">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.proposal}"
+                  class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm">TYPE OF PROPOSAL<span class="text-red">*</span></label>
+                  <ng-select placeholder="Select" formControlName="proposal">
+                     <ng-option *ngFor="let proposalType of  proposalArray">{{proposalType.name}}</ng-option>
+                  </ng-select>
+                  <span class="error-msg posrel-LG btm-lg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.quoteCurrency}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="quoteCurrency" class="head-sm">CURRENCY OF QUOTE<span class="text-red">*</span></label>
+                  <input type="text" formControlName="quoteCurrency" class="form-control" name="quoteCurrency" id="quoteCurrency" autocomplete="off">
+                  <span class="error-msg posrel-LG posrel-md">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.indianInsuredName}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="indianInsuredName" class="head-sm">NAME OF THE INDIAN INSURED<span
+                        class="text-red">*</span></label>
+                  <input type="text" formControlName="indianInsuredName" class="form-control" name="indianInsuredName" id="indianInsuredName"
+                     autocomplete="off">
+                  <span *ngIf="errMsg" class="error-msg posrel-md">
+                     Required *
+                  </span>
+                  <span class="is-text">
+                     (including name of only indian subsidiaries / Joint Ventures / Partners to be
+                     insured)(please do not include any entity
+                     registered / incorporated outside of india,if there is any search requirement please
+                     refer it to underwriter )
+                  </span>
+               </div>
+            </div>
+            <div class="row">
+               <!-- <div class="col-md-12 p-0">
+                          <label class="head-sm section-headings">REGISTERED ADDRESS OF THE INSURED INCLUDING PINCODE</label>
+                       </div> -->
+               <div class="col-md-12 col-lg-12">
+                  <div class="head-sm p-l-md">REGISTERED ADDRESS OF THE INSURED INCLUDING PINCODE</div>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.pinCode}" class="form-field col-md-6 col-lg-4 col-xl-3 mb-h-30">
+                  <label for="pincode" class="head-sm">PIN CODE</label>
+                  <input type="text" formControlName="pinCode" class="form-control" name="pincode" id="pincode" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.houseNo}" class="form-field col-md-6 col-lg-4 col-xl-3 mb-h-30">
+                  <label for="hno" class="head-sm long-label-text">HOUSE NO,BLDG / APPT NAME,SOC NAME / ROAD NAME
+                  </label>
+                  <input type="text" formControlName="houseNo" class="form-control" name="hno" id="hno" autocomplete="off">
+                  <span class="error-msg btm-errMsg-xl">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.landmark}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="landmark" class="head-sm">NEAREST LANDMARK</label>
+                  <input type="text" formControlName="landmark" class="form-control" name="landmark" id="landmark" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.village_district}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="village_district" class="head-sm">VILLAGE,DISTRICT</label>
+                  <input type="text" formControlName="village_district" class="form-control" name="village_district" id="village_district"
+                     autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.town_city}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="town_city" class="head-sm">TOWN,CITY</label>
+                  <input type="text" formControlName="town_city" class="form-control" name="town_city" id="town_city" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.state}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="state" class="head-sm">STATE</label>
+                  <ng-select placeholder="Select" formControlName="state">
+                     <ng-option *ngFor="let state of  stateArray">{{state.name}}</ng-option>
+                  </ng-select>
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.gstNumber}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="gstNo" class="head-sm">GST NUMBER</label>
+                  <input type="text" formControlName="gstNumber" class="form-control" name="gstNo" id="gstNo" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.businessForm}"
+                  class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm">FORM OF BUSINESS</label>
+                  <ng-select placeholder="Select" formControlName="businessForm">
+                     <ng-option *ngFor="let business of businessForm">{{business.name}}</ng-option>
+                  </ng-select>
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.businessDescription}"
+                  class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm"> BUSINESS DESCRIPTION<span class="text-red">*</span></label>
+                  <ng-select placeholder="Select" formControlName="businessDescription">
+                     <ng-option *ngFor="let business of businessDescriptionArray">{{business.desc}}
+                     </ng-option>
+                  </ng-select>
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.policyForm}"
+                  class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm">POLICY FORM<span class="text-red">*</span></label>
+                  <ng-select placeholder="Select" formControlName="policyForm">
+                     <ng-option *ngFor="let policy of  policyForm">{{policy.value}}</ng-option>
+                  </ng-select>
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.policyInceptionDate}" class="form-field col-md-6 col-lg-4 col-xl-3 mb-h-30">
+                  <label for="inceptionDate" class="head-sm">POLICY INCEPTION DATE</label>
+                  <input #policyInceptionDate type="text" (keyup.enter)="formatLikeExcel('inceptionDate')" (focusout)="formatLikeExcel('inceptionDate')" 
+                     (keypress)="isNumberKey($event)" formControlName="policyInceptionDate" class="form-control" name="inceptionDate" 
+                     id="inceptionDate" placeholder="DD/MM/YYYY" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.retroactiveDate}" class="form-field col-md-6 col-lg-4 col-xl-3 mb-h-30">
+                  <label for="retroactiveDate" class="head-sm">RETROACTIVE DATE(Only for claims-maid form)
+                  </label>
+                  <input #retroactiveDate type="text" (keyup.enter)="formatLikeExcel('retroactiveDate')" (focusout)="formatLikeExcel('retroactiveDate')" 
+                  (keypress)="isNumberKey($event)" formControlName="retroactiveDate" class="form-control" name="retroactiveDate" id="retroactiveDate"
+                     placeholder="DD/MM/YYYY" autocomplete="off">
+                  <span class="error-msg btm-errMsg-xl">
+                     Required *
+                  </span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4 col-lg-4 col-xl-3">
+                  <label class="head-sm color-asqi m-l-20">Limit of liability</label>
+                  <label class="head-lg ft-14 d-block m-l-20 l-h-55">General Aggregate Limit</label>
+               </div>
+               <div class="form-field col-md-4 col-lg-4 col-xl-3">
+                  <label class="head-sm color-asqi ft-14">AGGREGATE LIMIT</label>
+                  <input type="text" class="form-control">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div class="form-field col-md-4 col-lg-4 col-xl-3">
+                  <label class="head-sm color-asqi ft-14">ANY ONE OCCURENCE</label>
+                  <input type="text" class="form-control">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4 col-lg-4 col-xl-3">
+                  <label class="head-sm color-asqi m-l-20 small-device-labels">Limit of liability</label>
+                  <label class="head-lg ft-14 d-block m-l-20">Combined / Single Limit for General Aggregate & Products /
+                     Completed Operations</label>
+               </div>
+               <div class="form-field col-md-4 col-lg-4 col-xl-3">
+                  <label class="head-sm color-asqi ft-14 small-device-labels">AGGREGATE LIMIT</label>
+                  <input type="text" class="form-control">
+                  <span class="error-msg errMsg-btm-res">
+                     Required *
+                  </span>
+               </div>
+               <div class="form-field col-md-4 col-lg-4 col-xl-3">
+                  <label class="head-sm color-asqi ft-14 small-device-labels">ANY ONE OCCURENCE</label>
+                  <input type="text" class="form-control">
+                  <span class="error-msg errMsg-btm-res">
+                     Required *
+                  </span>
+               </div>
+            </div>
+            <div class="row">
+               <!-- <div class="col-md-12 p-0">
+                          <label class="head-sm section-headings">HOTEL</label>
+                       </div> -->
+               <div class="col-md-12 col-lg-12">
+                  <div class="head-sm p-l-md">HOTEL</div>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.hotel}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm">GRADE OF THE HOTEL (STAR)</label>
+                  <ng-select placeholder="Select" formControlName="hotel">
+                     <ng-option *ngFor="let hotel of hotelGrade">{{hotel.grade}}</ng-option>
+                  </ng-select>
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.totalNumberOfRooms}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="totalRooms" class="head-sm">TOTAL NUMBER OF ROOMS</label>
+                  <input type="text" formControlName="totalNumberOfRooms" class="form-control" name="totalRooms" id="totalRooms" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+            </div>
+            <div class="row">
+               <!-- <div class="col-md-12 p-0">
+                          <label class="head-sm section-headings">
+                          EDUCATIONAL INSTITUTES / SCHOOL / COLLEGES / TRAINING INSTITUTES
+                          </label>
+                       </div> -->
+               <div class="col-md-12 col-lg-12">
+                  <div class="head-sm p-l-md">EDUCATIONAL INSTITUTES / SCHOOL / COLLEGES / TRAINING INSTITUTES</div>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.question}"
+                  class="form-field col-md-6 col-lg-4 col-xl-3 m-h-30">
+                  <label class="head-sm">IS THE INSTITUTES AN INTERNATIONAL SCHOOL</label>
+                  <ng-select placeholder="Select" formControlName="question">
+                     <ng-option *ngFor="let question of  question">{{question.value}}</ng-option>
+                  </ng-select>
+                  <span class="error-msg btm-errMsg-xl">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.totalNoOfStudents}" class="form-field col-md-6 col-lg-4 col-xl-3 m-h-30">
+                  <label for="totalStudents" class="head-sm">TOTAL NUMBER OF STUDENTS</label>
+                  <input type="text" formControlName="totalNoOfStudents" class="form-control" name="totalStudents" id="totalStudents" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.questionOffered}"
+                  class="form-field col-md-6 col-lg-4 col-xl-3 m-h-30">
+                  <label class="head-sm long-label-text">IS HOSTEL/ACCOMODATION FACILITY BEING OFFERED</label>
+                  <ng-select placeholder="Select" formControlName="questionOffered">
+                     <ng-option *ngFor="let question of  question">{{question.value}}</ng-option>
+                  </ng-select>
+                  <span class="error-msg btm-errMsg-xl">
+                     Required *
+                  </span>
+               </div>
+            </div>
+            <div class="row">
+               <!-- <div class="col-md-12 p-0">
+                          <label class="head-sm section-headings">
+                          WINDMILL QUESTIONS
+                          </label>
+                       </div> -->
+               <div class="col-md-12 col-lg-12">
+                  <div class="head-sm p-l-md">WINDMILL QUESTIONS</div>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.numberOfWindmills}" class="form-field col-md-6 col-lg-4 col-xl-3 m-h-30 mb-h-30">
+                  <label for="noOfWindmills" class="head-sm">NUMBER OF WINDMILLS</label>
+                  <input type="text" formControlName="numberOfWindmills" class="form-control" name="noOfWindmills" id="noOfWindmills" autocomplete="off">
+                  <span class="error-msg btm-errMsg-xl">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.totalMwWindmills}" class="form-field col-md-6 col-lg-4 col-xl-3 m-h-30 mb-h-30">
+                  <label for="totalCapacity" class="head-sm long-label-text">TOTAL MW CAPACITY OF All THE WINDMILLS COMB
+                     TOGETHER</label>
+                  <input type="text" formControlName="totalMwWindmills" class="form-control" name="totalCapacity" id="totalCapacity" autocomplete="off">
+                  <span class="error-msg btm-errMsg-xl">
+                     Required *
+                  </span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12 col-lg-12">
+                  <label class="head-sm p-l-md">
+                     RESIDENTIALS HOUSING SOCIETY
+                  </label>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.noOfFlats}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="noOfFlats" class="head-sm">NO OF FLATS</label>
+                  <input type="text" formControlName="noOfFlats" class="form-control" name="noOfFlats" id="noOfFlats" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="dashed-border w-100">
+                  <!-- <div class="col-md-12 p-0">
+                             <label class="head-sm section-headings">
+                             SOLAR PLANTS
+                             </label>
+                          </div> -->
+                  <div class="col-md-12 col-lg-12">
+                     <label class="head-sm p-l-md">
+                        SOLAR PLANTS
+                     </label>
+                  </div>
+                  <div [ngClass]="{'complete':informationSheetForm.value.numberOfSolarPlants}" class="form-field col-md-6 col-lg-4 col-xl-3 m-h-30 mb-h-30">
+                     <label for="noOfSolarPlants" class="head-sm">NO OF SOLAR PLANTS</label>
+                     <input type="text" formControlName="numberOfSolarPlants" class="form-control" name="noOfSolarPlants" id="noOfSolarPlants"
+                        autocomplete="off">
+                     <span class="error-msg btm-errMsg-xl">
+                        Required *
+                     </span>
+                  </div>
+                  <div [ngClass]="{'complete':informationSheetForm.value.totalMwSolar}" class="form-field col-md-6 col-lg-4 col-xl-3 m-h-30 mb-h-30">
+                     <label for="totalCapacitySolar" class="head-sm long-label-text">TOTAL MW CAPACITY OF All THE SOLAR
+                        PLANTS COMB TOGETHER</label>
+                     <input type="text" formControlName="totalMwSolar" class="form-control" name="totalCapacitySolar" id="totalCapacitySolar"
+                        autocomplete="off">
+                     <span class="error-msg btm-errMsg-xl">
+                        Required *
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="row mt-4">
+               <div class="dashed-border w-100">
+                  <!-- <div class="col-md-12 p-0">
+                             <label class="head-sm section-headings">
+                             COVERAGE TERRITORY
+                             </label>
+                          </div> -->
+                  <div class="col-md-12 col-lg-12">
+                     <label class="head-sm p-l-md">
+                        COVERAGE TERRITORY<span class="text-red">*</span>
+                     </label>
+                  </div>
+                  <div [ngClass]="{'complete':informationSheetForm.value.coverageTerritoryAggregate}"
+                     class="form-field col-md-6 col-lg-4 col-xl-3">
+                     <label class="head-sm">GENERAL AGGREGATE LIMIT</label>
+                     <ng-select placeholder="Select" formControlName="coverageTerritoryAggregate">
+                        <ng-option *ngFor="let aggregate  of aggregateLimitArray">{{aggregate.name}}</ng-option>
+                     </ng-select>
+                     <span class="error-msg btm-errMsg-xl">
+                        Required *
+                     </span>
+                  </div>
+                  <div [ngClass]="{'complete':informationSheetForm.value.coverageTerritoryProducts}"
+                     class="form-field col-md-6 col-lg-4 col-xl-3">
+                     <label class="head-sm">PRODUCTS/COMPLETED OPERATIONS LIMIT</label>
+                     <ng-select placeholder="Select" formControlName="coverageTerritoryProducts">
+                        <ng-option *ngFor="let aggregate  of aggregateLimitArray">{{aggregate.name}}</ng-option>
+                     </ng-select>
+                     <span class="error-msg btm-errMsg-xl">
+                        Required *
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="row mt-4">
+               <div class="dashed-border w-100">
+                  <!-- <div class="col-md-12 p-0">
+                             <label class="head-sm section-headings">
+                             COVERAGE JURISDICTION
+                             </label>
+                          </div> -->
+                  <div class="col-md-12 col-lg-12">
+                     <label class="head-sm p-l-md">
+                        COVERAGE JURISDICTION<span class="text-red">*</span>
+                     </label>
+                  </div>
+                  <div [ngClass]="{'complete':informationSheetForm.value.coverageJurisdictionAggregate}"
+                     class="form-field col-md-6 col-lg-4 col-xl-3">
+                     <label class="head-sm">GENERAL AGGREGATE LIMIT</label>
+                     <ng-select placeholder="Select" formControlName="coverageJurisdictionAggregate">
+                        <ng-option *ngFor="let aggregate  of aggregateLimitArray">{{aggregate.name}}</ng-option>
+                     </ng-select>
+                     <span class="error-msg btm-errMsg-xl">
+                        Required *
+                     </span>
+                  </div>
+                  <div [ngClass]="{'complete':informationSheetForm.value.coverageJurisdictionProducts}"
+                     class="form-field col-md-6 col-lg-4 col-xl-3">
+                     <label class="head-sm">PRODUCTS/COMPLETED OPERATIONS LIMIT</label>
+                     <ng-select placeholder="Select" formControlName="coverageJurisdictionProducts">
+                        <ng-option *ngFor="let aggregate  of aggregateLimitArray">{{aggregate.name}}</ng-option>
+                     </ng-select>
+                     <span class="error-msg btm-errMsg-xl">
+                        Required *
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="row mt-4">
+               <!-- <div class="col-md-12 p-0">
+                          <label class="head-sm section-headings">
+                          PREMISES TO BE INSURED IN INDIA
+                          </label>
+                       </div> -->
+               <div class="col-md-12 col-lg-12">
+                  <label class="head-sm p-l-md">
+                     PREMISES TO BE INSURED IN INDIA
+                  </label>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm color-asqi ft-14 m-l-20">OCCUPANCY OF PREMISES</label>
+                  <label class="head-lg ft-14 d-block m-l-20 l-h-55">Hotels</label>
+               </div>
+               <div class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm color-asqi ft-14">COUNT OF PREMISES</label>
+                  <input type="text" class="form-control">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm color-asqi ft-14 m-l-20 small-device-labels">OCCUPANCY OF PREMISES</label>
+                  <label class="head-lg ft-14 d-block m-l-20 l-h-55">Offices</label>
+               </div>
+               <div class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label class="head-sm color-asqi ft-14 small-device-labels">COUNT OF PREMISES</label>
+                  <input type="text" class="form-control">
+                  <span class="error-msg errMsg-btm-res">
+                     Required *
+                  </span>
+               </div>
+            </div>
+            <!-- <div class="row">
+                       <div class="col-md-12 p-0">
+                          <div class="head-sm section-headings">
+                             PRODUCTS TO BE CONSIDERED FOR INSURANCE
+                          </div>
+                       </div>
+                    </div> -->
+            <div class="row">
+               <div class="col-md-12 col-lg-12">
+                  <label class="head-sm p-l-md">
+                     PRODUCTS TO BE CONSIDERED FOR INSURANCE
+                  </label>
+               </div>
+            </div>
+            <div class="row">
+               <div class="form-field col-md-12">
+                  <label for="productsTextArea" class="head-sm">PRODUCTS IN CONNECTION WITH THE BUSINESS OF INSURED AS
+                     MENTIONED ABOVE, ENLISTED HERE BELOW:
+                  </label>
+                  <textarea rows="5" class="form-control" name="productsTextArea" id="productsTextArea"></textarea>
+               </div>
+            </div>
+            <!-- <div class="row country-section">
+                       <div class="col-md-6 col-lg-4 col-xl-3">
+                          <label class="head-sm color-asqi ft-14">Country</label>
+                          <label class="head-lg ft-14 d-block l-h-55">India *</label>
+                       </div>
+                       <div class="form-field col-md-6 col-lg-4 col-xl-3">
+                          <label class="head-sm color-asqi ft-14">Turnover(In Inr) *</label>
+                          <input type="text" class="form-control">
+                       </div>
+                    </div>
+                    <div class="row country-section">
+                       <div class="col-md-6 col-lg-4 col-xl-3">
+                          <label class="head-sm color-asqi ft-14 small-device-labels">Country</label>
+                          <label class="head-lg ft-14 d-block l-h-55">UK / Europe / Australia</label>
+                       </div>
+                       <div class="form-field col-md-6 col-lg-4 col-xl-3">
+                          <label class="head-sm color-asqi ft-14 small-device-labels">Turnover(In Inr) *</label>
+                          <input type="text" class="form-control">
+                       </div>
+                    </div> -->
+            <!-- <div class="row">
+                     <div class="head-sm">COUNTRY AND TURNOVER</div>
+                    </div> -->
+            <div class="row">
+               <div class="col-md-12 col-lg-12">
+                  <div class="head-sm p-l-md">COUNTRY AND TURNOVER</div>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.indiaTurnover}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="indiaTO" class="head-sm">INDIA<span class="text-red">*</span></label>
+                  <input type="text" formControlName="indiaTurnover" class="form-control" name="indiaTO" id="indiaTO" placeholder="Turnover (INR)"
+                     autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.euTurnover}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="euTO" class="head-sm">UK/EUROPE/AUSTRAILIA</label>
+                  <input type="text" formControlName="euTurnover" class="form-control" name="euTO" id="euTO" placeholder="Turnover (INR)"
+                     autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.usCanadaTurnover}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="us-canadaTO" class="head-sm">US/CANADA</label>
+                  <input type="text" formControlName="usCanadaTurnover" class="form-control" name="us-canadaTO" id="us-canadaTO"
+                     placeholder="Turnover (INR)" autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+               <div [ngClass]="{'complete':informationSheetForm.value.restWorldTurnover}" class="form-field col-md-6 col-lg-4 col-xl-3">
+                  <label for="othersTO" class="head-sm">REST OF THE WORLD</label>
+                  <input type="text" formControlName="restWorldTurnover" class="form-control" name="othersTO" id="othersTO" placeholder="Turnover (INR)"
+                     autocomplete="off">
+                  <span class="error-msg">
+                     Required *
+                  </span>
+               </div>
+            </div>
+            <div class="row mb-4">
+               <div class="col-md-12 col-lg-12">
+                  <div class="head-sm p-l-md primary-dark-text">Total (INR) : <span class="font-lg">&nbsp;<i
+                           class="fa fa-inr"></i>80,00,00,000</span></div>
+               </div>
+            </div>
+            <!-- <div class="row country-section">
+                       <div class="col-md-6 col-lg-4 col-xl-3">
+                          <label class="head-sm color-asqi ft-14 small-device-labels">Country</label>
+                          <label class="head-lg ft-14 d-block l-h-55">US / Canada</label>
+                       </div>
+                       <div class="form-field col-md-6 col-lg-4 col-xl-3">
+                          <label class="head-sm color-asqi ft-14 small-device-labels">Turnover(In Inr) *</label>
+                          <input type="text" class="form-control">
+                       </div>
+                    </div>
+                    <div class="row country-section">
+                       <div class="col-md-6 col-lg-4 col-xl-3">
+                          <label class="head-sm color-asqi ft-14 small-device-labels">Country</label>
+                          <label class="head-lg ft-14 d-block l-h-55">Rest of the world</label>
+                       </div>
+                       <div class="form-field col-md-6 col-lg-4 col-xl-3">
+                          <label class="head-sm color-asqi ft-14 small-device-labels">Turnover(In Inr) *</label>
+                          <input type="text" class="form-control">
+                       </div>
+                    </div>
+                    <div class="row total-section">
+                       <div class="mb-4 col-6 col-md-6 col-lg-4 col-xl-3">
+                          <label class="head-sm">Total</label>
+                       </div>
+                       <span class="head-sm col-6 col-md-6 col-lg-4 col-xl-3">80,00,00,000</span>
+                    </div>  -->
+            <div class="row claim-conditions">
+               <div class="col-md-12 color-asqi">
+                  CLAIM / LOSS RELATED QUESTIONS
+               </div>
+               <div class="col-md-12 color-asqi font-sm">
+                  <ol class="order-list">
+                     <li>
+                        HAS THERE BEEN OR ARE THERE ANY CLAIMS OR LOSSES (REGARDLESS OF FAolT WHETHER OR NOT
+                        INSURED)
+                        OR ANY OCCURENCE OR INCIDENTS ,CONDITIONS,DEFFECTS,CIRCUMSTANCES OR SUSPECTED DEFFECTS,WHICH
+                        MAY GIVE
+                        RISE TO A CLAIM OVER:THE LAST FIVE YEARS UNDER GENERAL LIABILITY AND/OR PRODUCTS LIABILITY?
+                     </li>
+                     <li>
+                        ARE YOU AWARE OF ANY INCIDENT/CIRCUMSTANCES THAT COULD LEAD TO LOSS OR CLAIM UNDER THE
+                        PROPOSED POLICY ?
+                     </li>
+                  </ol>
+               </div>
+               <div class="color-asqi mb-4 font-sm col-md-12">
+                  NOTE:THESE ARE THE MOST IMP,QUESTIONS,PLS READ AND ANSWER THESE CAREFULLY
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-12">
+                  <div class="form-group theme-radio radio-btn premium-radio-btn theme-radio-btn-w">
+                     <input type="radio" id="Yes" name="yes" value="Yes">
+                     <label for="Yes"><span>Yes</span></label>
+                  </div>
+                  <div class="form-group theme-radio radio-btn theme-radio-btn-w">
+                     <input type="radio" id="no" name="No" value="No">
+                     <label for="no"><span>No</span></label>
+                  </div>
+               </div>
+            </div>
+            <div class="row m-t" *ngIf="nstpUser">
+               <div class="col-12">
+                  <span class="text-red uw-alert-msg">PLEASE CONTACT YOUR ZONAL OFFICE FOR APPROVAL IN CASE OF ANY
+                     LOSSES OR
+                     INCIDENTS THAT CAN BE LEAD TO LOSSES
+                  </span>
+               </div>
+            </div>
+            <!-- </div> -->
+            <!-- </div> -->
+         </div>
+         <div *ngIf="premiumCalculate" class="theme-card full has-form mt-4">
+            <div class="card-content">
+               <div class="row d-flex align-items-center">
+                  <!-- <div class="col-md-12 col-lg-12"> -->
+                     <!-- <label class="col-12 col-md-2 head-sm mb-0 pr-0">NET PREMIUM</label> -->
+                     <div class=" col-sm-12 col-md-3 col-lg-2">
+                     <label class="head-sm mb-0">NET PREMIUM</label>
+                  </div>
+                  <div class=" col-sm-12 col-md-6 col-lg-9">
+                     <div class="row">
+                     <div class="theme-value col"><span class="font-xl"><i class="fa fa-inr"></i>10,000</span></div>
+                     <div class="col ws-nowrap">
+                        <button (click)="openPremiumBreakupModal(premium_breakup_modal_template)" class="btn link-btn font-sm1 netPremium-linkbtn pt-2">View Premium</button>
+                     </div>
+                     </div>
+                  </div> 
+                        
+                   
+                  <!-- </div> -->
+                  <!-- <div class="head-sm ml-4 col-sm-2 p-0">NET PREMIUM</div>
+                  <div class="primary-dark-text font-lg ml-4"><i
+                     class="fa fa-inr"></i>10,000</div>
+                  <div class="link-btn ml-4 font-sm">View Premium</div> -->
+               </div>
+            </div>
+         </div>
+         <div *ngIf="nstpUser" class="theme-card w-100 mt-4 p-0">
+            <div class="card-content">
+               <div class="row">
+                  <div class="col-md-12 col-lg-12">
+                     <span class="alert-heading text-red alert-message uw-alert-msg"><i class="fa fa-warning"></i> Alert your
+                        quote has
+                        triggered Underwriter</span><br>
+                     <span class="inline-message">You can either change the values or send it for
+                        consideration</span>
+      
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="btn-block mt-4">
+            <button type="button" class="btn mob-text-btn primary-btn m-t-xs sm box-none d-md-inline margin-xl"
+               (click)="Calculate()">Calculate</button>
+            <button *ngIf="premiumCalculate" type="button" class="mob-text-btn btn primary-btn  m-t-xs sm"
+               (click)="contactDetailModal(contact_detail_template)">Save & Share</button>
+               <button *ngIf="nstpUser" type="button" class="btn primary-btn theme-lg-btn mob-text-btn">Send to Underwriter</button>
+         </div>
+         <!-- <div class="row mt-4"> -->
+         <div class="mt-4">
+            <div class="refer-mob-card">
+               <div class="row">
+                  <div [ngClass]="{'complete':informationSheetForm.value.reasonForReferal}" class="form-field col-md-12 col-lg-12 mt-4">
+                     <label for="referalReason" class="head-sm">REASON OF REFERAL</label>
+                     <div class="row">
+                        <div class="col-12 col-md-5 col-lg-5 ref-inpBlock">
+                           <input type="text" formControlName="reasonForReferal" class="form-control referal-input" name="referalReason" id="referalReason"
+                              autocomplete="off">
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-3 ref-btnBlock">
+                           <button class="btn is-refer-btn w-sm-100">Refer To Underwriter</button>
+                           <!-- <input type="text" class="form-control" name="" id=""> -->
+                        </div>
+                     </div>
+                     <!-- <input type="text" class="form-control referal-input" name="referalReason" id="referalReason" autocomplete="off"> -->
+                     <!-- <button class="btn primary-btn">Refer</button> -->
+                     <!-- <div class="head-sm">Not Applicable for Tata AIG General Insurance Company Limited Renewals
+                     </div> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- <div class="form-field col-lg-3">
+               <label for="" class="head-sm">Ref</label>
+               <button class="btn is-refer-btn">Refer To Underwriter</button>
+            </div> -->
+         <!-- </div> -->
+      </div>
+      <div class="head-sm txtsm-center">Not Applicable for Tata AIG General Insurance Company Limited Renewals
+      </div>
+      <!-- </div> -->
+   </form>
+</div>
+<ng-template #contact_detail_template>
+   <div class="modal-container">
+      <div class="detail-container-modal modal-md modal-form contact-detail-modal">
+         <div class="modal-header">
+            <h4 class="modal-title pull-left">CONTACT DETAILS</h4>
+            <div class="close-icon" (click)="contactModalRef.hide()">
+               <svg>
+                  <use xlink:href="#ICON_Cross" />
+               </svg>
+            </div>
+         </div>
+         <div class="modal-body has-form">
+            <form class="theme-form" [formGroup]="informationSheetForm">
+               <div class="row">
+                  <div [ngClass]="{'complete':informationSheetForm.value.title}" class="form-field col-md-6">
+                     <div class="head-sm">TITLE</div>
+                     <ng-select formControlName="title" placeholder="Select" [items]="titleArray"
+                        class="ngSelectOption 1">
+                     </ng-select>
+                     <span class="error-msg">
+                        Required *
+                     </span>
+                  </div>
+                  <div class="form-field col-md-6">
+                     <label for="fname" class="head-sm">FIRST NAME</label>
+                     <input type="text" (keypress)="formatName($event)" class="form-control" id="fname" autocomplete="off">
+                     <span class="error-msg">
+                        Required *
+                     </span>
+                  </div>
+                  <div class="form-field col-md-12">
+                     <label for="mname" class="head-sm">MIDDLE NAME</label>
+                     <input type="text" (keypress)="formatName($event)" class="form-control" id="mname" autocomplete="off">
+                     <!-- <span class="error-msg">
+                        Required *
+                     </span> -->
+                  </div>
+                  <div class="form-field col-md-12">
+                     <label for="lname" class="head-sm">LAST NAME</label>
+                     <input type="text" (keypress)="formatName($event)" class="form-control" id="lname" autocomplete="off">
+                     <span class="error-msg">
+                        Required *
+                     </span>
+                  </div>
+                  <div class="form-field col-md-12">
+                     <label for="usr" class="head-sm">EMAIL</label>
+                     <input type="email" (keypress)="formatEmail($event)" class="form-control" id="email" autocomplete="off">
+                     <span class="error-msg">
+                        Required *
+                     </span>
+                  </div>
+                  <div class="form-field col-md-12">
+                     <label for="usr" class="head-sm">MOBILE NUMBER</label>
+                     <input type="text" (keypress)="isNumberKey($event)" minlength="10" maxlength="10"
+                        class="form-control" id="mobile" autocomplete="off">
+                        <span class="error-msg">
+                           Required *
+                        </span>
+                  </div>
+                  <div class="col-md-12 text-center">
+                     <div class="row justify-content-center">
+                        <div class="col-6 col-md-4">
+                           <button (click)="saveQuote(save_template)" type="button" class="btn primary-btn m-t-xs sm w-100">Save</button>
+                        </div>
+                        <div class="col-6 col-md-4">
+                           <button type="button" class="btn primary-btn m-t-xs sm w-100"
+                              (click)="shareQuote(success_template)">Share</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</ng-template>
+<ng-template #success_template>
+   <div class="detail-container-modal modal-md success-info pb-modal">
+      <div class="modal-header">
+         <div class="close-icon" (click)="successModalRef.hide()">
+            <svg>
+               <use xlink:href="#ICON_Cross" />
+            </svg>
+         </div>
+      </div>
+      <div class="modal-body succes-container">
+         <div class="row">
+            <div class="text-center col-md-12">
+               <div>
+                  <svg class="icon-blue">
+                     <use xlink:href="#ICON_Sent_successfully" />
+                  </svg>
+               </div>
+               <div class="head-md">Congrulations, Your Quote "12345" Has Been Shared Successfully</div>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center">
+               <table>
+                  <tr>
+                     <td class="theme-label">Full Name</td>
+                     <td class="pl-5 theme-value">Rajesh Arora</td>
+                  </tr>
+                  <tr>
+                     <td class="theme-label">Quote Number</td>
+                     <td class="pl-5 theme-value">12356776</td>
+                  </tr>
+                  <tr>
+                     <td class="theme-label">Mobile Number</td>
+                     <td class="pl-5 theme-value">+91 98290 98280</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="col-md-12 text-center m-30-0">
+               <div class="row justify-content-center">
+                  <div class="col-6">
+                     <button type="button" class="btn primary-btn btn-successModal">Dashboard</button>
+                  </div>
+                  <div class="col-6 ">
+                     <button (click)="route()" type="button" class="btn primary-btn btn-successModal">View Quotes</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</ng-template>
+<ng-template #premium_breakup_modal_template>
+   <div class="detail-container-modal modal-md pb-modal">
+      <div class="modal-header">
+         <h4 class="modal-title pull-left">PREMIUM BREAKUP</h4>
+        <div class="close-icon" (click)="premiumBreakupModalRef.hide()">
+           <svg>
+              <use xlink:href="#ICON_Cross" />
+           </svg>
+        </div>
+     </div>
+      <div class="modal-body succes-container">
+         <!-- <div class="border-as-bottom-top">
+            <div class="row my-4 px-5">
+               <div class="col-md-6"><span class="theme-label">Net Premium</span></div>
+               <div class="col-md-6 pl-5"><span class="premBreak-span">
+                  <i class="fa fa-inr"></i>10,000</span></div>
+               <div class="col-md-6"><span class="theme-label">GST (18%)</span></div>
+               <div class="col-md-6 pl-5"><span class="premBreak-span">
+                  <i class="fa fa-inr"></i>1,800</span></div>
+               <div class="col-md-6"><span class="theme-label">Kerela Cess</span></div>
+               <div class="col-md-6 pl-5"><span class="premBreak-span">
+                  <i class="fa fa-inr"></i>200</span></div>
+            </div>
+         </div> -->
+         
+         <table aria-hidden="true" class="fw-100">
+            <tbody>
+               <tr>
+                  <td class="p-b-sm "><span class="theme-label">Net Premium</span></td>
+                  <td class="theme-value"><i class="fa fa-inr"></i>10,000</td>
+               </tr>
+               <tr>
+                  <td class="p-b-sm "><span class="theme-label">GST (18%)</span></td>
+                  <td class="theme-value"><i class="fa fa-inr"></i>1,800</td>
+               </tr>
+               <tr>
+                  <td class="p-b-sm "><span class="theme-label">Kerela Cess</span></td>
+                  <td class="theme-value"><i class="fa fa-inr"></i>200</td>
+               </tr>
+            </tbody>
+            <tfoot>
+               <tr class="border-as-bottom-top">
+                  <td class="p-b-md p-t-md"><span class="theme-label">Total Premium</span></td>
+                  <td class="theme-value"><i class="fa fa-inr"></i>2587</td>
+               </tr>
+            </tfoot>
+         </table>
+         <!-- <div class="row px-5 mt-3">
+            <div class="col-md-6"><span class="theme-value">Total Premium</span></div>
+            <div class="col-md-6 pl-5"><span class="theme-value pull-right">
+               <i class="fa fa-inr"></i>12,000</span></div>
+         </div> -->
+         <div class="col-md-12 text-center">
+            <button type="button" (click)="premiumBreakupModalRef.hide()" class="btn btn-mob primary-btn m-t">Done</button>
+         </div>
+      </div>
+   </div>
+ </ng-template>
+ <ng-template #save_template>
+   <div class="detail-container-modal modal-md success-info pb-modal">
+      <div class="modal-header">
+         <div class="close-icon" (click)="saveModalRef.hide()">
+            <svg>
+               <use xlink:href="#ICON_Cross" />
+            </svg>
+         </div>
+      </div>
+      <div class="modal-body succes-container">
+         <div class="row">
+            <div class="text-center col-md-12">
+               <div>
+                  <svg class="icon-blue">
+                     <use xlink:href="#ICON_Sent_successfully" />
+                  </svg>
+               </div>
+               <div class="head-md">Saved Successfully</div>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center">
+               <table>
+                  <tr>
+                     <td class="theme-label">Quote Number</td>
+                     <td class="pl-5 theme-value">12356776</td>
+                  </tr>
+                  <tr>
+                     <td class="theme-label">Name</td>
+                     <td class="pl-5 theme-value">Rajesh Arora</td>
+                  </tr>
+                  <tr>
+                     <td class="theme-label">Mobile Number</td>
+                     <td class="pl-5 theme-value">+91 98290 98280</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="col-md-12 text-center m-30-0">
+               <div class="row justify-content-center">
+                  <div class="col-6 col-md-4">
+                     <button type="button" class="btn btn-mob primary-btn m-t m-t-xs sm w-100">Dashboard</button>
+                  </div>
+                  <div class="col-6 col-md-4">
+                     <button (click)="route()" type="button" class="btn btn-mob primary-btn m-t m-t-xs sm w-100">View Quotes</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</ng-template>

@@ -1,0 +1,134 @@
+@import "../../../sass/variable"
+@import "../../../sass/mixins"
+
+.premium-card
+  input[type=radio]:checked + label
+   font-family: $pop-reg!important
+   background: none
+   &:after
+    content: url("../../../assets/icon/ICON_Tick_white.svg")
+    background: #91D49A
+    position: absolute
+    +square(22px)
+    border-radius: 50px
+    top: -12px
+    right: -4px
+    padding: 2px	  
+.quotelist-btn 
+    color: #264A9F
+    opacity: 1
+    background: #EAEBEF
+    box-shadow: -3px -3px 6px #FFFFFF, 3px 3px 6px #BFC3CF
+    border-radius: 20px
+    border: none
+    font-size: 12px
+    margin-right: 10px
+    margin-bottom: 10px
+    min-width: 50px
+.detail-list-container .form-group .input-group
+    width: Calc(100% - 50px)	
+.detail-list-container .form-group .input-btn
+    position: relative
+    top: 25px
+.filter-group
+    width: 100%
+    max-width: 580px
+.premium-card
+  input[type=radio]:checked + label
+   font-family: $pop-reg!important
+  .premium-container
+    padding: 10px
+    +box-size(100%, 100%)
+    color: $clr-primary
+  .premium-header
+    +float(left, 100%)
+    padding-bottom: 10px
+    min-height: 45px
+  .premium-body
+     +float(left, 100%)
+     padding-bottom: 40px
+     .premium-text
+       text-align: center
+
+  .premium-footer
+    +float(left, 100%)
+    padding: 10px
+    position: absolute
+    left: 0px
+    background: #18478b
+    color: #fff
+    bottom: 0px
+    border-bottom-left-radius: 8px
+    border-bottom-right-radius: 8px
+    .addons
+     font-size: 10px
+  .premium-type
+    float: left
+    text-align: left
+    font-size: 12px
+    .info-icon
+      margin-left: 5px
+      
+
+  .premium-header .premium-members
+    float: right
+    text-align: right
+    text-decoration: underline
+    font-size: 12px
+  .premium-summary
+    float: left
+    width: 100%
+
+  .premium-amt
+     +font_style(10px, #337ab7, $pop-lite)
+
+  .premium-per-month
+    +font_style(25px, $clr-primary, $pop-reg)
+    padding-bottom: 5px
+  .premium-list
+    border-top: 1px dotted
+    +float(left, 100%)
+    padding: 10px 0px
+    display: flex
+    align-items: baseline
+  .theme-lbl
+      float: left
+      text-align: left
+      +font_style(10px, #337ab7, $pop-reg) 
+      flex: 1
+
+  .premium-value
+      float: right
+      text-align: right
+      font-size: 12px
+	  
+.filter
+ width: 50px
+ float: left
+ position: relative
+ top: 25px
+ .info-icon
+      height: 35px
+      width: 35px
+	  
+.detail-list-content .premium-card-container label.premium-lbl
+ box-shadow: -3px -3px 6px #FFFFFF, 3px 3px 6px #BFC3CF 
+.detail-list-content .premium-card .premium-body
+ padding-bottom: 0px
+.detail-list-container .premium-card-container .theme-radio.premium-card
+ min-width: 240px
+ max-width: 240px
+.detail-list-content .premium-card-container label
+ margin-bottom: 0px
+ 
+.detail-list-content .premium-summary .premium-list:last-child .theme-lbl
+ margin-top: 5px
+@media (max-width: 480px)  
+ .theme-tab .nav-tabs .tab-item > a
+  font-size: 10px
+ .detail-list-container .premium-card-container .theme-radio.premium-card
+  min-width: 100%
+  max-width: 100%
+ .page-title .head-lg .head-date
+  width: 100%
+  display: block

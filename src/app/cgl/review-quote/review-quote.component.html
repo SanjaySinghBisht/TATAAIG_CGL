@@ -1,0 +1,706 @@
+<div class="theme-container" #target>
+   <div class="page-title">
+      <div class="nav-btn">
+         <svg>
+            <use xlink:href="#ICON_Arrow" />
+         </svg>
+      </div>
+      <div class="head-lg heading">REVIEW QUOTE</div>
+      <div class="pull-right breadcrum">
+         <span class="head-sm">Application / </span> <span class="head-sm">Review Quote</span>
+      </div>
+   </div>
+   <form class="theme-form mt-mobile">
+      <div class="preview-details">
+         <div class="theme-card w-100 p-0">
+             <div class="card-content">
+                 <div class="head-md pull-left rq-head-md">Commercial General Liability
+                 <div class="theme-label">Quote Number(Q12345-14)</div>
+                 </div>
+                 <div class="pull-right d-flex align-items-center">
+                     <div class="rq-quoteDate d-none d-md-block">Quote Date <span class="rq-span">20/12/2020</span>
+                         </div>
+                     <button (click)="openContatcModal(contact_detail_template)" class="btn quotelist-btn d-none d-sm-block"> <svg
+                             class="svg-xs mini-svg mr-0">
+                             <use xlink:href="#ICON_Download" />
+                         </svg></button>
+                     <button class="btn quotelist-btn rq-edit"> <svg class="svg-xs rq-edSvg">
+                             <use xlink:href="#ICON_Edit" />
+                         </svg></button>
+                 </div>
+                 <div class="disp-flex preview-structure">
+                     <div class="flex-box-100">
+                        <div class="fw-100">
+                           <div class="head-sm pull-left">CUSTOMER DETAILS</div>
+                        </div>
+                        <table aria-hidden="true" class="w-100">
+                           <tr>
+                              <td class="fixed-width"><span class="theme-label">Customer Name</span></td>
+                              <td><span class="theme-value">Rajesh</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fixed-width"><span class="theme-label">Email Address</span></td>
+                              <td><span class="theme-value">Rajesh@gmail.com</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fixed-width"><span class="theme-label">Mobile Number</span></td>
+                              <td><span class="theme-value">+91 9889767545</span></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">INSURED DETAILS</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Type</span></td>
+                               <td><span class="theme-value">Rajesh</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Policy Inception Date</span></td>
+                               <td><span class="theme-value">Rajesh@gmail.com</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Named Insured</span></td>
+                               <td><span class="theme-value">+91 9889767545</span></td>
+                            </tr>
+                            <tr>
+                             <td class="fixed-width"><span class="theme-label">Mailing Address</span></td>
+                             <td><span class="theme-value">Rajesh</span></td>
+                          </tr>
+                          <tr>
+                             <td class="fixed-width"><span class="theme-label">Period</span></td>
+                             <td><span class="theme-value">Rajesh@gmail.com</span></td>
+                          </tr>
+                          <tr>
+                             <td class="fixed-width"><span class="theme-label">Business Description</span></td>
+                             <td><span class="theme-value">+91 9889767545</span></td>
+                          </tr>
+                          <tr>
+                             <td class="fixed-width"><span class="theme-label">Currency of Quote</span></td>
+                             <td><span class="theme-value">Rajesh</span></td>
+                          </tr>
+                          <tr>
+                             <td class="fixed-width"><span class="theme-label">GSTIN</span></td>
+                             <td><span class="theme-value">Rajesh@gmail.com</span></td>
+                          </tr>
+                          <tr>
+                             <td class="fixed-width"><span class="theme-label">Form of Business</span></td>
+                             <td><span class="theme-value">+91 9889767545</span></td>
+                          </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">HOTEL</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Grade of the Hotel (Star)</span></td>
+                               <td><span class="theme-value">5</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Total Number of Rooms</span></td>
+                               <td><span class="theme-value">1000</span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">EDUCATIONAL INSTITUTES/ SCHOOL/ COLLEGES/TRAINING INSTITUTES</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Is the Instittute an International School</span></td>
+                               <td><span class="theme-value">Yes</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Total Number of Students</span></td>
+                               <td><span class="theme-value">248</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Is Hostel/Accomodation facility being offered</span></td>
+                               <td><span class="theme-value">Yes</span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">WINDMILLS</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">No. of Windmills</span></td>
+                               <td><span class="theme-value">5</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Total MW Capacity of all the windmills combined together</span></td>
+                               <td><span class="theme-value">1000</span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">RESIDENTIAL HOUSING SOCIETY</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">No. of Flats</span></td>
+                               <td><span class="theme-value">12</span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">SOLAR PLANTS</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">No. of Solar Plants</span></td>
+                               <td><span class="theme-value">5</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Total MW Capacity of all the Solar Plants combined together</span></td>
+                               <td><span class="theme-value">1000</span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">LIMIT OF LIABILITY</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Combined single Limit for General Aggregate & Products / Completed Operations</span></td>
+                               <td><span class="theme-value">INR 10,00,00,000 Any one Occurence And INR 10,00,00,000 In The Aggregate</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Personal and Advertising Injury Limit</span></td>
+                               <td><span class="theme-value">INR 10,00,00,000 Any one Occurence And INR 10,00,00,000 In The Aggregate</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Fire Damage Limit</span></td>
+                               <td><span class="theme-value">10% of Limit of Liability Subject to Maximum of 250000 Per Occurence</span></td>
+                            </tr>
+                            <tr>
+                             <td class="fixed-width"><span class="theme-label">Medical Expenses Limit</span></td>
+                             <td><span class="theme-value">5% of Limit of Liability Subject to Maximum of 100000 Per Person</span></td>
+                          </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">FORM</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="rq-span">CGL- Claims Made</span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">CONDITIONS</div>
+                         </div>
+                         <div class="fw-100">
+                             <div class="head-sm pull-left">The Policy will be issued subject to the following conditions:</div>
+                          </div>
+                          <div class="rqList-label mb-2">Key Coverages/Extensions</div>
+                          <ol class="rq-list">
+                             <li>Defense Costs Included In The Limit OF Liability As Per Endorsement</li>
+                             <li>Designated Premises As Per Endorsement</li>
+                             <li>Designated Product As Per Endorsement</li>
+                             <li>The Policy Covers Legal Ability Arising Out Of Travel Of Executives Of The Named Insured Anywhere In The World For Non-Manual Business Visits Only</li>
+                             <li>The Policy Covers Legal Ability For Bodily Injury / Propoerty Damage Arising Out Of Employee Engagement, Marketing And Promotional Activities Conducted At Insured's Premises By The Named Insured During The Policy Period As PEr Policy</li>
+                             <li>Coverage For Automatic Cover Until 90 Days Of Acquistion Of New Subsidiaries As Per Policy</li>
+                             <li>Coverage For Act Of God Peril As Per Policy</li>
+                             <li>Coverage For Food And Beverages As Per Policy</li>
+                             <li>Coverage For Lift Liability As Per Policy</li>
+                             <li>The Policy Covers Legal Liability For BI/PD Arising Out Of Training Conducted During The Normal Business Hours As Per Policy</li>
+                             <li>Cover For Cross Liability As Per Policy</li>
+                             <li>Additional Insured Endorsement - Wherever Required By Written Contract</li>
+                             <li>Waiver Of Subrogation - Wherever Required By Written Contract</li>
+                             <li>72 Hours Sudden And Accidental Pollution Coverage Under General Aggregate Limit As Per Endorsement Subject To:</li>
+                             <li>Coverage Territory And Coverage Jurisdiction: India</li>
+                             <li>Specific Matter Endorsement - Terrorism Legal Liability Coverage As Per Endorsement Subject To:
+                                 <ol class="rq-nestList">
+                                     <li>Sub-Limited To General Aggregate Limit Any One Occurence And In The Aggregate</li> 
+                                     <li>Defense Costs Further Sub-Limited To General Aggregate Limit Any One Occurence And In The Aggregate</li> 
+                                     <li>Coverage Territory And Coverage Jurisdiction: India Only</li>
+                                 </ol>
+                             </li>
+                             <li>Non-Owned And Hired Automobile Liability Coverage As Per Endorsement Subject To:
+                                 <ol class="rq-nestList">
+                                     <li>Sub-Limited To General Aggregate Limit Any One Occurence And In The Aggregate</li>
+                                     <li>It Is A Condition Precedent To Liability That A Valid Motor Vehicle Insurance Under The MV Act Be Maintained At All Times And This Extension Will Operate In Excess Of Such Statutory Cover</li>
+                                     <li>Coverage Territory And Coverage Jurisdiction: India Only</li>
+                                 </ol>
+                             </li>
+                             <li>Policy Covers Legal Liability Arising Out Of, Based Upon Or Attribute To The Meetings And/Or Conferences And Or</li>
+                             <li>Exhibitions And/ Or Promotional Events Organized By The Named Insured During The Policy Period Subject To The Following:
+                                 <ol class="rq-list pl-0">
+                                     <li>Sub-Limited To Limit Of Liability Of General Aggregate Limit Any One Occurence And In The Aggregate.</li>
+                                     <li>No Cover For ""Property Damage"" To Surrounding Properties Belonging To The Premises Occupied For The Event And Property Of Event Organizers And/Or Named Insured And/Or Their Contractors And/Or Their Sub Contractor.</li> 
+                                     <li>No Cover For ""Bodily Injury"" To The Employees Of The Event Organizers And/Or Named Insured And/Or Their Contractors And/Or Their Sub Contractors.</li>
+                                     <li>No Cover For Property Being Worked Upon By The Event Organizers And/Or Named Insured And/Or Their Contractors And/Or Their Sub Contractors.</li>
+                                     <li>This Is A Condition Precedent To Liability That Crowd Accumulation At Any Given Point Of Time Shall Not Exceed 1,000 At Any Given Point Of Time.</li>
+                                     <li>No Cover For Event Cancellation And/Or Postponement</li>
+                                     <li>Coverage Territory And Coverage Jurisdiction: India Only</li>
+                                 </ol>
+                             </li>
+                             <li>Policy Covers Legal Liability Arising Out Of Based Upon Or Attributable To Minor Civil Works, Renovation, Interior</li>
+                             <li>Alterations, New Addition To Existing Building, Repairs And Refurbishment, Subject To:
+                                 <ol class="rq-alphaList">
+                                    <li>Sub Limited To General Aggregate Limit Any One Occurence And In The Aggregate(But In No Case This Sublimit To Exceed INR 60 Lakhs In The Aggregate)</li>
+                                     <li>No Cover For ""Property Damage"" To Any Surrounding Property</li>
+                                     <li>No Cover For Property Being Worked Upon By The Insured And/Or Their Contractors And/Or Their Sub Contractors</li>
+                                     <li>No Cover For ""Bodily Injury"" Of The Employees Of The Insured And/Or Their Contractors And/Or Their Sub Contractors</li>
+                                     <li>This Coverage Is In Excess Of TPL Section Of CAR Policy( As Applicable)</li>
+                                     <li>Coverage Territory And Coverage Jurisdiction: India</li>
+                                 </ol>
+                             </li>
+                             <li>Tenant's Legal Liability - Sub Limited 10% Of LOL Each Occurence And In The Aggregate Coverage Territory And Coverge Jurisdiction: India</li>
+                             <li>Policy Covers
+                                 <ol class="rq-alphaList">
+                                     <li>Coverage For Valet Parking Under Care, Custody And Control As Per Endorsement</li>
+                                     <li>Personal Property Under Care, Custody And control As Per Endorsement</li> 
+                                 </ol>
+                             </li>
+                             <li>For A & B. Above Subject To Following
+                                 <ol class="rq-list">
+                                     <li>Sub Limited To 25% Of General Aggregate Limit Any One Occurence And In The Aggregate(But In No Case This Sublimit To Exceed INR 1 Crore In The Aggregate)</li>
+                                     <li>Maximum Of 3 Losses During The Period Of The Policy</li>
+                                     <li>Valet Driving By Drivers Having A Valid Driving License</li>
+                                     <li>Parking Done Within The Designated Premises Only</li>
+                                     <li>Warranted That In Case Of Theft, Insured Must Lodge A Police Complaint With The Authorities</li>
+                                     <li>Coverage Territory And Coverage Jurisdiction: India</li>
+                                 </ol>
+                             </li>
+                             <li>Transportation Legal Liability Sub Limited To 25% Of LOL Each Occurence And In The Aggregate Coverage Territory And Coverge Jurisdiction: India</li>
+                             <li>Incidental Medical Malpractice Extension For First Aid Only As Per Endorsement:
+                                 <ol class="rq-list">
+                                     <li>Sub Limited To 25% Of General Aggregate Limit Any One Occurence And In The Aggregate(But In No Case This Sublimit To Exceed INR 1 Crore In The Aggregate)</li>
+                                     <li>Coverage Territory And Coverage Jurisdiction: India</li>
+                                 </ol>
+                             </li>
+                             <li>Coverage For Discharge Of Treated Effluents As Per Endorsement Wordongs Outside Plant Premises Subject To
+                                 <ol class="rq-nestList">
+                                     <li>Discharge Point Upto 5 Kilometers From The Insured Premises</li>
+                                     <li>Coverage Territory And Coverage Jurisdiction: India</li>
+                                 </ol>
+                             </li>
+                             <li>Batch Clause</li>
+                         </ol>
+                         <div class="rqList-label mb-2">Key EXCLUSIONS & CONDITIONS</div>
+                         <ol class="rq-list">
+                             <li>Property Damage To Electronic Data Exclusion</li>
+                             <li>Absolute Professional Liability Exclusion</li>
+                             <li>Care, Custody And Control Exclusion Other Than Cover For Personal Property And Valet Parking Under Care, Custody And Control Coverage Offered Above</li>
+                             <li>Specific Matter Endorsement - War, Terrorism And Sabotage Exclusion Other Than Terrorism Coverage Offered Above</li>
+                             <li>Fines, Penalties, Punitive And Exemplary Damages Exclusion</li>
+                             <li>Pure Financial Loss Exclusion</li>
+                             <li>30 Days Cancellation Endorsement</li>
+                             <li>Subject To 18 Above: No Cover For Liability Arising Out Of Civil Work Project Exposure Of Any Kind</li>
+                             <li>Specific Matter Endorsement - Absolute Cyber Exclusion</li>
+                             <li>Specific Matter Endorsement - Absolute Asbestos And Silica Exclusion</li>
+                             <li>Specific Matter Endorsement - Absolute Nuclear Exclusion</li>
+                             <li>Deductible Endorsement</li>
+                             <li>Sanctions Endorsement</li>
+                             <li>Specific Matter Endorsement - Absolute Aviation Exclusion</li>
+                             <li>Specific Matter Endorsement - Communicable/Contagious Diseases, Covid 19</li>
+                             <li>Product Recall And Guarantee Excluded</li>
+                             <li>Absolute Inefficacy Exclusion</li>
+                             <li>No Cover For Products Finding Its Use In Or As Baby Wear / Infant Wear</li>
+                             <li>No Cover For Products Finding Its Application In Or As Medical / Healthcare Industry</li>
+                             <li>This Policy Does Not Cover Any Claim In Connection With Or On Account Of Operations Outside India</li>
+                             <li>This Policy Does Not Cover Any Claim In Connection With Or On Account Of The Following:
+                                <ol class="rq-alphaBrackList">
+                                   <li>Any Hydraulic Structure Including But Not Limited To Damage</li>
+                                   <li>Mines( Whether Underground Or Open Cast) And Colliaries</li>
+                                   <li>Tailing Storage Facilities</li>
+                                   <li>Offshore Risks</li>
+                                </ol>
+                             </li>
+                             <li>No Higher/Excess Limits To Be Taken Without The Prior Written Consent Of Tata AIG General Insurance Company</li>
+                             <li>This Quote Is Not Valid If USA/ Canada Turnover Exceeds 40% Of The Total Turnover Declared By The Insured</li>
+                             <li>50,000 Each And Every Claim For General Aggregate</li>
+                             <li>100,000 Each And Every Claim For Products & Completed Operations</li>
+                         </ol>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">DEDUCTIBLE</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Deductible 1</span></td>
+                               <td><span class="theme-value">50,000 Each And Every Claim For General Aggregate</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Deductible 2</span></td>
+                               <td><span class="theme-value">1,00,000 Each And Every Claim For Products & Completed Operations</span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">COVERAGE TERRITORY</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">General Aggregate</span></td>
+                               <td><span class="theme-value">India But Worldwide For Travel Executives</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Products/ Completed Operations Limit</span></td>
+                               <td><span class="theme-value">Worldwide Excluding USA/Canada</span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">COVERAGE JURISDICTION</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">General Aggregate</span></td>
+                               <td><span class="theme-value">Worldwide Including USA/Canada</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Products/ Completed Operations Limit</span></td>
+                               <td><span class="theme-value">Worldwide Including USA/Canada</span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">ANNUAL PREMIUM</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Annual Premium</span></td>
+                               <td><span class="theme-value">107445</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Taxes as Applicable is Additional</span></td>
+                               <td><span class="theme-value"></span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">RETROACTIVE DATE</div>
+                         </div>
+                         <div class="rq-span">As of Inception Date of This Tata Aig Policy</div>
+                         <div class="rq-span">The Above Retroactive Date, (Applicable Only To Claims-Made Forms) Is Subject To:</div>
+                         <ol class="rq-retroList">
+                             <li>Lower Of Applicable Limits And</li>
+                             <li>Narrower Of Applicable Coverage</li>
+                             <li>Evidence Of Expiring Cover Through Until Retroactive Data</li>
+                         </ol>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">UNDERWRITING INFORMATION</div>
+                         </div>
+                         <div class="rq-span">The Information Summarized Below Is Based Upon Representations/ Statements Made To Us By You Or On Your Behalf And/Or Information That Has Been Provided To Us By You, Or On Your Behalf. It Is The Basis Upon Which We Agreed To Underwrite This Risk.</div>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">ANNEXURE A - DESIGNATED PREMISES:</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Count of Premises</span></td>
+                               <td><span class="theme-value">5</span></td>
+                            </tr>
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Occupancy of Premises</span></td>
+                               <td><span class="theme-value">Manufacturing <br> 
+                                         Warehouse/Godown <br>
+                                         Office <br>
+                                         Show Room</span></td>
+                            </tr>
+                         </table>
+                      </div>
+                      <div class="flex-box-100">
+                         <div class="fw-100">
+                            <div class="head-sm pull-left">ANNEXURE B - DESIGNATED PRODUCTS:FOOD</div>
+                         </div>
+                         <table aria-hidden="true" class="w-100">
+                            <tr>
+                               <td class="fixed-width"><span class="theme-label">Turnover (INR crore)</span></td>
+                               <td><span class="theme-value">India - INR 400000000 <br> 
+                                         Europe/ UK / Austrailia - INR 0<br>
+                                         ROW - INR 100000000 <br>
+                                         USA/Canada - INR 0</span></td>
+                            </tr>
+                         </table>
+                         <div class="theme-label mt-2">
+                             OtherUnderwriting Information
+                         </div>
+                         <div class="theme-label">
+                             <p class="mb-0">a) for the past 5 years there are no known or reported losses.</p>
+                             <p class="mb-0">b) till date of inception of this policy the insured is not aware of any loss or circumstance that could lead to a claim under this policy</p>
+                         </div>
+                      </div>
+                 </div>
+             </div>
+         </div>
+         <ng-container *ngIf="uwUser; else stpTemplate">
+            <form [formGroup]="uwQuoteForm" class="theme-form p-0 theme-card mt-4">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="card-content theme-form-card">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="head-sm m-0">REASON FOR REFERRAL</div>
+                              <span class="theme-label">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
+                                 in laying out print, </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row mt-4">
+                  <div class="col-md-12 col-lg-12">
+                     <div class="card-content disp-flex theme-form-card">
+                        <div class="flex-box-100">
+                           <div class="row mb-3">
+                              <div class="col-md-12 col-lg-12">
+                                 <div class="head-md pull-left">UNDERWRITER HISTORY</div>
+                              </div>
+                              <div class="col-md-12 col-lg-12 mt-3">
+                                 <div class="uw-msg text-red">The case is taken to the underwriter</div>
+                              </div>
+                           </div>
+                           <div class="row border-as-bottom mb-3">
+                              <div class="col-lg-12">
+                                 <div class="head-sm">AGENT <span class="head-sm opacity-sm ml-3">12 / 02 / 2020</span>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <p class="rq-span">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+                                    laying out print, graphic or web designs. The passage is attributed to an unknown
+                                    typesetter in the 15th century who is thought to have scrambled parts of Cicero's De
+                                    Finibus Bonorum et Malorum for use in a type specimen book.</p>
+                              </div>
+                           </div>
+                           <div class="row border-as-bottom mb-3">
+                              <div class="col-lg-12">
+                                 <div class="head-sm">UNDERWRITER <span class="head-sm opacity-sm ml-3">12 / 02 /
+                                       2020</span></div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <p class="rq-span">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+                                    laying out print, graphic or web designs. </p>
+                              </div>
+                           </div>
+                           <div class="row border-as-bottom mb-3">
+                              <div class="col-lg-12">
+                                 <div class="head-sm">AGENT <span class="head-sm opacity-sm ml-3">12 / 02 / 2020</span>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <p class="rq-span">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+                                    laying out print, graphic or web designs. The passage is attributed to an unknown
+                                    typesetter in the 15th century who is thought to have scrambled parts of Cicero's De
+                                    Finibus Bonorum et Malorum for use in a type specimen book.</p>
+                              </div>
+                           </div>
+                           <div class="row mb-3">
+                              <div class="col-lg-12">
+                                 <div class="head-sm">UNDERWRITER <span class="head-sm opacity-sm ml-3">12 / 02 /
+                                       2020</span></div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <p class="rq-span">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+                                    laying out print, graphic or web designs. </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div *ngIf="displayQuoteForm" class="row mt-4">
+                  <div class="col-md-12 col-lg-12">
+                     <div class="card-content disp-flex theme-form-card">
+                        <div class="flex-box-100">
+                           <div class="row">
+                              <div class="col-md-6 col-lg-4">
+                                 <ng-select [items]="reasonArray" formControlName="action" placeholder="Select" class="ngSelectOption 1">
+                             </ng-select>
+                              </div>
+                              <div class="form-field col-md-12 col-lg-12">
+                                 <label for="uwRemark" class="head-sm pull-left">UW Remark</label>
+                                 <div class="pull-right"><button (click)="removeRemarks()" class="btn link-btn font-sm1">Remove Remarks</button></div>
+                                 <textarea class="form-control" formControlName="remark" name="uwRemark" id="uwRemark" cols="30" rows="4" placeholder="Remark"></textarea>
+                              </div>
+                           </div>
+                           <div class="row col-md-12 col-lg-12">
+                              <button (click)="uwSubmitQuote()" type="button" class="btn primary-btn theme-lg-btn">Submit</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div *ngIf="quoteApproved" class="row col-md-12 col-lg-12 mt-4">
+                  <button class="btn primary-btn uw-btn theme-lg-btn active"><svg class="uwTickCross-svg pull-left"><use xlink:href="#ICON_Tick_mark"/></svg>Quote Has Been Approved</button>
+               </div>
+               <div *ngIf="quoteRejected" class="row col-md-12 col-lg-12 mt-4">
+                  <button class="btn primary-btn uw-btn theme-lg-btn active"><svg class="uwTickCross-svg pull-left"><use xlink:href="#ICON_Cross"/></svg>Quote Has Been Rejected</button>
+               </div>
+               <div *ngIf="referToUW" class="row col-md-12 col-lg-12 mt-4">
+                  <button class="btn primary-btn uw-btn theme-lg-btn active"><svg class="uwYest-svg pull-left"><use xlink:href="#ICON_Yesterday_UW"/></svg>Referred To Underwriter {{uwNum}}</button>
+               </div>
+               <div class="btn-block m-t-lg">
+                  <button type="button" class="btn primary-btn theme-lg-btn">Back To Listing</button>
+               </div>
+
+            </form>
+         </ng-container>
+         <ng-template #stpTemplate>
+            <div class="convertClone-btn-block btn-block m-t-lg">
+               <button type="button" (click)="route()" class="btn primary-btn theme-lg-btn active">Convert To
+                  Proposal</button>
+               <button type="button" class="btn primary-btn btn-mob sm m-t-xs">Clone</button>
+            </div>
+            <div class="cloneConvert-btn-block btn-block primary bg-blue">
+               <button type="button" class="btn primary-btn mob-text-btn sm m-t-xs">Clone</button>
+               <button type="button" (click)="route()" class="btn primary-btn mob-btn sm m-t-xs w-auto">Convert To
+                  Proposal</button>
+            </div>
+            <div class="row col-lg-12 pt-2">
+               <span class="rq-ps">Not Applicable for Tata AIG Insurance Company Limited Renewals</span>
+            </div>
+         </ng-template>
+      </div>
+   </form>
+
+</div>
+<ng-template #contact_detail_template>
+   <div class="modal-container">
+      <div class="detail-container-modal modal-md modal-form contact-detail-modal">
+         <div class="modal-header">
+            <h4 class="modal-title pull-left">CONTACT DETAILS</h4>
+            <div class="close-icon" (click)="contactModalRef.hide()">
+               <svg>
+                  <use xlink:href="#ICON_Cross" />
+               </svg>
+            </div>
+         </div>
+         <div class="modal-body has-form">
+            <form class="theme-form">
+               <div class="row">
+                  <div class="form-field col-md-6">
+                     <div class="head-sm">TITLE</div>
+                     <ng-select placeholder="Select" [items]="titleArray"
+                        class="ngSelectOption 1">
+                     </ng-select>
+                     <span class="error-msg">
+                        Required *
+                     </span>
+                  </div>
+                  <div class="form-field col-md-6">
+                     <label for="fname" class="head-sm">FIRST NAME</label>
+                     <input type="text" (keypress)="formatName($event)" class="form-control" id="fname" autocomplete="off">
+                     <span class="error-msg">
+                        Required *
+                     </span>
+                  </div>
+                  <div class="form-field col-md-12">
+                     <label for="mname" class="head-sm">MIDDLE NAME</label>
+                     <input type="text" (keypress)="formatName($event)" class="form-control" id="mname" autocomplete="off">
+                     <!-- <span class="error-msg">
+                        Required *
+                     </span> -->
+                  </div>
+                  <div class="form-field col-md-12">
+                     <label for="lname" class="head-sm">LAST NAME</label>
+                     <input type="text" (keypress)="formatName($event)" class="form-control" id="lname" autocomplete="off">
+                     <span class="error-msg">
+                        Required *
+                     </span>
+                  </div>
+                  <div class="form-field col-md-12">
+                     <label for="usr" class="head-sm">EMAIL</label>
+                     <input type="email" (keypress)="formatEmail($event)" class="form-control" id="email" autocomplete="off">
+                     <span class="error-msg">
+                        Required *
+                     </span>
+                  </div>
+                  <div class="form-field col-md-12">
+                     <label for="usr" class="head-sm">MOBILE NUMBER</label>
+                     <input type="text" (keypress)="isNumberKey($event)" minlength="10" maxlength="10" class="form-control" id="mobile" autocomplete="off">
+                        <span class="error-msg">
+                           Required *
+                        </span>
+                  </div>
+                  <div class="col-md-12 text-center">
+                     <div class="row justify-content-center">
+                        <button (click)="openSuccessModal(success_template)" type="button" class="btn primary-btn m-t-xs sm">Save</button>
+                        <!-- <div class="col-6 col-md-4">
+                           <button (click)="saveQuote(save_template)" type="button" class="btn primary-btn m-t-xs sm w-100">Save</button>
+                        </div>
+                        <div class="col-6 col-md-4">
+                           <button type="button" class="btn primary-btn m-t-xs sm w-100"
+                              (click)="shareQuote(success_template)">Share</button>
+                        </div> -->
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</ng-template>
+<ng-template #success_template>
+   <div class="detail-container-modal modal-md success-info pb-modal">
+      <div class="modal-header">
+         <div class="close-icon" (click)="successModalRef.hide()">
+            <svg>
+               <use xlink:href="#ICON_Cross" />
+            </svg>
+         </div>
+      </div>
+      <div class="modal-body succes-container">
+         <div class="row">
+            <div class="text-center col-md-12">
+               <div>
+                  <svg class="icon-blue">
+                     <use xlink:href="#ICON_Sent_successfully" />
+                  </svg>
+               </div>
+               <div class="head-md">Saved Successfully</div>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center">
+               <table>
+                  <tr>
+                     <td class="theme-label">Full Name</td>
+                     <td class="pl-5 theme-value">Rajesh Arora</td>
+                  </tr>
+                  <tr>
+                     <td class="theme-label">Quote Number</td>
+                     <td class="pl-5 theme-value">12356776</td>
+                  </tr>
+                  <tr>
+                     <td class="theme-label">Mobile Number</td>
+                     <td class="pl-5 theme-value">+91 98290 98280</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="col-md-12 text-center m-30-0">
+               <div class="row justify-content-center">
+                  <div class="col-6 col-md-4">
+                     <button type="button" class="btn btn-mob primary-btn m-t m-t-xs sm w-100">Dashboard</button>
+                  </div>
+                  <div class="col-6 col-md-4">
+                     <button (click)="successModalRef.hide()" type="button" class="btn btn-mob primary-btn m-t m-t-xs sm w-100">Continue</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</ng-template>

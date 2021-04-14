@@ -1,0 +1,156 @@
+@import "../../../sass/variable"
+@import "../../../sass/mixins"
+.brdr-bottom
+ border-bottom: 1px dotted #337ab7
+.theme-container
+ max-width: 1000px
+.premium-card
+  input[type=radio]:checked + label
+   font-family: $pop-reg!important
+  .premium-container
+    padding: 10px
+    +box-size(100%, 100%)
+    color: $clr-primary
+  .premium-header
+    +float(left, 100%)
+    padding-bottom: 10px
+    min-height: 45px
+    color: #337ab7
+  .premium-body
+     +float(left, 100%)
+     padding-bottom: 40px
+     .premium-text
+       text-align: center
+       width: 100%
+
+  .premium-footer
+    +float(left, 100%)
+    padding: 10px
+    position: absolute
+    left: 0px
+    color: #fff
+    bottom: 0px
+    .addons
+     font-size: 10px
+     color: #337ab7
+  .premium-type
+    float: left
+    text-align: left
+    font-size: 12px
+    .info-icon
+      margin-left: 5px
+      
+
+  .premium-header .premium-members
+    float: right
+    text-align: center
+    font-size: 12px
+    .date
+      color: #264A9F
+  .premium-summary
+    float: left
+    width: 100%
+
+  .premium-amt
+     +font_style(10px, #337ab7, $pop-lite)
+
+  .premium-per-month
+    +font_style(25px, $clr-primary, $pop-reg)
+    padding-bottom: 5px
+  .premium-list
+    border-top: 1px dotted
+    +float(left, 100%)
+    padding: 5px 0px
+    display: flex
+    align-items: baseline
+
+    .theme-lbl
+      float: left
+      text-align: left
+      +font_style(10px, #337ab7, $pop-reg) 
+      flex: 1
+
+    .premium-value
+      float: right
+      text-align: right
+      font-size: 12px
+.icon-blue
+  fill: #BFCAE4
+.arrow-img
+ height: 20px
+ width: 20px
+ fill: #264A9F !important
+ margin-right: 8px
+.pending-details .has-form .head-sm
+ margin-bottom: 0px !important 
+@media (max-width: 1070px) 
+  .medicare .theme-radio.radio-btn
+    width: calc(50% - 20px)
+	
+@media (max-width: 1024px) 
+  .medicare .theme-radio.radio-btn
+    width: calc(33.3% - 20px)
+
+@media (max-width: 730px) 
+  .medicare .theme-radio.radio-btn
+    width: calc(50% - 20px)
+
+@media (max-width: 480px) 
+  .form-group.theme-radio.radio-btn
+   min-width: 0px
+   margin-right: 15px
+   width: calc(33.3% - 15px)
+  .medicare .theme-radio.radio-btn
+   width: 100%
+  .premium-card .premium-footer
+    background: #E9EAED
+  .premium-text
+    float: left
+    margin-right: 10px
+  .premium-amt
+    text-align: center
+  .premium-card .premium-summary
+    width: 100%
+    float: left
+    border-top: none
+  .premium-card .premium-list
+    border-bottom: none
+  .premium-card .premium-list .premium-value
+    float: left
+    text-align: left
+   
+.pending-details 
+  .form-field
+    max-width: 350px
+    margin-bottom: 30px
+    margin-right:10px
+  .detail-btn
+    +btn(normal)
+    width: 100%	
+    .detail-label
+     float: left
+     padding-left: 10px	
+     padding-top: 3px
+    .tick-img
+     background: $clr-primary
+     border-radius: 50px	 
+.detail-label-add
+ display: none
+.declartion
+ .check-default
+   padding-bottom: 20px
+   label
+    margin-bottom: 15px   
+ .link-btn 
+   opacity: 0.8 
+@media (min-width: 1600px)
+  .convert-proposal .premium-card-container .theme-radio.premium-card 
+    max-width: 360px
+    min-width: 360px
+  .premium-card .premium-list
+    padding: 10px
+    .theme-lbl
+        font-size: 12px
+@media (max-width: 600px)
+  .pending-details .form-field
+    width: 100%

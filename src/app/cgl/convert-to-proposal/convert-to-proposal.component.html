@@ -1,0 +1,125 @@
+<div class="theme-container convert-proposal"> 
+	<div class="page-title">
+			<div (click)="routeBack()" class="nav-btn">
+				<svg>
+					<use xlink:href="#ICON_Arrow" />
+				</svg>
+			</div>
+			<div class="head-lg heading">CONVERT TO PROPOSAL</div>
+			<div class="pull-right breadcrum">
+				<span class="head-sm">Application / </span> <span class="head-sm">Convert to Proposal</span>
+			</div>
+		</div>
+		
+	<form class="theme-form mt-mobile">
+		<div class="medicare">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="p-l-8 head-sm color-asqi">PROPOSAL DETAILS</div>
+				</div>
+			</div> 
+			<div (click)="routeBack()" class="premium-card-container">
+				<div class="row">
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div class="premium-card ">
+							<label class="premium-lbl" for="premier">
+							<div class="premium-container">
+								<div class="premium-header">
+									<div class="premium-type">
+										<span class="bg-icon pull-left member-icon">
+											<svg><use xlink:href="#ICON_Self"></use></svg>
+										</span>
+										<div class="pull-left ">
+											<div>Individual</div>
+										</div>
+									</div>
+									<div class="premium-members">
+										<span class="date-head">Policy Start Date</span>
+										<div class="date">04/03/2021</div>
+									</div>
+								</div>
+								<div class="premium-body">
+									<div class="premium-text">
+										<div class="premium-amt">Premium Amount</div>
+											<div class="premium-per-month"><i class="fa fa-inr"></i>10,000/m</div>
+									</div>
+									<div class="premium-summary">
+											<div class="premium-list">
+											<span class="theme-lbl">Insured Name</span><span class="premium-value">Rajesh Arora</span>
+											</div>
+											<div class="premium-list">
+											<span class="theme-lbl">Product Name</span><span class="premium-value">CGL</span>
+											</div>
+											<div class="premium-list brdr-bottom">
+											<span class="theme-lbl">Tenure</span><span class="premium-value">1 Year(s)</span>
+											</div>
+									</div>
+								</div>
+								<div class="fw-100 m-t-md">
+									<div class="addons text-center font-sm1 link-btn">View More</div>
+								</div>
+							</div>
+						</label>
+						</div>
+					</div> 
+				</div>
+			</div> 
+        </div>
+
+		<div class="pending-details m-t">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 form-field">
+                    <div class="head-sm">POLICY INCEPTION DATE</div>
+                    <input #policyInceptionDate type="text" class="form-control date" 
+                    (keyup.enter)="formatLikeExcel('policyInceptionDate')" (focusout)="formatLikeExcel('policyInceptionDate')" 
+                    (keypress)="isNumberKey($event)" name="policyInceptionDate" id="policyInceptionDate" 
+                    placeholder="DD/MM/YYYY" autocomplete="off">
+                </div>
+                <div class="col-md-6 col-lg-4 form-field">
+                    <div class="head-sm">RETROACTIVE DATE ( ONLY FOR CLAIM-MADE FORM )</div>
+                    <input #retroactiveDate type="text" class="form-control" 
+                    (keyup.enter)="formatLikeExcel('retroactiveDate')" (focusout)="formatLikeExcel('retroactiveDate')" 
+                    (keypress)="isNumberKey($event)" name="retroactiveDate" id="retroactiveDate" 
+                    placeholder="DD/MM/YYYY" autocomplete="off">
+                </div>
+            </div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="p-l-8 head-sm color-asqi">PENDING DETAILS</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-lg-4">
+					<button (click)="additionalDetails()" [ngClass]="{'svg-added': detailsCompleted['additionalDetails']}" class="btn detail-btn cvp-btn">
+						<svg *ngIf="detailsCompleted['additionalDetails']" class="tick-img pull-left svg-xs"><use xlink:href="#ICON_Tick_mark_w"/></svg>
+						<span *ngIf="!detailsCompleted['additionalDetails']" class="detail-label detail-value">
+							ADD ADDITIONAL DETAILS
+						</span>
+						<span *ngIf="detailsCompleted['additionalDetails']" class="detail-label detail-value pl-3">
+							ADDITIONAL DETAILS
+						</span>
+						<svg class="arrow-img pull-right"><use xlink:href="#ICON_right" /></svg>
+					</button>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<button (click)="docUpload()" [ngClass]="{'svg-added': detailsCompleted['documentUpload']}" class="btn detail-btn cvp-btn">
+						<svg *ngIf="detailsCompleted['documentUpload']" class="tick-img pull-left svg-xs"><use xlink:href="#ICON_Tick_mark_w"/></svg>
+						<span *ngIf="!detailsCompleted['documentUpload']" class="detail-label detail-value">
+							ADD DOCUMENT UPLOAD
+                        </span>
+                        <span *ngIf="detailsCompleted['documentUpload']" class="detail-label detail-value pl-3">
+							DOCUMENT UPLOAD
+						</span>
+						<svg class="arrow-img pull-right"><use xlink:href="#ICON_right" /></svg>
+					</button>
+				</div>
+			</div>
+			<div class="row col-md-12 col-lg-12">
+				<span class="cp-disc">Disclaimer: For Market Renewals, the above retroactive date is subject to no break/gap in cover.</span>
+			</div>
+			<div class="btn-block m-t-lg">
+				<button type="button" [ngClass]="{'active': true}" (click)="reviewProposal()" class="btn primary-btn theme-lg-btn mob-btn-cgl">Review</button>
+			</div> 
+		</div>
+	</form>
+</div>

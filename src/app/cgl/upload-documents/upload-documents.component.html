@@ -1,0 +1,108 @@
+<div class="theme-container" #target>
+    <div class="page-title">
+        <div (click)="routeBack()" class="nav-btn">
+            <svg>
+                <use xlink:href="#ICON_Arrow" />
+            </svg>
+        </div>
+        <div class="head-lg heading ws-nowrap">DOCUMENT UPLOAD<span class="p-l-md head-date">02/02</span></div>
+        <div class="pull-right breadcrum">
+            <span class="head-sm">Application / </span> <span class="head-sm">Document Upload</span>
+        </div>
+        <div class="pull-right">
+            <button type="button" class="link-btn font-sm1">Go Back To Proposal</button>
+        </div>
+    </div>
+    <form [formGroup]="documentForm" class="theme-form mt-mobile">
+        <div class="theme-card w-100 p-0 mb-1">
+            <div class="card-content">
+                <div class="fw-100">
+                    <div class="head-sm">Document Upload</div>
+                </div>
+                <div class="row">
+                    <div class="form-field col-md-6 col-lg-4 col-xl-3">
+                        <div class="head-sm">UPLOAD DOCUMENT</div>
+                        <div class="custom-file">
+                            <input type="file" (change)="onFileChange($event,'document',1)" id="customFile"
+                                accept="image/jpeg,image/png,application/pdf" class="custom-file-input">
+                            <label *ngIf="!documentForm.value.docName" class="custom-file-label form-control"
+                                for="customFile"><svg class="icon-uploadFile m-r-sm">
+                                    <use xlink:href="#ICON_FileUpload" /></svg>Upload file</label>
+                            <label *ngIf="documentForm.value.docName"
+                                class="custom-file-label form-control d-flex justify-content-between align-items-center"
+                                for="customFile"><span class="text-truncate">{{documentForm.value.docName}}</span>
+                                <span><button (click)="removeDocFile('document')"
+                                        class="btn font-sm link-btn">REMOVE</button></span>
+                            </label>
+                            <span class="doc-format-msg">File Format: JPG, PDF, PNG | Max Size:
+                                5mb</span>
+                            <span class="d-inline-block error-msg position-relative mt-0">
+                                Required *
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-field  col-md-6 col-xl-8">
+                        <div class="head-sm">REMARKS</div>
+                        <input type="text" id="remark" class="form-control"
+                            placeholder="Lorem-Ipsum-Dolor-Sit-Amet,Et-Mea-Quem-Unum-ludico">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theme-card w-100 p-0 mt-4">
+            <div class="card-content">
+                <div class="fw-100">
+                    <div class="head-sm">Expiring Policy Copy</div>
+                </div>
+                <div *ngFor="let policyDoc of documentForm.value.expiringPolicyCopy; index as i" class="row mb-3" [ngClass]="{'border-as-top': i >0}">
+                    <div *ngIf="i>0" (click)="removeFileFromArr(i)" class="fw-100 pt-2">
+                        <button class="btn quotelist-btn pull-right">
+                            <svg class="svg-xs">
+                                <use xlink:href="#ICON_Cross" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="form-field col-md-6 col-lg-4 col-xl-3">
+                        <div class="head-sm">UPLOAD DOCUMENT</div>
+                        <div class="custom-file">
+                            <input type="file" (change)="onFileChange($event,'expiringPolicy',i)" id="{{'customFile'+i}}"
+                                accept="image/jpeg,image/png,application/pdf" class="custom-file-input">
+                            <label *ngIf="!policyDoc['document_'+i+'_name']" class="custom-file-label form-control"
+                                for="{{'customFile'+i}}"><svg class="icon-uploadFile m-r-sm">
+                                    <use xlink:href="#ICON_FileUpload" /></svg>Upload file</label>
+                            <label *ngIf="policyDoc['document_'+i+'_name']"
+                                class="custom-file-label form-control d-flex justify-content-between align-items-center"
+                                for="{{'customFile'+i}}"><span
+                                    class="text-truncate">{{policyDoc['document_'+i+'_name']}}</span>
+                                <span><button (click)="removeDocFile('expiringPolicy')"
+                                        class="btn font-sm link-btn">REMOVE</button></span>
+                            </label>
+                            <span class="doc-format-msg">File Format: JPG, PDF, PNG | Max Size:
+                                5mb</span>
+                            <span class="d-inline-block error-msg position-relative mt-0">
+                                Required *
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-field  col-md-6 col-xl-8">
+                        <div class="head-sm">REMARKS</div>
+                        <input type="text" id="remark" class="form-control"
+                            placeholder="Lorem-Ipsum-Dolor-Sit-Amet,Et-Mea-Quem-Unum-ludico">
+                    </div>
+                </div>
+                <div class="px-3 w-100 mt-2">
+                    <button type="button" (click)="addDocumentFileBtn('expiringPolicyCopy')"
+                        class="link-btn font-sm1 p-0 link-btn-fr-pr">+ ADD ANOTHER FILE</button>
+                </div>
+            </div>
+        </div>
+        <div class="btn-block primary bg-blue m-t-lg">
+            <button type="button" class="btn primary-btn mob-text-btn sm m-t-xs margin-xl">Save</button>
+            <button type="button" (click)="route()" class="btn primary-btn mob-btn sm m-t-xs">Next</button>
+        </div>
+        <!-- <div class="btn-block m-t-lg">
+            <button type="button" class="btn primary-btn theme-lg-btn">Save</button>
+            <button type="button" (click)="route()" class="btn primary-btn theme-lg-btn">Next</button>
+        </div> -->
+    </form>
+</div>

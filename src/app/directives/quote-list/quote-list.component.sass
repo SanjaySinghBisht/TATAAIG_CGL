@@ -1,0 +1,168 @@
+@import "../../../sass/variable"
+@import "../../../sass/mixins"
+
+.quote-listing
+  padding: 40px 20px
+  +float(left, 100%)
+
+.empty-card
+   color:$clr-primary
+   +border-radius(10px)
+   font-size: 10px
+   border: dotted 1px $clr-primary
+   vertical-align: middle
+   text-align: center
+   padding: 45px 63px
+.share-btn
+   position: absolute
+   bottom: 35px 
+.custom-dropdown-menu
+   border: none
+   background: $card-bg
+   +box-shadow($outset)
+   .quote-list-content a
+      padding:10px 5px
+      text-declaration: none !important
+      border-bottom: solid 1px #ddd
+
+.c-token
+   +box-shadow($outset)
+   margin-bottom: 10px
+   margin-right: 10px
+   border-radius: 10px !important
+   width: auto   
+   float: left
+   padding: 2px 5px
+   .c-remove
+      right: -15px
+      padding: 1px 3px
+      position: relative
+      top: -7px
+      width: 13px
+      height: 13px
+      border-radius: 10px
+      +box-shadow($outset)
+	  
+.quotelist-btn 
+    color: #264A9F
+    opacity: 1
+    background: #EAEBEF
+    box-shadow: -3px -3px 6px #FFFFFF, 3px 3px 6px #BFC3CF
+    border-radius: 20px
+    border: none
+    font-size: 11px
+    margin-right: 10px
+    margin-bottom: 10px
+    min-width: 50px
+    padding: 3px
+.quote-num
+    color: #a0a6b5
+.quote-listing-container .premium-card-container .theme-radio > label
+    box-shadow: -3px -3px 6px #FFFFFF, 3px 3px 6px #BFC3CF
+.quote-listing-container .premium-card-container .theme-radio.premium-card
+    min-width: auto
+    max-width: 100%
+    display: block
+    width: 100%
+    flex: auto
+    padding: 2px
+    margin-right: 0px
+    margin-bottom: 20px
+.premium-card
+  input[type=radio]:checked + label
+   font-family: $pop-reg!important
+  .premium-container
+    padding: 10px 10px 0px
+    +box-size(100%, 100%)
+    color: #AAB2C3
+  .premium-list.qte-num .theme-lbl
+    color: #AAB2C3
+  .premium-header
+    +float(left, 100%)
+    padding-bottom: 10px
+    min-height: 38px
+  .premium-body
+     +float(left, 100%)
+     .premium-text
+       text-align: center
+
+  .premium-footer
+    +float(left, 100%)
+    padding: 10px
+    position: absolute
+    left: 0px
+    background: #18478b
+    color: #fff
+    bottom: 0px
+    .addons
+     font-size: 10px
+  .premium-type
+    float: left
+    text-align: left
+    font-size: 12px
+    .info-icon
+      margin-left: 5px
+    .mem
+      text-decoration: underline
+  .premium-list .icon-grp	 
+    position: absolute
+    right: 10px
+    .info-icon svg
+        left: 9px
+        top: 9px
+        fill: #AAB2C3
+  .premium-header .premium-members
+    float: right
+    text-align: right
+    font-size: 12px
+    .day
+      position: relative
+      top: -5px
+  .premium-summary
+    float: left
+    width: 100%
+
+  .premium-amt
+     +font_style(12px, #337ab7, $pop-lite)
+
+  .premium-per-month
+    +font_style(22px, $clr-primary, $pop-reg)
+    padding-bottom: 5px
+  .premium-list
+    border-top: 1px dotted
+    +float(left, 100%)
+    padding: 10px 0px
+    display: flex
+    align-items: baseline
+  .theme-lbl
+      float: left
+      text-align: left
+      +font_style(10px, #337ab7, $pop-reg) 
+      flex: 1
+
+  .premium-value
+      float: right
+      text-align: right
+      font-size: 10px	
+      color: #337ab7
+	  
+.card-detail 
+ overflow-y: auto
+ height: calc(100vh - 350px)
+.filter-input
+ width: calc(100% - 50px)
+ float: left
+.filter
+ width: 50px
+ float: left
+ .info-icon
+      height: 35px
+      width: 35px
+@media (min-width: 1600px)
+  .premium-container
+      padding: 15px 15px 0px !important
+  .premium-list .theme-lbl
+      +font_style(13px, #337ab7, $pop-reg) 
+  .premium-card .premium-value
+      font-size: 13px
+	

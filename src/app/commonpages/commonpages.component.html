@@ -1,0 +1,613 @@
+ <ul class="nested">
+	<li>
+	  <a [routerLink]="'/convertproposals'" routerLinkActive="active">Convert to Proposals</a>	
+    </li>
+	<li>
+	  <a [routerLink]="'/reviewproposals'" routerLinkActive="active">Review Proposal</a>	
+    </li>
+	<li>
+	  <a [routerLink]="'/nomineedetails'" routerLinkActive="active">Nominee Details</a>	
+    </li>
+	<li>
+	  <a [routerLink]="'/additionaldetails'" routerLinkActive="active">Additional Details</a>	
+    </li>
+	<li>
+	  <a [routerLink]="'/previewquotes'" routerLinkActive="active">Preview Quote</a>	
+    </li>
+	<li>
+	  <a [routerLink]="'/customerdetails'" routerLinkActive="active">Customer Detail</a>	
+    </li>
+	<li>
+	  <a [routerLink]="'/detaillists'" routerLinkActive="active">Detail List</a>	
+    </li>
+	<li>
+	  <a [routerLink]="'/payment-cmn'" routerLinkActive="active">PAYMENT PAGE</a>	
+    </li>
+	
+	<li>
+				  <a (click)="premiumModal(premium_breakup_template)">PREMIUM BREAKUP</a>	
+				</li>
+				<!-- <li>
+				  <a (click)="medicare(medicare_template)">MEDICARE TEMPLATE</a>	
+				</li>
+				<li>
+				  <a (click)="medicareprotect(medicare_product_template)">MEDI PROTECT ADD ONS</a>	
+				</li> -->
+				<li>
+				  <a (click)="additionaldiscount(additional_discount_template)">ADDITIONAL DISCOUNT</a>	
+				</li>
+				<li>
+				  <a (click)="contactdetail(contact_detail_template)">CONTACT DETAILS</a>	
+				</li>
+				<li>
+				  <a (click)="sentsucessfull(successfull_template)">SENT SUCCESSFULLY</a>	
+				</li>
+				<li>
+				  <a (click)="savesucessfull(save_template)">SAVE SUCCESSFULLY</a>	
+				</li>
+				<li>
+				  <a (click)="meminclude(members_template)">MEMBERS INCLUDED</a>	
+				</li>
+				<li>
+				  <a (click)="dic1(declaration1_template)">DECLARATON</a>	
+				</li>
+				<li>
+				  <a (click)="dic2(declaration2_template)">DECLARATON</a>	
+				</li>
+				<li>
+				  <a (click)="paymentsuccess(payment_success1)">PAYMENT SUCCESS</a>	
+				</li>
+				<li>
+				  <a (click)="otptemp(otptemplate)">OTP VERIFICATION</a>	
+				</li>
+				<li>
+				  <a (click)="paymentunsuccess(payment_unsuccess)">PAYMENT UNSUCCESS</a>	
+				</li>
+				<li>
+				  <a (click)="paymentservererror(payment_server_error)">PAYMENT SERVER ERROR</a>	
+				</li>
+				<li>
+				  <a (click)="paymentsummary(payment_summary)">PAYMENT SUMMARY</a>	
+				</li>
+			
+</ul>
+
+
+
+<ng-template #premium_breakup_template>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-header modal-back">
+      <h4 class="modal-title pull-left">PREMIUM BREAKUP</h4>
+      <div class="close-icon" (click)="modalRef.hide()">
+         <svg>
+            <use xlink:href="#ICON_Cross" />
+         </svg>
+      </div>
+   </div>
+   <div class="modal-body premium-breakup">
+		<table  aria-hidden="true" class="fw-100">
+			<tbody>
+				<tr class="head-sm">
+					<td>Sum of Premium</td>
+					<td>4785</td>
+				</tr>	
+				<tr class="head-sm">
+					<td>Discount Premium</td>
+					<td>0.0</td>
+				</tr>
+				<tr class="head-sm">
+					<td>Net Premium</td>
+					<td>4785</td>
+				</tr>	
+				<tr class="head-sm">
+					<td>GST (18%)</td>
+					<td>862</td>
+				</tr>	
+			</tbody>
+			<tfoot>
+				<tr class="head-sm">
+					<td>Total Premium</td>
+					<td>5646</td>
+				</tr>	
+			</tfoot>
+		</table>
+
+		<div class="text-center p-sm double-btn m-t-lg">
+         <button type="button" class="btn secondary-btn">Done</button>
+      </div>
+   </div>
+</div>
+</div>
+</ng-template>
+
+
+
+<ng-template #medicare_template>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-header modal-back">
+	<div class="nav-btn"><svg><use xlink:href="#ICON_Arrow" /></svg></div>
+      <h4 class="modal-title pull-left">MEDICARE ADD ONS</h4>
+      <div class="close-icon" (click)="modalRef.hide()">
+         <svg>
+            <use xlink:href="#ICON_Cross" />
+         </svg>
+      </div>
+   </div>
+   <div class="modal-body has-form">
+   <form class="theme-form">   
+	<div class="accomodation-type">
+		<div class="fw-100 form-field">
+			<div class="head-sm">ACCOMODATION TYPE</div>
+			<div class=" theme-radio radio-btn fw-50 p-r-md">
+				<input type="radio"  id="accom_single" name="accomodat_type" checked>
+				<label for="accom_single"><span class="lbl-txt">Single</span></label>
+			</div>
+			<div class=" theme-radio radio-btn fw-50">
+				<input type="radio"  id="accom_shared" name="accomodat_type">
+				<label for="accom_shared"><span class="lbl-txt">Shared</span></label>
+			</div>
+		</div>
+		<div class="p-sm text-center">
+			<button type="button" class="btn secondary-btn secondary small-btn">Save</button>
+		</div>	
+	</div>		
+</form>
+  </div>
+  </div>
+  </div>
+</ng-template>
+
+
+<ng-template #medicare_product_template>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-header modal-back">
+	<div class="nav-btn"><svg><use xlink:href="#ICON_Arrow" /></svg></div>
+      <h4 class="modal-title pull-left">MEDI PROTECT ADD ONS</h4>
+      <div class="close-icon" (click)="modalRef.hide()">
+         <svg>
+            <use xlink:href="#ICON_Cross" />
+         </svg>
+      </div>
+   </div>
+   <div class="modal-body has-form">
+   <form class="theme-form">  
+	<div class="accomodation-type">
+		<div class="form-field">
+			<div class="head-sm">ACCOMODATION TYPE</div>
+			<div class=" theme-radio radio-btn fw-50 p-r-md">
+				<input type="radio"  id="accom_single" name="accomodat_type" checked>
+				<label for="accom_single"><span class="lbl-txt">Single</span></label>
+			</div>
+			<div class=" theme-radio radio-btn fw-50">
+				<input type="radio"  id="accom_shared" name="accomodat_type">
+				<label for="accom_shared"><span class="lbl-txt">Shared</span></label>
+			</div>
+		</div>
+		<div class="check-default">
+			<input type="checkbox" class="checkbox" id="accident_death_rider">
+			<label class="custom-control-label" for="accident_death_rider">Accidental Death Rider</label>
+		</div>
+      <span class="info-icon">
+         <svg>
+            <use xlink:href="#ICON_tool_tip" />
+         </svg>
+      </span>
+	<div class="p-sm text-center">
+			<button type="button" class="btn secondary-btn secondary small-btn">Save</button>
+		</div>	
+   </div> 	
+</form>
+  </div>
+  </div>
+  </div>
+</ng-template>
+
+
+<ng-template #additional_discount_template>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-header modal-back">
+		<div class="nav-btn"><svg><use xlink:href="#ICON_Arrow" /></svg></div>
+      <h4 class="modal-title pull-left">ADDITIONAL DISCOUNT</h4>
+      <div class="close-icon" (click)="modalRef.hide()">
+         <svg>
+            <use xlink:href="#ICON_Cross" />
+         </svg>
+      </div>
+   </div>
+   <div class="modal-body has-form">
+        <form class="theme-form">
+            <div class="additional-discount">
+				<div class="form-field band">
+					<div class="head-sm pull-left m-t">DISCOUNT 1(BY DEFAULT)</div>
+					<div class=" theme-radio radio-btn pull-right outset">
+						<input type="radio" name="bandradio" id="bandone">
+						<label for="bandone"><span>60%</span></label>
+					</div>
+			    </div>
+			  <div class="form-field band">
+				<div class="head-sm pull-left m-t">DISCOUNT 2(APPROVED CRM TICKET)</div>
+				<div class=" theme-radio radio-btn pull-right outset">
+					<input type="radio" name="bandradio" id="bandtwo">
+					<label for="bandtwo"><span>02%</span></label>
+				</div>
+			  </div> 
+			  <div class="form-field">
+					<div class="head-sm pull-left m-t">Loading Amount</div>
+					<input type="text" class="form-control">
+			    </div>
+			  <div class="form-field">
+				 <div class="head-sm ">REQUEST FOR ADDITIONAL
+					<div class="theme-label">A ticket will be raised in case of additional discount request</div>
+				 </div>
+					<input type="text" class="form-control w-50" id="" value="XX%">
+			  </div>
+			  <div class="form-field">
+				 <textarea class="form-control" rows="5" id="comment" placeholder="Remarks"></textarea>
+			  </div>
+			  <div class="text-center"><button type="button" class="btn secondary-btn">Done</button></div>
+		    </div>
+		</form>
+   </div>
+   </div>
+   </div>
+</ng-template>
+
+
+<ng-template #contact_detail_template>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-header">
+      <h4 class="modal-title pull-left">CONTACT DETAILS</h4>
+      <div class="close-icon" (click)="modalRef.hide()">
+         <svg>
+            <use xlink:href="#ICON_Cross" />
+         </svg>
+      </div>
+   </div>
+   <div class="modal-body has-form">
+      <form class="theme-form">
+      <div class="contact-details">
+     <div class="split-two-col"> 
+      <div class="form-field col-one">
+            <div for="usr" class="head-sm">TITLE:</div>
+            <ng-select>
+               <ng-option value="Mr">Mr.</ng-option>
+               <ng-option value="Mrs">Mrs.</ng-option>
+            </ng-select>
+
+      </div>
+      <div class="form-field col-two">
+            <div for="usr" class="head-sm">CUSTOMER NAME</div>
+            <input type="text" class="form-control" id="usr" value="Rajesh Arora">
+         </div>
+     </div> 
+      <div class="form-field">
+			 <div for="usr" class="head-sm">EMAIL</div>
+			 <input type="text" class="form-control" id="usr" value="rajesh@gmail.com">
+      </div>
+	  <div class="form-field">
+			 <div for="usr" class="head-sm">MOBILE NUMBER</div>
+			 <input type="text" class="form-control" id="usr" value="8320523372">
+      </div>
+      <div class="text-center m-t-lg"><button type="button" class="btn secondary-btn">Send</button></div>
+      <div class="text-center m-t-lg"><button type="button" class="btn secondary-btn">Save</button></div>
+   </div>
+</form>
+</div>
+</div>
+</div>
+</ng-template>
+
+
+<ng-template #successfull_template>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-header">
+      <div class="close-icon" (click)="modalRef.hide()">
+         <svg>
+            <use xlink:href="#ICON_Cross" />
+         </svg>
+      </div>
+   </div>
+   <div class="modal-body succes-container">
+      <div class="text-center m-b-md">
+         <div>
+            <svg class="icon-blue">
+               <use xlink:href="#ICON_Sent_successfully" />
+            </svg>
+         </div>
+         <div class="head-md text-center">SENT SUCCESSFULLY</div>
+		 <table  aria-hidden="true"  class="success-tbl">
+         <tr>
+			<td class="theme-label text-left">Quote ID</td>
+            <td class="theme-value text-left">34859 83993</td>
+         </tr>
+         <tr>
+			<td class="theme-label text-left">Name</td>
+            <td class="theme-value text-left">Mr. John Doe</td>
+         </tr>
+         <tr>
+			<td class="theme-label text-left">Phone Number</td>
+            <td class="theme-value text-left">+91 98290 98280</td>
+         </tr>
+		 </table>
+      </div>
+      <div class="text-center p-sm double-btn">
+         <button type="button" class="btn secondary-btn m-r-sm">Dashboard</button>
+         <button type="button" class="btn secondary-btn m-l-sm">View Quotes</button>
+      </div>
+   </div>
+   </div>
+   </div>
+</ng-template>
+
+
+<ng-template #save_template>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-header">
+      <div class="close-icon" (click)="modalRef.hide()">
+         <svg>
+            <use xlink:href="#ICON_Cross" />
+         </svg>
+      </div>
+   </div>
+   <div class="modal-body succes-container">
+      <div class="text-center m-b-md">
+         <div>
+            <svg class="icon-blue">
+               <use xlink:href="#ICON_Sent_successfully" />
+            </svg>
+         </div>
+         <div class="head-md text-center">SAVED SUCCESSFULLY</div>
+		 <table  aria-hidden="true"  class="success-tbl">
+         <tr>
+			<td class="theme-label text-left">Quote ID</td>
+            <td class="theme-value text-left">34859 83993</td>
+         </tr>
+         <tr>
+			<td class="theme-label text-left">Name</td>
+            <td class="theme-value text-left">Mr. John Doe</td>
+         </tr>
+         <tr>
+			<td class="theme-label text-left">Phone Number</td>
+            <td class="theme-value text-left">+91 98290 98280</td>
+         </tr>
+		 </table>
+      </div>
+      <div class="text-center p-sm double-btn">
+         <button type="button" class="btn secondary-btn m-r-sm">Dashboard</button>
+         <button type="button" class="btn secondary-btn m-l-sm">View Quotes</button>
+      </div>
+   </div>
+   </div>
+   </div>
+</ng-template>
+
+
+<ng-template #members_template>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-body members-modal">
+		 <div class="head-sm fw-100">
+			<span class="pull-left f-70">MEMBERS INCLUDED</span>
+            <span class="pull-right f-30">SUM INSURED</span>
+		 </div>
+         <div class="fw-100">
+			<span class="theme-label pull-left f-70">Self</span>
+            <span class="theme-value pull-right text-left f-30">5,00,000</span>
+         </div>
+         <div class="fw-100">
+			<span class="theme-label pull-left f-70">Spouse</span>
+            <span class="theme-value pull-right text-left f-30">3,00,000</span>
+         </div>
+         <div class="fw-100">
+			<span class="theme-label pull-left f-70">Daughter 1</span>
+            <span class="theme-value pull-right text-left f-30">2,00,000</span>
+         </div>
+		  <div class="fw-100">
+			<span class="theme-label pull-left f-70">Daughter 2</span>
+            <span class="theme-value pull-right text-left f-30">2,00,000</span>
+         </div>
+		<div class="text-center p-sm double-btn m-t-md fw-100">
+         <button type="button" class="btn secondary-btn">Done</button>
+      </div>
+   </div>
+   </div>
+   </div>
+</ng-template>
+
+<ng-template #declaration1_template>
+<div class="modal-container">
+<div class="detail-container-modal">
+    <div class="modal-header">
+		<div class="head-lg pull-left">Declaration</div>
+		<div class="close-icon" (click)="modalRef.hide()">
+			<svg>
+				<use xlink:href="#ICON_Cross" />
+			 </svg>
+		 </div>
+   </div>
+   <div class="modal-body">
+		<div class="head-sm">
+			Declaration and warranty on behalf of all persons proposed to the insured
+		</div>
+	   <div class="points">1)I hereby declare, on my behalf and on behalf of call person proposed to be insured, that the bove statements answers and/or particulars given by me are true and complete in all respects to the best of my knowledge and that i am authorized to propose on behalf of these other persons.</div>
+	   <div class="points">2)I understand that the information provided by me will form the basis of the insurance policy, is subject to the Board approved underwriting policy of the insurer and that the policy will come into force only after full payment of the premium chargeable.</div>
+	   <div class="points">3)I further declare that i will notify in writing any change occurring in the occupation or general health of the life to be insured/proposer after the proposal hs been submitted but before communication of the risk acceptance by the company.</div>
+	   <div class="points">4)I declared that I consent to the company seeking medical information from any doctor or hospital who/which at any time attended on the person to be insured/proposer or from any past or present employer concerning any thing which effects the physical or mental health of the person to be insured/proposer and seeking information from any insurer to whom an application for insurance on the person to be insured/proposer has been made for the purpose of underwriting the proposal and/or claim settlement.</div>
+	   <div class="points">5)I authorize the company to share information pertaining to my proposal including the medical records of the insured/porposer for the sole purpose of underwriting the proposal and/or claims settlement and with any Governmental and/or Regulatory authority.</div>
+	   <div class="points">6)I have understood the purpose of Aadhar authentication and here by state that i have no objection to providing my Aadhar details.</div>
+	</div>
+	</div>
+	</div>
+</ng-template>
+
+<ng-template #declaration2_template>
+<div class="modal-container">
+<div class="detail-container-modal">
+    <div class="modal-header">
+		<div class="head-lg pull-left">Declaration</div>
+        <div class="close-icon" (click)="modalRef.hide()">
+			 <svg>
+				<use xlink:href="#ICON_Cross" />
+			 </svg>
+		</div>
+	</div>
+    <div class="modal-body">
+		<div class="head-sm">
+			Agent Declarations
+	   </div>
+		<div class="points">
+		  I (Full Name) in my capacity as an Insurance Advisor/ Specified Person of the Corporate Agent/Authorized employee of the Broker/Relationship Officer, do hereby declare that I have explained all the contents of this Proposal Form, including the nature of the questions contained in this Proposal Form to the Proposer including statement(s), information and response(s) submitted by him/her in this Proposal Form to questions contained herein or any details sought herein will form the basis of the Contract of Insurance between the Company and the Proposer, if this Proposal is accepted by the Company for issuance of the Policy. I have further explained that if any untrue statement(s)/ information/response(s) is/are contained in this Proposal Form/including addendum(s), affidavits, statements, submissions, furnished/to be furnished, the Company shall have the right to vary the benefits which may be payable and further more if there has been a non-disclosure of any material fact, the policy issued to his/her favour pursuant to this Proposal may be treated by the Company as null and void and all premiums paid under the Policy may be forfeited to the company.
+	   </div>
+	   <div class="points">License No.(Advisor/Corporate Agent/Broker/Relationship officer):</div>
+	   <div class="points">Place:<span class="m-r-md">BOB VIJAYA BANK</span>Date:<span>DD/MM/YYYY</span></div>
+	</div>
+	</div>
+	</div>
+</ng-template>
+
+<ng-template #payment_success1>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-header">
+      <div class="close-icon" (click)="modalRef.hide()">
+         <svg>
+            <use xlink:href="#ICON_Cross" />
+         </svg>
+      </div>
+   </div>
+   <div class="modal-body p-0 payment-popup">
+      <div class="text-center m-b-md">
+		<div><svg class="icon-blue"><use xlink:href="#ICON_Payment_successful" /></svg></div>
+         <div class="head-md text-center f-bold">Payment Successful</div>
+         <span class="p-r-10 theme-label p-r-md">Policy Number</span>
+         <span class="theme-value">123465</span>
+      </div>
+      <div class="text-center p-sm double-btn">
+         <button type="button" class="btn secondary-btn m-r-sm">Dashboard</button>
+         <button type="button" class="btn secondary-btn m-l-sm">View Policy</button>
+      </div>
+   </div>
+   </div>
+   </div>
+</ng-template>
+
+
+<ng-template #otptemplate>
+<div class="modal-container">
+<div class="detail-container-modal">
+   <div class="modal-header modal-back">
+      <h4 class="modal-title m-b-sm pull-left">OTP VERIFICATION</h4>
+      <div class="theme-label fw-100">OTP has been sent to 9829098290</div>
+      <div class="close-icon" (click)="modalRef.hide()"><svg><use xlink:href="#ICON_Cross" /></svg>
+	</div>
+   </div>
+   <div class="modal-body">
+      <form class="theme-form">
+      <div class="otp">
+         <div class="form-field">
+            <div class="text-left head-sm">ENTER OTP NUMBER</div>
+            <div class="otp-container">
+               <div class="otp-input"><input type="text" class="form-control"/></div>
+               <div class="otp-input"><input type="text" class="form-control"/></div>
+               <div class="otp-input"><input type="text" class="form-control"/></div>
+               <div class="otp-input"><input type="text" class="form-control"/></div>
+            </div>
+			<button type="button" class="link-btn">Resend</button>
+         </div>
+         <div class="text-center">
+            <button type="button" class="btn secondary-btn" style="width:50%;">Proceed</button>
+         </div>
+      </div>
+   </form>
+   </div>
+   </div>
+   </div>
+</ng-template>
+
+<ng-template #payment_unsuccess>
+    <div class="modal-container">
+		<div class="detail-container-modal">
+		   <div class="modal-header">
+			  <div class="close-icon" (click)="modalRef.hide()">
+				 <svg>
+					<use xlink:href="#ICON_Cross" />
+				 </svg>
+			  </div>
+		   </div>
+		   <div class="modal-body p-0 payment-popup">
+			  <div class="text-center m-b-md">
+				<div><svg class="icon-blue"><use xlink:href="#ICON_Payment_successful" /></svg></div>
+				 <div class="head-md text-center f-bold">Payment Unsuccessful</div>
+				 <div class="f-bold  text-center theme-label p-sm">Due to an error, we have been unable to process the payment request for </div>
+				  <span class="p-r-10 m-t-sm theme-label p-r-md">Reference Number</span>
+				 <span class="theme-value">12347842</span>
+			  </div>
+		   </div>
+		</div>
+	</div>
+</ng-template>
+
+<ng-template #payment_server_error>
+    <div class="modal-container">
+		<div class="detail-container-modal">
+		   <div class="modal-header">
+			  <div class="close-icon" (click)="modalRef.hide()">
+				 <svg>
+					<use xlink:href="#ICON_Cross" />
+				 </svg>
+			  </div>
+		   </div>
+		   <div class="modal-body p-0 payment-popup">
+			  <div class="text-center m-b-md">
+				<div><svg class="icon-blue"><use xlink:href="#ICON_Payment_successful" /></svg></div>
+				 <div class="head-md text-center f-bold">Server Error</div>
+				 <div class="f-bold  text-center theme-label p-sm">We have been unable to process your request. Any amount that has been deducted will be refunded to you in 4-5 working days </div>
+			  </div>
+		   </div>
+		</div>
+	</div>
+</ng-template>
+
+<ng-template #payment_summary>
+    <div class="modal-container">
+		<div class="detail-container-modal">
+			<div class="modal-header modal-back">
+				<h4 class="modal-title m-b-sm pull-left">PAYMENT SUMMARY</h4>
+				<div class="close-icon" (click)="modalRef.hide()"><svg><use xlink:href="#ICON_Cross" /></svg></div>
+			</div>
+			<div class="modal-body p-sm  payment-summary">
+				<div>You have made part payment using cheque, the amount is not sufficient to finish payment. You can either go back and change the payable amount or you can add another cheque.</div>
+				<table aria-hidden="true"  class="fw-100 m-t-sm">
+					<tbody>
+						<tr>
+							<td class="theme-label">Amount Paid</td>
+							<td class="theme-value">₹ 2,200</td>
+						</tr>	
+						<tr>
+							<td  class="theme-label">Cheque Number</td>
+							<td class="theme-value">ABC1234567</td>
+						</tr>
+						<tr>
+							<td  class="theme-label">Bank Name</td>
+							<td class="theme-value">HDFC Bank</td>
+						</tr>	
+						<tr>
+							<td  class="theme-label">IFSC Code</td>
+							<td  class="theme-value">HDFC00012</td>
+						</tr>	
+					</tbody>
+				</table>
+				<div class="btn-block text-center">
+					<button type="button" class="btn primary-btn" (click)="modalRef.hide()">Add Cheque</button>
+				</div>	
+			</div>
+		</div>
+	</div>
+</ng-template>

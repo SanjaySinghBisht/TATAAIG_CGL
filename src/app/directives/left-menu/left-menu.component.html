@@ -1,0 +1,29 @@
+<nav class="left-container" [ngClass]="{'in' : openMenu,'out' : closeMenu}" >
+<!-- Brand and toggle get grouped for better mobile display -->
+	<a href="#" class="logo text-center pull-left"><img class="svg-lg square" alt="" src="assets/images/LINEAR ICONS/logo.png"></a>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="menu" [ngClass]="{'hidden': hidenav}">
+		<div class="navbar-collapse-header">
+						<div class="">
+							<div class="pull-left">
+								<a href="./index.html">
+								   <img class="svg-xl square" alt="" src="assets/images/LINEAR ICONS/logo.png">
+								</a>
+							</div>
+							<div class="pull-right m-t-xs c-pointer">
+								<a class="" (click)="menuClose()"><img alt="" class="svg-xxs" src="assets/images/FILLED ICONS/ICON_Cross.svg"></a>
+							</div>
+						</div>
+					</div>
+		  <ul class="nav theme-menu text-center fw-100">
+				<li class="p-h-lg" [routerLink]="'/plan'"  routerLinkActive="active"><img alt="" class="svg-xs" src="assets/images/LINEAR ICONS/ICON_Dashboard.svg"><div class="font-xs">Dashboard</div></li>
+				<li class="p-h-lg" [routerLink]="'/plan'"  routerLinkActive="active"><img alt="" class="svg-xs" src="assets/images/LINEAR ICONS/ICON_Applications.svg"><div class="font-xs">Application</div></li>
+				<li class="p-h-lg" [routerLink]="'/plan'"  routerLinkActive="active"><img alt="" class="svg-xs" src="assets/images/LINEAR ICONS/ICON_Report.svg"><div class="font-xs">Report</div></li>
+				<li class="p-h-lg" [routerLink]="'/plan'"  routerLinkActive="active"><img alt="" class="svg-xs" src="assets/images/LINEAR ICONS/ICON_Search.svg"><div class="font-xs">Search</div></li>
+				<li class="p-h-lg" [routerLink]="'/plan'"  routerLinkActive="active"><img alt="" class="svg-xs" src="assets/images/LINEAR ICONS/ICON_Support.svg"><div class="font-xs">Support</div></li>
+		  </ul> 
+	</div><!-- /.navbar-collapse -->
+	<button type="button" class="pull-right  nav-toggle circle" (click)="menuOpen()">
+		<img class="svg-xs" alt="" src="assets/images/LINEAR ICONS/ICON_menu.svg">
+	</button>
+</nav>

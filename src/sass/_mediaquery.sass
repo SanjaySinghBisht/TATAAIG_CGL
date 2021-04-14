@@ -1,0 +1,54 @@
+
+@import "variable"
+//font breakpoint
+$font-lap-lg: 1600px 
+$font-lap-md: 1400px 
+$font-lap-sm: 1100px 
+$font-tab: 600px
+
+=fmQ($font-size) 	
+ @if $font-size == $font-lap-lg 	
+  @media only screen and (max-width: $font-lap-lg) 
+   @content 
+ @if $font-size == $font-lap-md 	
+  @media only screen and (max-width: $font-lap-md) 
+   @content 
+ @if $font-size == $font-lap-sm 	
+  @media only screen and (max-width: $font-lap-sm) 
+   @content    
+ @if $font-size == $font-tab 	
+  @media only screen and (max-width: $font-tab) 
+   @content    
+
+
+
+//common font changes
+
++fmQ($font-lap-lg)
+ .head-lg
+  font-size: 24px
+ .head-md
+  font-size: 18px 
+ .head-sm
+  font-size: 14px 
++fmQ($font-lap-md)
+ .head-lg
+  font-size: 22px
+ .head-md
+  font-size: 16px 
+ .head-sm
+  font-size: 12px 
++fmQ($font-lap-sm)
+ .head-lg
+  font-size: 18px
+ .head-md
+  font-size: 14px 
+ .head-sm
+  font-size: 12px   
++fmQ($font-tab)
+ .head-lg
+  font-size: 14px !important
+ .head-md
+  font-size: 12px 
+ .head-sm
+  font-size: 12px   
